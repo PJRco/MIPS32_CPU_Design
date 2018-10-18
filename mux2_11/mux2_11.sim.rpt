@@ -1,0 +1,419 @@
+Simulator report for mux2_11
+Sun Mar 19 13:30:32 2017
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 129 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 129          ;
+; Total output ports checked                          ; 129          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 129          ;
+; Total output ports with no 1-value coverage         ; 129          ;
+; Total output ports with no 0-value coverage         ; 129          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------+
+; Missing 1-Value Coverage                                      ;
++------------------+-------------------------+------------------+
+; Node Name        ; Output Port Name        ; Output Port Type ;
++------------------+-------------------------+------------------+
+; |mux2_11|y1~320  ; |mux2_11|y1~320         ; combout          ;
+; |mux2_11|y1~321  ; |mux2_11|y1~321         ; combout          ;
+; |mux2_11|y1~322  ; |mux2_11|y1~322         ; combout          ;
+; |mux2_11|y1~323  ; |mux2_11|y1~323         ; combout          ;
+; |mux2_11|y1~324  ; |mux2_11|y1~324         ; combout          ;
+; |mux2_11|y1~325  ; |mux2_11|y1~325         ; combout          ;
+; |mux2_11|y1~326  ; |mux2_11|y1~326         ; combout          ;
+; |mux2_11|y1~327  ; |mux2_11|y1~327         ; combout          ;
+; |mux2_11|y1~328  ; |mux2_11|y1~328         ; combout          ;
+; |mux2_11|y1~329  ; |mux2_11|y1~329         ; combout          ;
+; |mux2_11|y1~330  ; |mux2_11|y1~330         ; combout          ;
+; |mux2_11|y1~331  ; |mux2_11|y1~331         ; combout          ;
+; |mux2_11|y1~332  ; |mux2_11|y1~332         ; combout          ;
+; |mux2_11|y1~333  ; |mux2_11|y1~333         ; combout          ;
+; |mux2_11|y1~334  ; |mux2_11|y1~334         ; combout          ;
+; |mux2_11|y1~335  ; |mux2_11|y1~335         ; combout          ;
+; |mux2_11|y1~336  ; |mux2_11|y1~336         ; combout          ;
+; |mux2_11|y1~337  ; |mux2_11|y1~337         ; combout          ;
+; |mux2_11|y1~338  ; |mux2_11|y1~338         ; combout          ;
+; |mux2_11|y1~339  ; |mux2_11|y1~339         ; combout          ;
+; |mux2_11|y1~340  ; |mux2_11|y1~340         ; combout          ;
+; |mux2_11|y1~341  ; |mux2_11|y1~341         ; combout          ;
+; |mux2_11|y1~342  ; |mux2_11|y1~342         ; combout          ;
+; |mux2_11|y1~343  ; |mux2_11|y1~343         ; combout          ;
+; |mux2_11|y1~344  ; |mux2_11|y1~344         ; combout          ;
+; |mux2_11|y1~345  ; |mux2_11|y1~345         ; combout          ;
+; |mux2_11|y1~346  ; |mux2_11|y1~346         ; combout          ;
+; |mux2_11|y1~347  ; |mux2_11|y1~347         ; combout          ;
+; |mux2_11|y1~348  ; |mux2_11|y1~348         ; combout          ;
+; |mux2_11|y1~349  ; |mux2_11|y1~349         ; combout          ;
+; |mux2_11|y1~350  ; |mux2_11|y1~350         ; combout          ;
+; |mux2_11|y1~351  ; |mux2_11|y1~351         ; combout          ;
+; |mux2_11|y1[0]   ; |mux2_11|y1[0]          ; padio            ;
+; |mux2_11|y1[1]   ; |mux2_11|y1[1]          ; padio            ;
+; |mux2_11|y1[2]   ; |mux2_11|y1[2]          ; padio            ;
+; |mux2_11|y1[3]   ; |mux2_11|y1[3]          ; padio            ;
+; |mux2_11|y1[4]   ; |mux2_11|y1[4]          ; padio            ;
+; |mux2_11|y1[5]   ; |mux2_11|y1[5]          ; padio            ;
+; |mux2_11|y1[6]   ; |mux2_11|y1[6]          ; padio            ;
+; |mux2_11|y1[7]   ; |mux2_11|y1[7]          ; padio            ;
+; |mux2_11|y1[8]   ; |mux2_11|y1[8]          ; padio            ;
+; |mux2_11|y1[9]   ; |mux2_11|y1[9]          ; padio            ;
+; |mux2_11|y1[10]  ; |mux2_11|y1[10]         ; padio            ;
+; |mux2_11|y1[11]  ; |mux2_11|y1[11]         ; padio            ;
+; |mux2_11|y1[12]  ; |mux2_11|y1[12]         ; padio            ;
+; |mux2_11|y1[13]  ; |mux2_11|y1[13]         ; padio            ;
+; |mux2_11|y1[14]  ; |mux2_11|y1[14]         ; padio            ;
+; |mux2_11|y1[15]  ; |mux2_11|y1[15]         ; padio            ;
+; |mux2_11|y1[16]  ; |mux2_11|y1[16]         ; padio            ;
+; |mux2_11|y1[17]  ; |mux2_11|y1[17]         ; padio            ;
+; |mux2_11|y1[18]  ; |mux2_11|y1[18]         ; padio            ;
+; |mux2_11|y1[19]  ; |mux2_11|y1[19]         ; padio            ;
+; |mux2_11|y1[20]  ; |mux2_11|y1[20]         ; padio            ;
+; |mux2_11|y1[21]  ; |mux2_11|y1[21]         ; padio            ;
+; |mux2_11|y1[22]  ; |mux2_11|y1[22]         ; padio            ;
+; |mux2_11|y1[23]  ; |mux2_11|y1[23]         ; padio            ;
+; |mux2_11|y1[24]  ; |mux2_11|y1[24]         ; padio            ;
+; |mux2_11|y1[25]  ; |mux2_11|y1[25]         ; padio            ;
+; |mux2_11|y1[26]  ; |mux2_11|y1[26]         ; padio            ;
+; |mux2_11|y1[27]  ; |mux2_11|y1[27]         ; padio            ;
+; |mux2_11|y1[28]  ; |mux2_11|y1[28]         ; padio            ;
+; |mux2_11|y1[29]  ; |mux2_11|y1[29]         ; padio            ;
+; |mux2_11|y1[30]  ; |mux2_11|y1[30]         ; padio            ;
+; |mux2_11|y1[31]  ; |mux2_11|y1[31]         ; padio            ;
+; |mux2_11|d11[0]  ; |mux2_11|d11[0]~corein  ; combout          ;
+; |mux2_11|d01[0]  ; |mux2_11|d01[0]~corein  ; combout          ;
+; |mux2_11|s1      ; |mux2_11|s1~corein      ; combout          ;
+; |mux2_11|d11[1]  ; |mux2_11|d11[1]~corein  ; combout          ;
+; |mux2_11|d01[1]  ; |mux2_11|d01[1]~corein  ; combout          ;
+; |mux2_11|d11[2]  ; |mux2_11|d11[2]~corein  ; combout          ;
+; |mux2_11|d01[2]  ; |mux2_11|d01[2]~corein  ; combout          ;
+; |mux2_11|d11[3]  ; |mux2_11|d11[3]~corein  ; combout          ;
+; |mux2_11|d01[3]  ; |mux2_11|d01[3]~corein  ; combout          ;
+; |mux2_11|d11[4]  ; |mux2_11|d11[4]~corein  ; combout          ;
+; |mux2_11|d01[4]  ; |mux2_11|d01[4]~corein  ; combout          ;
+; |mux2_11|d11[5]  ; |mux2_11|d11[5]~corein  ; combout          ;
+; |mux2_11|d01[5]  ; |mux2_11|d01[5]~corein  ; combout          ;
+; |mux2_11|d11[6]  ; |mux2_11|d11[6]~corein  ; combout          ;
+; |mux2_11|d01[6]  ; |mux2_11|d01[6]~corein  ; combout          ;
+; |mux2_11|d11[7]  ; |mux2_11|d11[7]~corein  ; combout          ;
+; |mux2_11|d01[7]  ; |mux2_11|d01[7]~corein  ; combout          ;
+; |mux2_11|d11[8]  ; |mux2_11|d11[8]~corein  ; combout          ;
+; |mux2_11|d01[8]  ; |mux2_11|d01[8]~corein  ; combout          ;
+; |mux2_11|d11[9]  ; |mux2_11|d11[9]~corein  ; combout          ;
+; |mux2_11|d01[9]  ; |mux2_11|d01[9]~corein  ; combout          ;
+; |mux2_11|d11[10] ; |mux2_11|d11[10]~corein ; combout          ;
+; |mux2_11|d01[10] ; |mux2_11|d01[10]~corein ; combout          ;
+; |mux2_11|d11[11] ; |mux2_11|d11[11]~corein ; combout          ;
+; |mux2_11|d01[11] ; |mux2_11|d01[11]~corein ; combout          ;
+; |mux2_11|d11[12] ; |mux2_11|d11[12]~corein ; combout          ;
+; |mux2_11|d01[12] ; |mux2_11|d01[12]~corein ; combout          ;
+; |mux2_11|d11[13] ; |mux2_11|d11[13]~corein ; combout          ;
+; |mux2_11|d01[13] ; |mux2_11|d01[13]~corein ; combout          ;
+; |mux2_11|d11[14] ; |mux2_11|d11[14]~corein ; combout          ;
+; |mux2_11|d01[14] ; |mux2_11|d01[14]~corein ; combout          ;
+; |mux2_11|d11[15] ; |mux2_11|d11[15]~corein ; combout          ;
+; |mux2_11|d01[15] ; |mux2_11|d01[15]~corein ; combout          ;
+; |mux2_11|d11[16] ; |mux2_11|d11[16]~corein ; combout          ;
+; |mux2_11|d01[16] ; |mux2_11|d01[16]~corein ; combout          ;
+; |mux2_11|d11[17] ; |mux2_11|d11[17]~corein ; combout          ;
+; |mux2_11|d01[17] ; |mux2_11|d01[17]~corein ; combout          ;
+; |mux2_11|d11[18] ; |mux2_11|d11[18]~corein ; combout          ;
+; |mux2_11|d01[18] ; |mux2_11|d01[18]~corein ; combout          ;
+; |mux2_11|d11[19] ; |mux2_11|d11[19]~corein ; combout          ;
+; |mux2_11|d01[19] ; |mux2_11|d01[19]~corein ; combout          ;
+; |mux2_11|d11[20] ; |mux2_11|d11[20]~corein ; combout          ;
+; |mux2_11|d01[20] ; |mux2_11|d01[20]~corein ; combout          ;
+; |mux2_11|d11[21] ; |mux2_11|d11[21]~corein ; combout          ;
+; |mux2_11|d01[21] ; |mux2_11|d01[21]~corein ; combout          ;
+; |mux2_11|d11[22] ; |mux2_11|d11[22]~corein ; combout          ;
+; |mux2_11|d01[22] ; |mux2_11|d01[22]~corein ; combout          ;
+; |mux2_11|d11[23] ; |mux2_11|d11[23]~corein ; combout          ;
+; |mux2_11|d01[23] ; |mux2_11|d01[23]~corein ; combout          ;
+; |mux2_11|d11[24] ; |mux2_11|d11[24]~corein ; combout          ;
+; |mux2_11|d01[24] ; |mux2_11|d01[24]~corein ; combout          ;
+; |mux2_11|d11[25] ; |mux2_11|d11[25]~corein ; combout          ;
+; |mux2_11|d01[25] ; |mux2_11|d01[25]~corein ; combout          ;
+; |mux2_11|d11[26] ; |mux2_11|d11[26]~corein ; combout          ;
+; |mux2_11|d01[26] ; |mux2_11|d01[26]~corein ; combout          ;
+; |mux2_11|d11[27] ; |mux2_11|d11[27]~corein ; combout          ;
+; |mux2_11|d01[27] ; |mux2_11|d01[27]~corein ; combout          ;
+; |mux2_11|d11[28] ; |mux2_11|d11[28]~corein ; combout          ;
+; |mux2_11|d01[28] ; |mux2_11|d01[28]~corein ; combout          ;
+; |mux2_11|d11[29] ; |mux2_11|d11[29]~corein ; combout          ;
+; |mux2_11|d01[29] ; |mux2_11|d01[29]~corein ; combout          ;
+; |mux2_11|d11[30] ; |mux2_11|d11[30]~corein ; combout          ;
+; |mux2_11|d01[30] ; |mux2_11|d01[30]~corein ; combout          ;
+; |mux2_11|d11[31] ; |mux2_11|d11[31]~corein ; combout          ;
+; |mux2_11|d01[31] ; |mux2_11|d01[31]~corein ; combout          ;
++------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------+
+; Missing 0-Value Coverage                                      ;
++------------------+-------------------------+------------------+
+; Node Name        ; Output Port Name        ; Output Port Type ;
++------------------+-------------------------+------------------+
+; |mux2_11|y1~320  ; |mux2_11|y1~320         ; combout          ;
+; |mux2_11|y1~321  ; |mux2_11|y1~321         ; combout          ;
+; |mux2_11|y1~322  ; |mux2_11|y1~322         ; combout          ;
+; |mux2_11|y1~323  ; |mux2_11|y1~323         ; combout          ;
+; |mux2_11|y1~324  ; |mux2_11|y1~324         ; combout          ;
+; |mux2_11|y1~325  ; |mux2_11|y1~325         ; combout          ;
+; |mux2_11|y1~326  ; |mux2_11|y1~326         ; combout          ;
+; |mux2_11|y1~327  ; |mux2_11|y1~327         ; combout          ;
+; |mux2_11|y1~328  ; |mux2_11|y1~328         ; combout          ;
+; |mux2_11|y1~329  ; |mux2_11|y1~329         ; combout          ;
+; |mux2_11|y1~330  ; |mux2_11|y1~330         ; combout          ;
+; |mux2_11|y1~331  ; |mux2_11|y1~331         ; combout          ;
+; |mux2_11|y1~332  ; |mux2_11|y1~332         ; combout          ;
+; |mux2_11|y1~333  ; |mux2_11|y1~333         ; combout          ;
+; |mux2_11|y1~334  ; |mux2_11|y1~334         ; combout          ;
+; |mux2_11|y1~335  ; |mux2_11|y1~335         ; combout          ;
+; |mux2_11|y1~336  ; |mux2_11|y1~336         ; combout          ;
+; |mux2_11|y1~337  ; |mux2_11|y1~337         ; combout          ;
+; |mux2_11|y1~338  ; |mux2_11|y1~338         ; combout          ;
+; |mux2_11|y1~339  ; |mux2_11|y1~339         ; combout          ;
+; |mux2_11|y1~340  ; |mux2_11|y1~340         ; combout          ;
+; |mux2_11|y1~341  ; |mux2_11|y1~341         ; combout          ;
+; |mux2_11|y1~342  ; |mux2_11|y1~342         ; combout          ;
+; |mux2_11|y1~343  ; |mux2_11|y1~343         ; combout          ;
+; |mux2_11|y1~344  ; |mux2_11|y1~344         ; combout          ;
+; |mux2_11|y1~345  ; |mux2_11|y1~345         ; combout          ;
+; |mux2_11|y1~346  ; |mux2_11|y1~346         ; combout          ;
+; |mux2_11|y1~347  ; |mux2_11|y1~347         ; combout          ;
+; |mux2_11|y1~348  ; |mux2_11|y1~348         ; combout          ;
+; |mux2_11|y1~349  ; |mux2_11|y1~349         ; combout          ;
+; |mux2_11|y1~350  ; |mux2_11|y1~350         ; combout          ;
+; |mux2_11|y1~351  ; |mux2_11|y1~351         ; combout          ;
+; |mux2_11|y1[0]   ; |mux2_11|y1[0]          ; padio            ;
+; |mux2_11|y1[1]   ; |mux2_11|y1[1]          ; padio            ;
+; |mux2_11|y1[2]   ; |mux2_11|y1[2]          ; padio            ;
+; |mux2_11|y1[3]   ; |mux2_11|y1[3]          ; padio            ;
+; |mux2_11|y1[4]   ; |mux2_11|y1[4]          ; padio            ;
+; |mux2_11|y1[5]   ; |mux2_11|y1[5]          ; padio            ;
+; |mux2_11|y1[6]   ; |mux2_11|y1[6]          ; padio            ;
+; |mux2_11|y1[7]   ; |mux2_11|y1[7]          ; padio            ;
+; |mux2_11|y1[8]   ; |mux2_11|y1[8]          ; padio            ;
+; |mux2_11|y1[9]   ; |mux2_11|y1[9]          ; padio            ;
+; |mux2_11|y1[10]  ; |mux2_11|y1[10]         ; padio            ;
+; |mux2_11|y1[11]  ; |mux2_11|y1[11]         ; padio            ;
+; |mux2_11|y1[12]  ; |mux2_11|y1[12]         ; padio            ;
+; |mux2_11|y1[13]  ; |mux2_11|y1[13]         ; padio            ;
+; |mux2_11|y1[14]  ; |mux2_11|y1[14]         ; padio            ;
+; |mux2_11|y1[15]  ; |mux2_11|y1[15]         ; padio            ;
+; |mux2_11|y1[16]  ; |mux2_11|y1[16]         ; padio            ;
+; |mux2_11|y1[17]  ; |mux2_11|y1[17]         ; padio            ;
+; |mux2_11|y1[18]  ; |mux2_11|y1[18]         ; padio            ;
+; |mux2_11|y1[19]  ; |mux2_11|y1[19]         ; padio            ;
+; |mux2_11|y1[20]  ; |mux2_11|y1[20]         ; padio            ;
+; |mux2_11|y1[21]  ; |mux2_11|y1[21]         ; padio            ;
+; |mux2_11|y1[22]  ; |mux2_11|y1[22]         ; padio            ;
+; |mux2_11|y1[23]  ; |mux2_11|y1[23]         ; padio            ;
+; |mux2_11|y1[24]  ; |mux2_11|y1[24]         ; padio            ;
+; |mux2_11|y1[25]  ; |mux2_11|y1[25]         ; padio            ;
+; |mux2_11|y1[26]  ; |mux2_11|y1[26]         ; padio            ;
+; |mux2_11|y1[27]  ; |mux2_11|y1[27]         ; padio            ;
+; |mux2_11|y1[28]  ; |mux2_11|y1[28]         ; padio            ;
+; |mux2_11|y1[29]  ; |mux2_11|y1[29]         ; padio            ;
+; |mux2_11|y1[30]  ; |mux2_11|y1[30]         ; padio            ;
+; |mux2_11|y1[31]  ; |mux2_11|y1[31]         ; padio            ;
+; |mux2_11|d11[0]  ; |mux2_11|d11[0]~corein  ; combout          ;
+; |mux2_11|d01[0]  ; |mux2_11|d01[0]~corein  ; combout          ;
+; |mux2_11|s1      ; |mux2_11|s1~corein      ; combout          ;
+; |mux2_11|d11[1]  ; |mux2_11|d11[1]~corein  ; combout          ;
+; |mux2_11|d01[1]  ; |mux2_11|d01[1]~corein  ; combout          ;
+; |mux2_11|d11[2]  ; |mux2_11|d11[2]~corein  ; combout          ;
+; |mux2_11|d01[2]  ; |mux2_11|d01[2]~corein  ; combout          ;
+; |mux2_11|d11[3]  ; |mux2_11|d11[3]~corein  ; combout          ;
+; |mux2_11|d01[3]  ; |mux2_11|d01[3]~corein  ; combout          ;
+; |mux2_11|d11[4]  ; |mux2_11|d11[4]~corein  ; combout          ;
+; |mux2_11|d01[4]  ; |mux2_11|d01[4]~corein  ; combout          ;
+; |mux2_11|d11[5]  ; |mux2_11|d11[5]~corein  ; combout          ;
+; |mux2_11|d01[5]  ; |mux2_11|d01[5]~corein  ; combout          ;
+; |mux2_11|d11[6]  ; |mux2_11|d11[6]~corein  ; combout          ;
+; |mux2_11|d01[6]  ; |mux2_11|d01[6]~corein  ; combout          ;
+; |mux2_11|d11[7]  ; |mux2_11|d11[7]~corein  ; combout          ;
+; |mux2_11|d01[7]  ; |mux2_11|d01[7]~corein  ; combout          ;
+; |mux2_11|d11[8]  ; |mux2_11|d11[8]~corein  ; combout          ;
+; |mux2_11|d01[8]  ; |mux2_11|d01[8]~corein  ; combout          ;
+; |mux2_11|d11[9]  ; |mux2_11|d11[9]~corein  ; combout          ;
+; |mux2_11|d01[9]  ; |mux2_11|d01[9]~corein  ; combout          ;
+; |mux2_11|d11[10] ; |mux2_11|d11[10]~corein ; combout          ;
+; |mux2_11|d01[10] ; |mux2_11|d01[10]~corein ; combout          ;
+; |mux2_11|d11[11] ; |mux2_11|d11[11]~corein ; combout          ;
+; |mux2_11|d01[11] ; |mux2_11|d01[11]~corein ; combout          ;
+; |mux2_11|d11[12] ; |mux2_11|d11[12]~corein ; combout          ;
+; |mux2_11|d01[12] ; |mux2_11|d01[12]~corein ; combout          ;
+; |mux2_11|d11[13] ; |mux2_11|d11[13]~corein ; combout          ;
+; |mux2_11|d01[13] ; |mux2_11|d01[13]~corein ; combout          ;
+; |mux2_11|d11[14] ; |mux2_11|d11[14]~corein ; combout          ;
+; |mux2_11|d01[14] ; |mux2_11|d01[14]~corein ; combout          ;
+; |mux2_11|d11[15] ; |mux2_11|d11[15]~corein ; combout          ;
+; |mux2_11|d01[15] ; |mux2_11|d01[15]~corein ; combout          ;
+; |mux2_11|d11[16] ; |mux2_11|d11[16]~corein ; combout          ;
+; |mux2_11|d01[16] ; |mux2_11|d01[16]~corein ; combout          ;
+; |mux2_11|d11[17] ; |mux2_11|d11[17]~corein ; combout          ;
+; |mux2_11|d01[17] ; |mux2_11|d01[17]~corein ; combout          ;
+; |mux2_11|d11[18] ; |mux2_11|d11[18]~corein ; combout          ;
+; |mux2_11|d01[18] ; |mux2_11|d01[18]~corein ; combout          ;
+; |mux2_11|d11[19] ; |mux2_11|d11[19]~corein ; combout          ;
+; |mux2_11|d01[19] ; |mux2_11|d01[19]~corein ; combout          ;
+; |mux2_11|d11[20] ; |mux2_11|d11[20]~corein ; combout          ;
+; |mux2_11|d01[20] ; |mux2_11|d01[20]~corein ; combout          ;
+; |mux2_11|d11[21] ; |mux2_11|d11[21]~corein ; combout          ;
+; |mux2_11|d01[21] ; |mux2_11|d01[21]~corein ; combout          ;
+; |mux2_11|d11[22] ; |mux2_11|d11[22]~corein ; combout          ;
+; |mux2_11|d01[22] ; |mux2_11|d01[22]~corein ; combout          ;
+; |mux2_11|d11[23] ; |mux2_11|d11[23]~corein ; combout          ;
+; |mux2_11|d01[23] ; |mux2_11|d01[23]~corein ; combout          ;
+; |mux2_11|d11[24] ; |mux2_11|d11[24]~corein ; combout          ;
+; |mux2_11|d01[24] ; |mux2_11|d01[24]~corein ; combout          ;
+; |mux2_11|d11[25] ; |mux2_11|d11[25]~corein ; combout          ;
+; |mux2_11|d01[25] ; |mux2_11|d01[25]~corein ; combout          ;
+; |mux2_11|d11[26] ; |mux2_11|d11[26]~corein ; combout          ;
+; |mux2_11|d01[26] ; |mux2_11|d01[26]~corein ; combout          ;
+; |mux2_11|d11[27] ; |mux2_11|d11[27]~corein ; combout          ;
+; |mux2_11|d01[27] ; |mux2_11|d01[27]~corein ; combout          ;
+; |mux2_11|d11[28] ; |mux2_11|d11[28]~corein ; combout          ;
+; |mux2_11|d01[28] ; |mux2_11|d01[28]~corein ; combout          ;
+; |mux2_11|d11[29] ; |mux2_11|d11[29]~corein ; combout          ;
+; |mux2_11|d01[29] ; |mux2_11|d01[29]~corein ; combout          ;
+; |mux2_11|d11[30] ; |mux2_11|d11[30]~corein ; combout          ;
+; |mux2_11|d01[30] ; |mux2_11|d01[30]~corein ; combout          ;
+; |mux2_11|d11[31] ; |mux2_11|d11[31]~corein ; combout          ;
+; |mux2_11|d01[31] ; |mux2_11|d01[31]~corein ; combout          ;
++------------------+-------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Sun Mar 19 13:30:32 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off mux2_11 -c mux2_11
+Info: Using vector source file "D:/JISUANJIZUCHENGDAZUOYE/mux2_11/mux2_11.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Thank you for using the Quartus II software 30-day evaluation. You have 7 days left (until Mar 26, 2017) before compilation and simulation support is disabled.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Sun Mar 19 13:30:32 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

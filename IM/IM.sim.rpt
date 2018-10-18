@@ -1,0 +1,466 @@
+Simulator report for IM
+Fri Mar 10 16:44:22 2017
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 180 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 180          ;
+; Total output ports checked                          ; 153          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 153          ;
+; Total output ports with no 1-value coverage         ; 153          ;
+; Total output ports with no 0-value coverage         ; 153          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------+
+; Missing 1-Value Coverage                                       ;
++---------------------+-----------------------+------------------+
+; Node Name           ; Output Port Name      ; Output Port Type ;
++---------------------+-----------------------+------------------+
+; |IM|mem_initial~491 ; |IM|mem_initial~491   ; combout          ;
+; |IM|mem_initial~492 ; |IM|mem_initial~492   ; combout          ;
+; |IM|mem_initial~493 ; |IM|mem_initial~493   ; combout          ;
+; |IM|mem_initial~494 ; |IM|mem_initial~494   ; combout          ;
+; |IM|mem_initial~495 ; |IM|mem_initial~495   ; combout          ;
+; |IM|mem_initial~496 ; |IM|mem_initial~496   ; combout          ;
+; |IM|mem_initial~497 ; |IM|mem_initial~497   ; combout          ;
+; |IM|mem_initial~498 ; |IM|mem_initial~498   ; combout          ;
+; |IM|mem_initial~499 ; |IM|mem_initial~499   ; combout          ;
+; |IM|mem_initial~500 ; |IM|mem_initial~500   ; combout          ;
+; |IM|mem_initial~501 ; |IM|mem_initial~501   ; combout          ;
+; |IM|mem_initial~502 ; |IM|mem_initial~502   ; combout          ;
+; |IM|mem_initial~503 ; |IM|mem_initial~503   ; combout          ;
+; |IM|mem_initial~504 ; |IM|mem_initial~504   ; combout          ;
+; |IM|mem_initial~505 ; |IM|mem_initial~505   ; combout          ;
+; |IM|mem_initial~506 ; |IM|mem_initial~506   ; combout          ;
+; |IM|mem_initial~507 ; |IM|mem_initial~507   ; combout          ;
+; |IM|mem_initial~508 ; |IM|mem_initial~508   ; combout          ;
+; |IM|mem_initial~509 ; |IM|mem_initial~509   ; combout          ;
+; |IM|mem_initial~510 ; |IM|mem_initial~510   ; combout          ;
+; |IM|mem_initial~511 ; |IM|mem_initial~511   ; combout          ;
+; |IM|mem_initial~512 ; |IM|mem_initial~512   ; combout          ;
+; |IM|mem_initial~513 ; |IM|mem_initial~513   ; combout          ;
+; |IM|mem_initial~514 ; |IM|mem_initial~514   ; combout          ;
+; |IM|mem_initial~515 ; |IM|mem_initial~515   ; combout          ;
+; |IM|mem_initial~516 ; |IM|mem_initial~516   ; combout          ;
+; |IM|mem_initial~517 ; |IM|mem_initial~517   ; combout          ;
+; |IM|mem_initial~518 ; |IM|mem_initial~518   ; combout          ;
+; |IM|mem_initial~519 ; |IM|mem_initial~519   ; combout          ;
+; |IM|mem_initial~520 ; |IM|mem_initial~520   ; combout          ;
+; |IM|mem_initial~521 ; |IM|mem_initial~521   ; combout          ;
+; |IM|mem_initial~522 ; |IM|mem_initial~522   ; combout          ;
+; |IM|mem_initial~523 ; |IM|mem_initial~523   ; combout          ;
+; |IM|mem_initial~524 ; |IM|mem_initial~524   ; combout          ;
+; |IM|mem_initial~525 ; |IM|mem_initial~525   ; combout          ;
+; |IM|mem_initial~526 ; |IM|mem_initial~526   ; combout          ;
+; |IM|mem_initial~527 ; |IM|mem_initial~527   ; combout          ;
+; |IM|mem_initial~528 ; |IM|mem_initial~528   ; combout          ;
+; |IM|mem_initial~529 ; |IM|mem_initial~529   ; combout          ;
+; |IM|mem_initial~530 ; |IM|mem_initial~530   ; combout          ;
+; |IM|mem_initial~531 ; |IM|mem_initial~531   ; combout          ;
+; |IM|mem_initial~532 ; |IM|mem_initial~532   ; combout          ;
+; |IM|mem_initial~533 ; |IM|mem_initial~533   ; combout          ;
+; |IM|mem_initial~534 ; |IM|mem_initial~534   ; combout          ;
+; |IM|mem_initial~535 ; |IM|mem_initial~535   ; combout          ;
+; |IM|mem_initial~536 ; |IM|mem_initial~536   ; combout          ;
+; |IM|mem_initial~537 ; |IM|mem_initial~537   ; combout          ;
+; |IM|im_out[0]       ; |IM|im_out[0]         ; padio            ;
+; |IM|im_out[1]       ; |IM|im_out[1]         ; padio            ;
+; |IM|im_out[2]       ; |IM|im_out[2]         ; padio            ;
+; |IM|im_out[3]       ; |IM|im_out[3]         ; padio            ;
+; |IM|im_out[4]       ; |IM|im_out[4]         ; padio            ;
+; |IM|im_out[5]       ; |IM|im_out[5]         ; padio            ;
+; |IM|im_out[6]       ; |IM|im_out[6]         ; padio            ;
+; |IM|im_out[7]       ; |IM|im_out[7]         ; padio            ;
+; |IM|im_out[8]       ; |IM|im_out[8]         ; padio            ;
+; |IM|im_out[9]       ; |IM|im_out[9]         ; padio            ;
+; |IM|im_out[10]      ; |IM|im_out[10]        ; padio            ;
+; |IM|im_out[11]      ; |IM|im_out[11]        ; padio            ;
+; |IM|im_out[12]      ; |IM|im_out[12]        ; padio            ;
+; |IM|im_out[13]      ; |IM|im_out[13]        ; padio            ;
+; |IM|im_out[14]      ; |IM|im_out[14]        ; padio            ;
+; |IM|im_out[15]      ; |IM|im_out[15]        ; padio            ;
+; |IM|im_out[16]      ; |IM|im_out[16]        ; padio            ;
+; |IM|im_out[17]      ; |IM|im_out[17]        ; padio            ;
+; |IM|im_out[18]      ; |IM|im_out[18]        ; padio            ;
+; |IM|im_out[19]      ; |IM|im_out[19]        ; padio            ;
+; |IM|im_out[20]      ; |IM|im_out[20]        ; padio            ;
+; |IM|im_out[21]      ; |IM|im_out[21]        ; padio            ;
+; |IM|im_out[22]      ; |IM|im_out[22]        ; padio            ;
+; |IM|im_out[23]      ; |IM|im_out[23]        ; padio            ;
+; |IM|im_out[24]      ; |IM|im_out[24]        ; padio            ;
+; |IM|im_out[25]      ; |IM|im_out[25]        ; padio            ;
+; |IM|im_out[26]      ; |IM|im_out[26]        ; padio            ;
+; |IM|im_out[27]      ; |IM|im_out[27]        ; padio            ;
+; |IM|im_out[28]      ; |IM|im_out[28]        ; padio            ;
+; |IM|im_out[29]      ; |IM|im_out[29]        ; padio            ;
+; |IM|im_out[30]      ; |IM|im_out[30]        ; padio            ;
+; |IM|im_out[31]      ; |IM|im_out[31]        ; padio            ;
+; |IM|i_out1[0]       ; |IM|i_out1[0]         ; padio            ;
+; |IM|i_out1[1]       ; |IM|i_out1[1]         ; padio            ;
+; |IM|i_out1[2]       ; |IM|i_out1[2]         ; padio            ;
+; |IM|i_out1[3]       ; |IM|i_out1[3]         ; padio            ;
+; |IM|i_out1[4]       ; |IM|i_out1[4]         ; padio            ;
+; |IM|i_out1[5]       ; |IM|i_out1[5]         ; padio            ;
+; |IM|i_out1[6]       ; |IM|i_out1[6]         ; padio            ;
+; |IM|i_out1[7]       ; |IM|i_out1[7]         ; padio            ;
+; |IM|i_out1[8]       ; |IM|i_out1[8]         ; padio            ;
+; |IM|i_out1[9]       ; |IM|i_out1[9]         ; padio            ;
+; |IM|i_out1[10]      ; |IM|i_out1[10]        ; padio            ;
+; |IM|i_out1[11]      ; |IM|i_out1[11]        ; padio            ;
+; |IM|i_out1[12]      ; |IM|i_out1[12]        ; padio            ;
+; |IM|i_out1[13]      ; |IM|i_out1[13]        ; padio            ;
+; |IM|i_out1[14]      ; |IM|i_out1[14]        ; padio            ;
+; |IM|i_out1[15]      ; |IM|i_out1[15]        ; padio            ;
+; |IM|i_out1[16]      ; |IM|i_out1[16]        ; padio            ;
+; |IM|i_out1[17]      ; |IM|i_out1[17]        ; padio            ;
+; |IM|i_out1[18]      ; |IM|i_out1[18]        ; padio            ;
+; |IM|i_out1[19]      ; |IM|i_out1[19]        ; padio            ;
+; |IM|i_out1[20]      ; |IM|i_out1[20]        ; padio            ;
+; |IM|i_out1[21]      ; |IM|i_out1[21]        ; padio            ;
+; |IM|i_out1[22]      ; |IM|i_out1[22]        ; padio            ;
+; |IM|i_out1[23]      ; |IM|i_out1[23]        ; padio            ;
+; |IM|i_out1[24]      ; |IM|i_out1[24]        ; padio            ;
+; |IM|i_out1[25]      ; |IM|i_out1[25]        ; padio            ;
+; |IM|i_out2[26]      ; |IM|i_out2[26]        ; padio            ;
+; |IM|i_out2[27]      ; |IM|i_out2[27]        ; padio            ;
+; |IM|i_out2[28]      ; |IM|i_out2[28]        ; padio            ;
+; |IM|i_out2[29]      ; |IM|i_out2[29]        ; padio            ;
+; |IM|i_out2[30]      ; |IM|i_out2[30]        ; padio            ;
+; |IM|i_out2[31]      ; |IM|i_out2[31]        ; padio            ;
+; |IM|i_out3[21]      ; |IM|i_out3[21]        ; padio            ;
+; |IM|i_out3[22]      ; |IM|i_out3[22]        ; padio            ;
+; |IM|i_out3[23]      ; |IM|i_out3[23]        ; padio            ;
+; |IM|i_out3[24]      ; |IM|i_out3[24]        ; padio            ;
+; |IM|i_out3[25]      ; |IM|i_out3[25]        ; padio            ;
+; |IM|i_out4[16]      ; |IM|i_out4[16]        ; padio            ;
+; |IM|i_out4[17]      ; |IM|i_out4[17]        ; padio            ;
+; |IM|i_out4[18]      ; |IM|i_out4[18]        ; padio            ;
+; |IM|i_out4[19]      ; |IM|i_out4[19]        ; padio            ;
+; |IM|i_out4[20]      ; |IM|i_out4[20]        ; padio            ;
+; |IM|i_out5[11]      ; |IM|i_out5[11]        ; padio            ;
+; |IM|i_out5[12]      ; |IM|i_out5[12]        ; padio            ;
+; |IM|i_out5[13]      ; |IM|i_out5[13]        ; padio            ;
+; |IM|i_out5[14]      ; |IM|i_out5[14]        ; padio            ;
+; |IM|i_out5[15]      ; |IM|i_out5[15]        ; padio            ;
+; |IM|i_out6[0]       ; |IM|i_out6[0]         ; padio            ;
+; |IM|i_out6[1]       ; |IM|i_out6[1]         ; padio            ;
+; |IM|i_out6[2]       ; |IM|i_out6[2]         ; padio            ;
+; |IM|i_out6[3]       ; |IM|i_out6[3]         ; padio            ;
+; |IM|i_out6[4]       ; |IM|i_out6[4]         ; padio            ;
+; |IM|i_out6[5]       ; |IM|i_out6[5]         ; padio            ;
+; |IM|i_out6[6]       ; |IM|i_out6[6]         ; padio            ;
+; |IM|i_out6[7]       ; |IM|i_out6[7]         ; padio            ;
+; |IM|i_out6[8]       ; |IM|i_out6[8]         ; padio            ;
+; |IM|i_out6[9]       ; |IM|i_out6[9]         ; padio            ;
+; |IM|i_out6[10]      ; |IM|i_out6[10]        ; padio            ;
+; |IM|i_out6[11]      ; |IM|i_out6[11]        ; padio            ;
+; |IM|i_out6[12]      ; |IM|i_out6[12]        ; padio            ;
+; |IM|i_out6[13]      ; |IM|i_out6[13]        ; padio            ;
+; |IM|i_out6[14]      ; |IM|i_out6[14]        ; padio            ;
+; |IM|i_out6[15]      ; |IM|i_out6[15]        ; padio            ;
+; |IM|i_out7[0]       ; |IM|i_out7[0]         ; padio            ;
+; |IM|i_out7[1]       ; |IM|i_out7[1]         ; padio            ;
+; |IM|i_out7[2]       ; |IM|i_out7[2]         ; padio            ;
+; |IM|i_out7[3]       ; |IM|i_out7[3]         ; padio            ;
+; |IM|i_out7[4]       ; |IM|i_out7[4]         ; padio            ;
+; |IM|i_out7[5]       ; |IM|i_out7[5]         ; padio            ;
+; |IM|address[0]      ; |IM|address[0]~corein ; combout          ;
+; |IM|address[1]      ; |IM|address[1]~corein ; combout          ;
+; |IM|address[2]      ; |IM|address[2]~corein ; combout          ;
+; |IM|address[3]      ; |IM|address[3]~corein ; combout          ;
+; |IM|address[4]      ; |IM|address[4]~corein ; combout          ;
++---------------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------+
+; Missing 0-Value Coverage                                       ;
++---------------------+-----------------------+------------------+
+; Node Name           ; Output Port Name      ; Output Port Type ;
++---------------------+-----------------------+------------------+
+; |IM|mem_initial~491 ; |IM|mem_initial~491   ; combout          ;
+; |IM|mem_initial~492 ; |IM|mem_initial~492   ; combout          ;
+; |IM|mem_initial~493 ; |IM|mem_initial~493   ; combout          ;
+; |IM|mem_initial~494 ; |IM|mem_initial~494   ; combout          ;
+; |IM|mem_initial~495 ; |IM|mem_initial~495   ; combout          ;
+; |IM|mem_initial~496 ; |IM|mem_initial~496   ; combout          ;
+; |IM|mem_initial~497 ; |IM|mem_initial~497   ; combout          ;
+; |IM|mem_initial~498 ; |IM|mem_initial~498   ; combout          ;
+; |IM|mem_initial~499 ; |IM|mem_initial~499   ; combout          ;
+; |IM|mem_initial~500 ; |IM|mem_initial~500   ; combout          ;
+; |IM|mem_initial~501 ; |IM|mem_initial~501   ; combout          ;
+; |IM|mem_initial~502 ; |IM|mem_initial~502   ; combout          ;
+; |IM|mem_initial~503 ; |IM|mem_initial~503   ; combout          ;
+; |IM|mem_initial~504 ; |IM|mem_initial~504   ; combout          ;
+; |IM|mem_initial~505 ; |IM|mem_initial~505   ; combout          ;
+; |IM|mem_initial~506 ; |IM|mem_initial~506   ; combout          ;
+; |IM|mem_initial~507 ; |IM|mem_initial~507   ; combout          ;
+; |IM|mem_initial~508 ; |IM|mem_initial~508   ; combout          ;
+; |IM|mem_initial~509 ; |IM|mem_initial~509   ; combout          ;
+; |IM|mem_initial~510 ; |IM|mem_initial~510   ; combout          ;
+; |IM|mem_initial~511 ; |IM|mem_initial~511   ; combout          ;
+; |IM|mem_initial~512 ; |IM|mem_initial~512   ; combout          ;
+; |IM|mem_initial~513 ; |IM|mem_initial~513   ; combout          ;
+; |IM|mem_initial~514 ; |IM|mem_initial~514   ; combout          ;
+; |IM|mem_initial~515 ; |IM|mem_initial~515   ; combout          ;
+; |IM|mem_initial~516 ; |IM|mem_initial~516   ; combout          ;
+; |IM|mem_initial~517 ; |IM|mem_initial~517   ; combout          ;
+; |IM|mem_initial~518 ; |IM|mem_initial~518   ; combout          ;
+; |IM|mem_initial~519 ; |IM|mem_initial~519   ; combout          ;
+; |IM|mem_initial~520 ; |IM|mem_initial~520   ; combout          ;
+; |IM|mem_initial~521 ; |IM|mem_initial~521   ; combout          ;
+; |IM|mem_initial~522 ; |IM|mem_initial~522   ; combout          ;
+; |IM|mem_initial~523 ; |IM|mem_initial~523   ; combout          ;
+; |IM|mem_initial~524 ; |IM|mem_initial~524   ; combout          ;
+; |IM|mem_initial~525 ; |IM|mem_initial~525   ; combout          ;
+; |IM|mem_initial~526 ; |IM|mem_initial~526   ; combout          ;
+; |IM|mem_initial~527 ; |IM|mem_initial~527   ; combout          ;
+; |IM|mem_initial~528 ; |IM|mem_initial~528   ; combout          ;
+; |IM|mem_initial~529 ; |IM|mem_initial~529   ; combout          ;
+; |IM|mem_initial~530 ; |IM|mem_initial~530   ; combout          ;
+; |IM|mem_initial~531 ; |IM|mem_initial~531   ; combout          ;
+; |IM|mem_initial~532 ; |IM|mem_initial~532   ; combout          ;
+; |IM|mem_initial~533 ; |IM|mem_initial~533   ; combout          ;
+; |IM|mem_initial~534 ; |IM|mem_initial~534   ; combout          ;
+; |IM|mem_initial~535 ; |IM|mem_initial~535   ; combout          ;
+; |IM|mem_initial~536 ; |IM|mem_initial~536   ; combout          ;
+; |IM|mem_initial~537 ; |IM|mem_initial~537   ; combout          ;
+; |IM|im_out[0]       ; |IM|im_out[0]         ; padio            ;
+; |IM|im_out[1]       ; |IM|im_out[1]         ; padio            ;
+; |IM|im_out[2]       ; |IM|im_out[2]         ; padio            ;
+; |IM|im_out[3]       ; |IM|im_out[3]         ; padio            ;
+; |IM|im_out[4]       ; |IM|im_out[4]         ; padio            ;
+; |IM|im_out[5]       ; |IM|im_out[5]         ; padio            ;
+; |IM|im_out[6]       ; |IM|im_out[6]         ; padio            ;
+; |IM|im_out[7]       ; |IM|im_out[7]         ; padio            ;
+; |IM|im_out[8]       ; |IM|im_out[8]         ; padio            ;
+; |IM|im_out[9]       ; |IM|im_out[9]         ; padio            ;
+; |IM|im_out[10]      ; |IM|im_out[10]        ; padio            ;
+; |IM|im_out[11]      ; |IM|im_out[11]        ; padio            ;
+; |IM|im_out[12]      ; |IM|im_out[12]        ; padio            ;
+; |IM|im_out[13]      ; |IM|im_out[13]        ; padio            ;
+; |IM|im_out[14]      ; |IM|im_out[14]        ; padio            ;
+; |IM|im_out[15]      ; |IM|im_out[15]        ; padio            ;
+; |IM|im_out[16]      ; |IM|im_out[16]        ; padio            ;
+; |IM|im_out[17]      ; |IM|im_out[17]        ; padio            ;
+; |IM|im_out[18]      ; |IM|im_out[18]        ; padio            ;
+; |IM|im_out[19]      ; |IM|im_out[19]        ; padio            ;
+; |IM|im_out[20]      ; |IM|im_out[20]        ; padio            ;
+; |IM|im_out[21]      ; |IM|im_out[21]        ; padio            ;
+; |IM|im_out[22]      ; |IM|im_out[22]        ; padio            ;
+; |IM|im_out[23]      ; |IM|im_out[23]        ; padio            ;
+; |IM|im_out[24]      ; |IM|im_out[24]        ; padio            ;
+; |IM|im_out[25]      ; |IM|im_out[25]        ; padio            ;
+; |IM|im_out[26]      ; |IM|im_out[26]        ; padio            ;
+; |IM|im_out[27]      ; |IM|im_out[27]        ; padio            ;
+; |IM|im_out[28]      ; |IM|im_out[28]        ; padio            ;
+; |IM|im_out[29]      ; |IM|im_out[29]        ; padio            ;
+; |IM|im_out[30]      ; |IM|im_out[30]        ; padio            ;
+; |IM|im_out[31]      ; |IM|im_out[31]        ; padio            ;
+; |IM|i_out1[0]       ; |IM|i_out1[0]         ; padio            ;
+; |IM|i_out1[1]       ; |IM|i_out1[1]         ; padio            ;
+; |IM|i_out1[2]       ; |IM|i_out1[2]         ; padio            ;
+; |IM|i_out1[3]       ; |IM|i_out1[3]         ; padio            ;
+; |IM|i_out1[4]       ; |IM|i_out1[4]         ; padio            ;
+; |IM|i_out1[5]       ; |IM|i_out1[5]         ; padio            ;
+; |IM|i_out1[6]       ; |IM|i_out1[6]         ; padio            ;
+; |IM|i_out1[7]       ; |IM|i_out1[7]         ; padio            ;
+; |IM|i_out1[8]       ; |IM|i_out1[8]         ; padio            ;
+; |IM|i_out1[9]       ; |IM|i_out1[9]         ; padio            ;
+; |IM|i_out1[10]      ; |IM|i_out1[10]        ; padio            ;
+; |IM|i_out1[11]      ; |IM|i_out1[11]        ; padio            ;
+; |IM|i_out1[12]      ; |IM|i_out1[12]        ; padio            ;
+; |IM|i_out1[13]      ; |IM|i_out1[13]        ; padio            ;
+; |IM|i_out1[14]      ; |IM|i_out1[14]        ; padio            ;
+; |IM|i_out1[15]      ; |IM|i_out1[15]        ; padio            ;
+; |IM|i_out1[16]      ; |IM|i_out1[16]        ; padio            ;
+; |IM|i_out1[17]      ; |IM|i_out1[17]        ; padio            ;
+; |IM|i_out1[18]      ; |IM|i_out1[18]        ; padio            ;
+; |IM|i_out1[19]      ; |IM|i_out1[19]        ; padio            ;
+; |IM|i_out1[20]      ; |IM|i_out1[20]        ; padio            ;
+; |IM|i_out1[21]      ; |IM|i_out1[21]        ; padio            ;
+; |IM|i_out1[22]      ; |IM|i_out1[22]        ; padio            ;
+; |IM|i_out1[23]      ; |IM|i_out1[23]        ; padio            ;
+; |IM|i_out1[24]      ; |IM|i_out1[24]        ; padio            ;
+; |IM|i_out1[25]      ; |IM|i_out1[25]        ; padio            ;
+; |IM|i_out2[26]      ; |IM|i_out2[26]        ; padio            ;
+; |IM|i_out2[27]      ; |IM|i_out2[27]        ; padio            ;
+; |IM|i_out2[28]      ; |IM|i_out2[28]        ; padio            ;
+; |IM|i_out2[29]      ; |IM|i_out2[29]        ; padio            ;
+; |IM|i_out2[30]      ; |IM|i_out2[30]        ; padio            ;
+; |IM|i_out2[31]      ; |IM|i_out2[31]        ; padio            ;
+; |IM|i_out3[21]      ; |IM|i_out3[21]        ; padio            ;
+; |IM|i_out3[22]      ; |IM|i_out3[22]        ; padio            ;
+; |IM|i_out3[23]      ; |IM|i_out3[23]        ; padio            ;
+; |IM|i_out3[24]      ; |IM|i_out3[24]        ; padio            ;
+; |IM|i_out3[25]      ; |IM|i_out3[25]        ; padio            ;
+; |IM|i_out4[16]      ; |IM|i_out4[16]        ; padio            ;
+; |IM|i_out4[17]      ; |IM|i_out4[17]        ; padio            ;
+; |IM|i_out4[18]      ; |IM|i_out4[18]        ; padio            ;
+; |IM|i_out4[19]      ; |IM|i_out4[19]        ; padio            ;
+; |IM|i_out4[20]      ; |IM|i_out4[20]        ; padio            ;
+; |IM|i_out5[11]      ; |IM|i_out5[11]        ; padio            ;
+; |IM|i_out5[12]      ; |IM|i_out5[12]        ; padio            ;
+; |IM|i_out5[13]      ; |IM|i_out5[13]        ; padio            ;
+; |IM|i_out5[14]      ; |IM|i_out5[14]        ; padio            ;
+; |IM|i_out5[15]      ; |IM|i_out5[15]        ; padio            ;
+; |IM|i_out6[0]       ; |IM|i_out6[0]         ; padio            ;
+; |IM|i_out6[1]       ; |IM|i_out6[1]         ; padio            ;
+; |IM|i_out6[2]       ; |IM|i_out6[2]         ; padio            ;
+; |IM|i_out6[3]       ; |IM|i_out6[3]         ; padio            ;
+; |IM|i_out6[4]       ; |IM|i_out6[4]         ; padio            ;
+; |IM|i_out6[5]       ; |IM|i_out6[5]         ; padio            ;
+; |IM|i_out6[6]       ; |IM|i_out6[6]         ; padio            ;
+; |IM|i_out6[7]       ; |IM|i_out6[7]         ; padio            ;
+; |IM|i_out6[8]       ; |IM|i_out6[8]         ; padio            ;
+; |IM|i_out6[9]       ; |IM|i_out6[9]         ; padio            ;
+; |IM|i_out6[10]      ; |IM|i_out6[10]        ; padio            ;
+; |IM|i_out6[11]      ; |IM|i_out6[11]        ; padio            ;
+; |IM|i_out6[12]      ; |IM|i_out6[12]        ; padio            ;
+; |IM|i_out6[13]      ; |IM|i_out6[13]        ; padio            ;
+; |IM|i_out6[14]      ; |IM|i_out6[14]        ; padio            ;
+; |IM|i_out6[15]      ; |IM|i_out6[15]        ; padio            ;
+; |IM|i_out7[0]       ; |IM|i_out7[0]         ; padio            ;
+; |IM|i_out7[1]       ; |IM|i_out7[1]         ; padio            ;
+; |IM|i_out7[2]       ; |IM|i_out7[2]         ; padio            ;
+; |IM|i_out7[3]       ; |IM|i_out7[3]         ; padio            ;
+; |IM|i_out7[4]       ; |IM|i_out7[4]         ; padio            ;
+; |IM|i_out7[5]       ; |IM|i_out7[5]         ; padio            ;
+; |IM|address[0]      ; |IM|address[0]~corein ; combout          ;
+; |IM|address[1]      ; |IM|address[1]~corein ; combout          ;
+; |IM|address[2]      ; |IM|address[2]~corein ; combout          ;
+; |IM|address[3]      ; |IM|address[3]~corein ; combout          ;
+; |IM|address[4]      ; |IM|address[4]~corein ; combout          ;
++---------------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Fri Mar 10 16:44:22 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off IM -c IM
+Info: Using vector source file "D:/JISUANJIZUCHENGDAZUOYE/IM/IM.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Fri Mar 10 16:44:22 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

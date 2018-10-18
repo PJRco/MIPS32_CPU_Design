@@ -1,0 +1,400 @@
+Analysis & Synthesis report for alu
+Tue Apr 25 23:05:37 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. User-Specified and Inferred Latches
+  5. Multiplexer Restructuring Statistics (Restructuring Performed)
+  6. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Apr 25 23:05:37 2017    ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name               ; alu                                      ;
+; Top-level Entity Name       ; alu                                      ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; N/A until Partition Merge                ;
+; Total pins                  ; N/A until Partition Merge                ;
+; Total virtual pins          ; N/A until Partition Merge                ;
+; Total memory bits           ; N/A until Partition Merge                ;
+; Total PLLs                  ; N/A until Partition Merge                ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                          ; alu                ; alu                ;
+; Family name                                                    ; Cyclone            ; Cyclone IV GX      ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Synchronization Register Chain Length                          ; 2                  ; 3                  ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; a1[0]$latch                                         ; Mux2                ; yes                    ;
+; a1[1]$latch                                         ; Mux2                ; yes                    ;
+; a1[2]$latch                                         ; Mux2                ; yes                    ;
+; a1[3]$latch                                         ; Mux2                ; yes                    ;
+; a1[4]$latch                                         ; Mux2                ; yes                    ;
+; a1[5]$latch                                         ; Mux2                ; yes                    ;
+; a1[6]$latch                                         ; Mux2                ; yes                    ;
+; a1[7]$latch                                         ; Mux2                ; yes                    ;
+; a1[8]$latch                                         ; Mux2                ; yes                    ;
+; a1[9]$latch                                         ; Mux2                ; yes                    ;
+; a1[10]$latch                                        ; Mux2                ; yes                    ;
+; a1[11]$latch                                        ; Mux2                ; yes                    ;
+; a1[12]$latch                                        ; Mux2                ; yes                    ;
+; a1[13]$latch                                        ; Mux2                ; yes                    ;
+; a1[14]$latch                                        ; Mux2                ; yes                    ;
+; a1[15]$latch                                        ; Mux2                ; yes                    ;
+; a1[16]$latch                                        ; Mux2                ; yes                    ;
+; a1[17]$latch                                        ; Mux2                ; yes                    ;
+; a1[18]$latch                                        ; Mux2                ; yes                    ;
+; a1[19]$latch                                        ; Mux2                ; yes                    ;
+; a1[20]$latch                                        ; Mux2                ; yes                    ;
+; a1[21]$latch                                        ; Mux2                ; yes                    ;
+; a1[22]$latch                                        ; Mux2                ; yes                    ;
+; a1[23]$latch                                        ; Mux2                ; yes                    ;
+; a1[24]$latch                                        ; Mux2                ; yes                    ;
+; a1[25]$latch                                        ; Mux2                ; yes                    ;
+; a1[26]$latch                                        ; Mux2                ; yes                    ;
+; a1[27]$latch                                        ; Mux2                ; yes                    ;
+; a1[28]$latch                                        ; Mux2                ; yes                    ;
+; a1[29]$latch                                        ; Mux2                ; yes                    ;
+; a1[30]$latch                                        ; Mux2                ; yes                    ;
+; a1[31]$latch                                        ; Mux2                ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 1:1                ; 32 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |alu|Mux49                 ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 0 LEs                ; 96 LEs                 ; No         ; |alu|Add0                  ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |alu|Add0                  ;
+; 28:1               ; 8 bits    ; 144 LEs       ; 80 LEs               ; 64 LEs                 ; No         ; |alu|Mux20                 ;
+; 28:1               ; 8 bits    ; 144 LEs       ; 80 LEs               ; 64 LEs                 ; No         ; |alu|Mux28                 ;
+; 30:1               ; 4 bits    ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |alu|Mux9                  ;
+; 30:1               ; 4 bits    ; 80 LEs        ; 48 LEs               ; 32 LEs                 ; No         ; |alu|Mux31                 ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 24 LEs               ; 18 LEs                 ; No         ; |alu|Mux7                  ;
+; 32:1               ; 2 bits    ; 42 LEs        ; 24 LEs               ; 18 LEs                 ; No         ; |alu|Mux34                 ;
+; 34:1               ; 2 bits    ; 44 LEs        ; 26 LEs               ; 18 LEs                 ; No         ; |alu|Mux5                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue Apr 25 23:05:33 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off alu -c alu
+Info: Found 2 design units, including 1 entities, in source file alu.vhd
+    Info: Found design unit 1: alu-behav
+    Info: Found entity 1: alu
+Info: Elaborating entity "alu" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at alu.vhd(49): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at alu.vhd(25): inferring latch(es) for signal or variable "a1", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "a1[0]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[1]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[2]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[3]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[4]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[5]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[6]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[7]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[8]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[9]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[10]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[11]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[12]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[13]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[14]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[15]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[16]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[17]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[18]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[19]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[20]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[21]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[22]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[23]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[24]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[25]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[26]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[27]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[28]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[29]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[30]" at alu.vhd(25)
+Info (10041): Inferred latch for "a1[31]" at alu.vhd(25)
+Warning: The following nodes have both tri-state and non-tri-state drivers
+    Warning: Inserted always-enabled tri-state buffer between "a1[0]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[1]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[2]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[3]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[4]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[5]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[6]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[7]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[8]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[9]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[10]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[11]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[12]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[13]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[14]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[15]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[16]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[17]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[18]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[19]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[20]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[21]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[22]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[23]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[24]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[25]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[26]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[27]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[28]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[29]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[30]" and its non-tri-state driver.
+    Warning: Inserted always-enabled tri-state buffer between "a1[31]" and its non-tri-state driver.
+Info: One or more bidirs are fed by always enabled tri-state buffers
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[0]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[1]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[2]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[3]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[4]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[5]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[6]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[7]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[8]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[9]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[10]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[11]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[12]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[13]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[14]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[15]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[16]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[17]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[18]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[19]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[20]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[21]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[22]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[23]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[24]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[25]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[26]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[27]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[28]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[29]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[30]" is moved to its source
+    Info: Fan-out of permanently enabled tri-state buffer feeding bidir "a1[31]" is moved to its source
+Warning: Latch a1[0]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[2]
+Warning: Latch a1[1]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[2]
+Warning: Latch a1[2]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[2]
+Warning: Latch a1[3]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[2]
+Warning: Latch a1[4]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[5]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[6]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[7]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[8]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[9]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[10]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[11]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[12]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[13]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[14]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[15]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[16]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[17]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[18]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[19]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[20]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[21]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[22]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[23]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[24]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[25]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[26]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[27]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[1]
+Warning: Latch a1[28]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[2]
+Warning: Latch a1[29]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[2]
+Warning: Latch a1[30]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[0]
+Warning: Latch a1[31]$latch has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal alucontr[0]
+Warning: TRI or OPNDRN buffers permanently enabled
+    Warning: Node "a1[0]~synth"
+    Warning: Node "a1[1]~synth"
+    Warning: Node "a1[2]~synth"
+    Warning: Node "a1[3]~synth"
+    Warning: Node "a1[4]~synth"
+    Warning: Node "a1[5]~synth"
+    Warning: Node "a1[6]~synth"
+    Warning: Node "a1[7]~synth"
+    Warning: Node "a1[8]~synth"
+    Warning: Node "a1[9]~synth"
+    Warning: Node "a1[10]~synth"
+    Warning: Node "a1[11]~synth"
+    Warning: Node "a1[12]~synth"
+    Warning: Node "a1[13]~synth"
+    Warning: Node "a1[14]~synth"
+    Warning: Node "a1[15]~synth"
+    Warning: Node "a1[16]~synth"
+    Warning: Node "a1[17]~synth"
+    Warning: Node "a1[18]~synth"
+    Warning: Node "a1[19]~synth"
+    Warning: Node "a1[20]~synth"
+    Warning: Node "a1[21]~synth"
+    Warning: Node "a1[22]~synth"
+    Warning: Node "a1[23]~synth"
+    Warning: Node "a1[24]~synth"
+    Warning: Node "a1[25]~synth"
+    Warning: Node "a1[26]~synth"
+    Warning: Node "a1[27]~synth"
+    Warning: Node "a1[28]~synth"
+    Warning: Node "a1[29]~synth"
+    Warning: Node "a1[30]~synth"
+    Warning: Node "a1[31]~synth"
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 132 warnings
+    Info: Peak virtual memory: 257 megabytes
+    Info: Processing ended: Tue Apr 25 23:05:38 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

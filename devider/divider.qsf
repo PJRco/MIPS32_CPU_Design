@@ -1,0 +1,71 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic       
+# functions, and any output files any of the foregoing           
+# (including device programming or simulation files), and any    
+# associated documentation or information are expressly subject  
+# to the terms and conditions of the Altera Program License      
+# Subscription Agreement, Altera MegaCore Function License       
+# Agreement, or other applicable license agreement, including,   
+# without limitation, that your use is for the sole purpose of   
+# programming logic devices manufactured by Altera and sold by   
+# Altera or its authorized distributors.  Please refer to the    
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		divider_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 4.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:11:42  JULY 28, 2005"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.0
+set_global_assignment -name VHDL_FILE divider.vhd
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_79 -to clock
+set_location_assignment PIN_67 -to dividend[0]
+set_location_assignment PIN_68 -to dividend[1]
+set_location_assignment PIN_69 -to dividend[2]
+set_location_assignment PIN_70 -to dividend[3]
+set_location_assignment PIN_53 -to divisor[0]
+set_location_assignment PIN_54 -to divisor[1]
+set_location_assignment PIN_55 -to divisor[2]
+set_location_assignment PIN_56 -to divisor[3]
+set_location_assignment PIN_193 -to finish
+set_location_assignment PIN_7 -to quotient[0]
+set_location_assignment PIN_8 -to quotient[1]
+set_location_assignment PIN_9 -to quotient[2]
+set_location_assignment PIN_11 -to quotient[3]
+set_location_assignment PIN_111 -to remainder[0]
+set_location_assignment PIN_112 -to remainder[1]
+set_location_assignment PIN_113 -to remainder[2]
+set_location_assignment PIN_114 -to remainder[3]
+set_location_assignment PIN_115 -to remainder[4]
+set_location_assignment PIN_116 -to remainder[5]
+set_location_assignment PIN_119 -to remainder[6]
+set_location_assignment PIN_120 -to remainder[7]
+set_location_assignment PIN_12 -to remainder_r[0]
+set_location_assignment PIN_13 -to remainder_r[1]
+set_location_assignment PIN_14 -to remainder_r[2]
+set_location_assignment PIN_15 -to remainder_r[3]
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 208
+set_global_assignment -name FAMILY ACEX1K
+set_global_assignment -name TOP_LEVEL_ENTITY divider
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE "EP1K100QC208-3"

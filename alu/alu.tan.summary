@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 22.528 ns
+From           : b1[29]
+To             : a1[17]$latch
+From Clock     : --
+To Clock       : alucontr[0]
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 25.180 ns
+From           : a1[6]$latch
+To             : result[22]
+From Clock     : alucontr[3]
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 31.883 ns
+From           : b1[29]
+To             : result[22]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.043 ns
+From           : alucontr[2]
+To             : a1[0]$latch
+From Clock     : --
+To Clock       : alucontr[3]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'alucontr[3]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 69.61 MHz ( period = 14.366 ns )
+From           : a1[29]$latch
+To             : a1[17]$latch
+From Clock     : alucontr[3]
+To Clock       : alucontr[3]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'alucontr[1]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 69.61 MHz ( period = 14.366 ns )
+From           : a1[29]$latch
+To             : a1[17]$latch
+From Clock     : alucontr[1]
+To Clock       : alucontr[1]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'alucontr[2]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 69.61 MHz ( period = 14.366 ns )
+From           : a1[29]$latch
+To             : a1[17]$latch
+From Clock     : alucontr[2]
+To Clock       : alucontr[2]
+Failed Paths   : 0
+
+Type           : Clock Setup: 'alucontr[0]'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 69.61 MHz ( period = 14.366 ns )
+From           : a1[29]$latch
+To             : a1[17]$latch
+From Clock     : alucontr[0]
+To Clock       : alucontr[0]
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

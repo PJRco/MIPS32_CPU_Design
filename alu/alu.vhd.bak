@@ -1,0 +1,61 @@
+library ieee;
+use ieee.std_logic_1164.all;
+--use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+use IEEE.math_real.all;
+use IEEE.numeric_std.all;
+use IEEE.math_complex.all;
+use IEEE.numeric_bit.all;
+use IEEE.STD_LOGIC_SIGNED.all;
+entity alu is
+port(
+     								
+     a1:inout std_logic_vector(31 downto 0);			
+						    
+     b1:in std_logic_vector(31 downto 0);			
+     alucontr:in std_logic_vector(3 downto 0);			
+     result:buffer std_logic_vector(31 downto 0);		
+     zero: out std_logic							
+    );
+end alu;
+
+architecture behav of alu is
+begin
+
+ process(a1,b1,alucontr)
+variable x1:integer;
+
+ begin
+
+  case alucontr is
+   when "0000"=> result<=a1 and b1 ;  --and
+   when "0001"=> result<=a1 or b1 ;   --or
+   when "0010"=> result<=a1 + b1 ;  --add
+   when "0011"=> result<=a1 xor b1 ;  --xor
+   when "0100"=> result<=a1 nor b1 ; --nor
+   when "0101"=> result<=TO_STDLOGICVECTOR(to_bitvector(a1) sll conv_integer(b1)) ;  --sll
+   when "0110"=> result<=a1 - b1 ;  --sub
+   when "1001"=> result<=a1+1 ;      --inc
+   when "1010"=> result<=a1-1 ;     --dec
+   when "0111"=>                 --slt
+    if(a1<b1)then result<=x"00000001" ;
+       else result<=x"00000000" ;
+     end if; 
+   when "1000"=> result<=TO_STDLOGICVECTOR(to_bitvector(a1) srl conv_integer(b1)) ;  --srl
+   when "1011"=>
+   x1:= conv_integer(b1(3 downto 0));
+   while(x1>0)loop
+   result<=a1+1;
+   a1<=result;
+   x1:=x1-1;
+   end loop;
+   when others=> result<=x"00000000" ;
+   end case;
+  if(a1=b1)then   --beq
+   zero<='1';
+  else
+   zero<='0';
+  end if;
+
+  end process;
+end behav;

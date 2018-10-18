@@ -1,0 +1,719 @@
+-- Copyright (C) 1991-2005 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--A1L76Q is remainder[0]~reg0
+--operation mode is normal
+
+A1L76Q_lut_out = A1L06 & (A1L16 & A1L19Q # !A1L16 & (A1L76Q));
+A1L76Q = DFFEA(A1L76Q_lut_out, clock, , , , , );
+
+--A1L66Q is remainder[0]~2129
+--operation mode is normal
+
+A1L66Q = A1L76Q;
+
+
+--A1L64Q is finish~reg0
+--operation mode is normal
+
+A1L64Q_lut_out = count[1] & count[0] & count2[1] & count2[0];
+A1L64Q = DFFEA(A1L64Q_lut_out, clock, , , , , );
+
+--A1L54Q is finish~2
+--operation mode is normal
+
+A1L54Q = A1L64Q;
+
+
+--A1L25 is quotient~41
+--operation mode is normal
+
+A1L25 = A1L76Q & A1L64Q;
+
+--A1L65 is quotient~45
+--operation mode is normal
+
+A1L65 = A1L76Q & A1L64Q;
+
+
+--A1L07Q is remainder[1]~reg0
+--operation mode is normal
+
+A1L07Q_lut_out = count2[1] & A1L301 # !count2[1] & (count2[0] & A1L301 # !count2[0] & (dividend[0]));
+A1L07Q = DFFEA(A1L07Q_lut_out, clock, , , , , );
+
+--A1L96Q is remainder[1]~2130
+--operation mode is normal
+
+A1L96Q = A1L07Q;
+
+
+--A1L35 is quotient~42
+--operation mode is normal
+
+A1L35 = A1L64Q & A1L07Q;
+
+--A1L75 is quotient~46
+--operation mode is normal
+
+A1L75 = A1L64Q & A1L07Q;
+
+
+--A1L37Q is remainder[2]~reg0
+--operation mode is normal
+
+A1L37Q_lut_out = count2[1] & A1L401 # !count2[1] & (count2[0] & A1L401 # !count2[0] & (dividend[1]));
+A1L37Q = DFFEA(A1L37Q_lut_out, clock, , , , , );
+
+--A1L27Q is remainder[2]~2131
+--operation mode is normal
+
+A1L27Q = A1L37Q;
+
+
+--A1L45 is quotient~43
+--operation mode is normal
+
+A1L45 = A1L64Q & A1L37Q;
+
+--A1L85 is quotient~47
+--operation mode is normal
+
+A1L85 = A1L64Q & A1L37Q;
+
+
+--A1L67Q is remainder[3]~reg0
+--operation mode is normal
+
+A1L67Q_lut_out = count2[1] & A1L501 # !count2[1] & (count2[0] & A1L501 # !count2[0] & (dividend[2]));
+A1L67Q = DFFEA(A1L67Q_lut_out, clock, , , , , );
+
+--A1L57Q is remainder[3]~2132
+--operation mode is normal
+
+A1L57Q = A1L67Q;
+
+
+--A1L55 is quotient~44
+--operation mode is normal
+
+A1L55 = A1L64Q & A1L67Q;
+
+--A1L95 is quotient~48
+--operation mode is normal
+
+A1L95 = A1L64Q & A1L67Q;
+
+
+--A1L28Q is remainder[5]~reg0
+--operation mode is normal
+
+A1L28Q_lut_out = !A1L211;
+A1L28Q = DFFEA(A1L28Q_lut_out, clock, , , , , );
+
+--A1L18Q is remainder[5]~2133
+--operation mode is normal
+
+A1L18Q = A1L28Q;
+
+
+--A1L79 is remainder_r~27
+--operation mode is normal
+
+A1L79 = A1L64Q & A1L28Q;
+
+--A1L001 is remainder_r~30
+--operation mode is normal
+
+A1L001 = A1L64Q & A1L28Q;
+
+
+--A1L58Q is remainder[6]~reg0
+--operation mode is normal
+
+A1L58Q_lut_out = !A1L311;
+A1L58Q = DFFEA(A1L58Q_lut_out, clock, , , , , );
+
+--A1L48Q is remainder[6]~2134
+--operation mode is normal
+
+A1L48Q = A1L58Q;
+
+
+--A1L89 is remainder_r~28
+--operation mode is normal
+
+A1L89 = A1L64Q & A1L58Q;
+
+--A1L101 is remainder_r~31
+--operation mode is normal
+
+A1L101 = A1L64Q & A1L58Q;
+
+
+--A1L88Q is remainder[7]~reg0
+--operation mode is normal
+
+A1L88Q_lut_out = A1L58Q & (A1L16 # A1L601 & !adderout[3]) # !A1L58Q & (A1L601 & !adderout[3]);
+A1L88Q = DFFEA(A1L88Q_lut_out, clock, , , , , );
+
+--A1L78Q is remainder[7]~2135
+--operation mode is normal
+
+A1L78Q = A1L88Q;
+
+
+--A1L99 is remainder_r~29
+--operation mode is normal
+
+A1L99 = A1L64Q & A1L88Q;
+
+--A1L201 is remainder_r~32
+--operation mode is normal
+
+A1L201 = A1L64Q & A1L88Q;
+
+
+--count2[1] is count2[1]
+--operation mode is normal
+
+count2[1]_lut_out = count2[1] $ count2[0];
+count2[1] = DFFEA(count2[1]_lut_out, clock, , , , , );
+
+--A1L81Q is count2[1]~44
+--operation mode is normal
+
+A1L81Q = count2[1];
+
+
+--count2[0] is count2[0]
+--operation mode is normal
+
+count2[0]_lut_out = count2[1] & (!count[0] # !count[1]) # !count2[0];
+count2[0] = DFFEA(count2[0]_lut_out, clock, , , , , );
+
+--A1L61Q is count2[0]~45
+--operation mode is normal
+
+A1L61Q = count2[0];
+
+
+--A1L06 is reduce_nor~40
+--operation mode is normal
+
+A1L06 = count2[1] # count2[0];
+
+--A1L26 is reduce_nor~42
+--operation mode is normal
+
+A1L26 = count2[1] # count2[0];
+
+
+--A1L19Q is remainder[8]~reg0
+--operation mode is normal
+
+A1L19Q_lut_out = count2[0] & (count2[1] $ !A1L88Q) # !count2[0] & count2[1] & !A1L88Q & A1L19Q;
+A1L19Q = DFFEA(A1L19Q_lut_out, clock, , , , , );
+
+--A1L09Q is remainder[8]~2136
+--operation mode is normal
+
+A1L09Q = A1L19Q;
+
+
+--A1L16 is reduce_nor~41
+--operation mode is normal
+
+A1L16 = count2[1] & count2[0];
+
+--A1L36 is reduce_nor~43
+--operation mode is normal
+
+A1L36 = count2[1] & count2[0];
+
+
+--count[1] is count[1]
+--operation mode is normal
+
+count[1]_lut_out = count[1] $ (count[0] & count2[1] & count2[0]);
+count[1] = DFFEA(count[1]_lut_out, clock, , , , , );
+
+--A1L22Q is count[1]~18
+--operation mode is normal
+
+A1L22Q = count[1];
+
+
+--count[0] is count[0]
+--operation mode is normal
+
+count[0]_lut_out = count[0] $ (count2[1] & count2[0]);
+count[0] = DFFEA(count[0]_lut_out, clock, , , , , );
+
+--A1L02Q is count[0]~19
+--operation mode is normal
+
+A1L02Q = count[0];
+
+
+--A1L301 is remainder~2098
+--operation mode is normal
+
+A1L301 = count2[1] & (count2[0] & A1L76Q # !count2[0] & (A1L07Q)) # !count2[1] & (A1L07Q);
+
+--A1L411 is remainder~2137
+--operation mode is normal
+
+A1L411 = count2[1] & (count2[0] & A1L76Q # !count2[0] & (A1L07Q)) # !count2[1] & (A1L07Q);
+
+
+--A1L401 is remainder~2100
+--operation mode is normal
+
+A1L401 = count2[1] & (count2[0] & A1L07Q # !count2[0] & (A1L37Q)) # !count2[1] & (A1L37Q);
+
+--A1L511 is remainder~2138
+--operation mode is normal
+
+A1L511 = count2[1] & (count2[0] & A1L07Q # !count2[0] & (A1L37Q)) # !count2[1] & (A1L37Q);
+
+
+--A1L501 is remainder~2102
+--operation mode is normal
+
+A1L501 = count2[1] & (count2[0] & A1L37Q # !count2[0] & (A1L67Q)) # !count2[1] & (A1L67Q);
+
+--A1L611 is remainder~2139
+--operation mode is normal
+
+A1L611 = count2[1] & (count2[0] & A1L37Q # !count2[0] & (A1L67Q)) # !count2[1] & (A1L67Q);
+
+
+--A1L601 is remainder~2106
+--operation mode is normal
+
+A1L601 = count2[0] & (!count2[1]) # !count2[0] & A1L88Q & count2[1];
+
+--A1L711 is remainder~2140
+--operation mode is normal
+
+A1L711 = count2[0] & (!count2[1]) # !count2[0] & A1L88Q & count2[1];
+
+
+--drreg[2] is drreg[2]
+--operation mode is normal
+
+drreg[2]_lut_out = divisor[2];
+drreg[2] = DFFEA(drreg[2]_lut_out, clock, , , A1L93, , );
+
+--A1L04Q is drreg[2]~8
+--operation mode is normal
+
+A1L04Q = drreg[2];
+
+
+--A1L921 is tcbuffout[2]~53
+--operation mode is normal
+
+A1L921 = drreg[2] $ (!count2[0] & A1L88Q & count2[1]);
+
+--A1L031 is tcbuffout[2]~55
+--operation mode is normal
+
+A1L031 = drreg[2] $ (!count2[0] & A1L88Q & count2[1]);
+
+
+--A1L97Q is remainder[4]~reg0
+--operation mode is normal
+
+A1L97Q_lut_out = A1L901 # dividend[3] & !count2[1] & !count2[0];
+A1L97Q = DFFEA(A1L97Q_lut_out, clock, , , , , );
+
+--A1L87Q is remainder[4]~2141
+--operation mode is normal
+
+A1L87Q = A1L97Q;
+
+
+--drreg[0] is drreg[0]
+--operation mode is normal
+
+drreg[0]_lut_out = divisor[0];
+drreg[0] = DFFEA(drreg[0]_lut_out, clock, , , A1L93, , );
+
+--A1L53Q is drreg[0]~9
+--operation mode is normal
+
+A1L53Q = drreg[0];
+
+
+--A1L1 is add_op~30
+--operation mode is normal
+
+A1L1 = A1L88Q & count2[1] & (!count2[0]);
+
+--A1L2 is add_op~31
+--operation mode is normal
+
+A1L2 = A1L88Q & count2[1] & (!count2[0]);
+
+
+--A1L8 is carries[0]~359
+--operation mode is normal
+
+A1L8 = drreg[0] & A1L97Q # !drreg[0] & (!A1L1);
+
+--A1L9 is carries[0]~361
+--operation mode is normal
+
+A1L9 = drreg[0] & A1L97Q # !drreg[0] & (!A1L1);
+
+
+--drreg[1] is drreg[1]
+--operation mode is normal
+
+drreg[1]_lut_out = divisor[1];
+drreg[1] = DFFEA(drreg[1]_lut_out, clock, , , A1L93, , );
+
+--A1L73Q is drreg[1]~10
+--operation mode is normal
+
+A1L73Q = drreg[1];
+
+
+--A1L721 is tcbuffout[1]~54
+--operation mode is normal
+
+A1L721 = drreg[1] $ (!count2[0] & A1L88Q & count2[1]);
+
+--A1L821 is tcbuffout[1]~56
+--operation mode is normal
+
+A1L821 = drreg[1] $ (!count2[0] & A1L88Q & count2[1]);
+
+
+--A1L01 is carries[1]~360
+--operation mode is normal
+
+A1L01 = A1L28Q & (A1L8 # !A1L721) # !A1L28Q & A1L8 & (!A1L721);
+
+--A1L11 is carries[1]~362
+--operation mode is normal
+
+A1L11 = A1L28Q & (A1L8 # !A1L721) # !A1L28Q & A1L8 & (!A1L721);
+
+
+--drreg[3] is drreg[3]
+--operation mode is normal
+
+drreg[3]_lut_out = divisor[3];
+drreg[3] = DFFEA(drreg[3]_lut_out, clock, , , A1L93, , );
+
+--A1L34Q is drreg[3]~11
+--operation mode is normal
+
+A1L34Q = drreg[3];
+
+
+--A1L5 is adderout[3]~354
+--operation mode is normal
+
+A1L5 = drreg[3] $ (A1L88Q & (count2[0] # !count2[1]));
+
+--A1L6 is adderout[3]~355
+--operation mode is normal
+
+A1L6 = drreg[3] $ (A1L88Q & (count2[0] # !count2[1]));
+
+
+--adderout[3] is adderout[3]
+--operation mode is normal
+
+adderout[3] = A1L5 $ (A1L921 & A1L01 & A1L58Q # !A1L921 & (A1L01 # A1L58Q));
+
+--A1L7 is adderout[3]~356
+--operation mode is normal
+
+A1L7 = A1L5 $ (A1L921 & A1L01 & A1L58Q # !A1L921 & (A1L01 # A1L58Q));
+
+
+--A1L701 is remainder~2115
+--operation mode is normal
+
+A1L701 = count2[1] & (count2[0] # !A1L88Q);
+
+--A1L811 is remainder~2142
+--operation mode is normal
+
+A1L811 = count2[1] & (count2[0] # !A1L88Q);
+
+
+--A1L801 is remainder~2116
+--operation mode is normal
+
+A1L801 = A1L701 & (A1L16 & A1L67Q # !A1L16 & (A1L97Q));
+
+--A1L911 is remainder~2143
+--operation mode is normal
+
+A1L911 = A1L701 & (A1L16 & A1L67Q # !A1L16 & (A1L97Q));
+
+
+--A1L901 is remainder~2117
+--operation mode is normal
+
+A1L901 = A1L801 # A1L601 & (A1L97Q $ drreg[0]);
+
+--A1L021 is remainder~2144
+--operation mode is normal
+
+A1L021 = A1L801 # A1L601 & (A1L97Q $ drreg[0]);
+
+
+--A1L011 is remainder~2119
+--operation mode is normal
+
+A1L011 = A1L16 & (!A1L97Q) # !A1L16 & !A1L28Q # !A1L701;
+
+--A1L121 is remainder~2145
+--operation mode is normal
+
+A1L121 = A1L16 & (!A1L97Q) # !A1L16 & !A1L28Q # !A1L701;
+
+--A1L221 is remainder~2146
+--operation mode is normal
+
+A1L221 = A1L16 & (!A1L97Q) # !A1L16 & !A1L28Q # !A1L701;
+
+
+--A1L211 is remainder~2125
+--operation mode is normal
+
+A1L211 = (A1L8 $ A1L28Q $ A1L721 # !A1L601) & CASCADE(A1L221);
+
+--A1L321 is remainder~2147
+--operation mode is normal
+
+A1L321 = (A1L8 $ A1L28Q $ A1L721 # !A1L601) & CASCADE(A1L221);
+
+
+--A1L111 is remainder~2121
+--operation mode is normal
+
+A1L111 = A1L16 & (!A1L28Q) # !A1L16 & !A1L58Q # !A1L701;
+
+--A1L421 is remainder~2148
+--operation mode is normal
+
+A1L421 = A1L16 & (!A1L28Q) # !A1L16 & !A1L58Q # !A1L701;
+
+--A1L521 is remainder~2149
+--operation mode is normal
+
+A1L521 = A1L16 & (!A1L28Q) # !A1L16 & !A1L58Q # !A1L701;
+
+
+--A1L311 is remainder~2126
+--operation mode is normal
+
+A1L311 = (A1L01 $ A1L58Q $ A1L921 # !A1L601) & CASCADE(A1L521);
+
+--A1L621 is remainder~2150
+--operation mode is normal
+
+A1L621 = (A1L01 $ A1L58Q $ A1L921 # !A1L601) & CASCADE(A1L521);
+
+
+--A1L93 is drreg[2]~4
+--operation mode is normal
+
+A1L93 = !A1L06;
+
+--A1L14 is drreg[2]~12
+--operation mode is normal
+
+A1L14 = !A1L06;
+
+
+--clock is clock
+--operation mode is input
+
+clock = INPUT();
+
+
+--dividend[0] is dividend[0]
+--operation mode is input
+
+dividend[0] = INPUT();
+
+
+--dividend[1] is dividend[1]
+--operation mode is input
+
+dividend[1] = INPUT();
+
+
+--dividend[2] is dividend[2]
+--operation mode is input
+
+dividend[2] = INPUT();
+
+
+--divisor[2] is divisor[2]
+--operation mode is input
+
+divisor[2] = INPUT();
+
+
+--dividend[3] is dividend[3]
+--operation mode is input
+
+dividend[3] = INPUT();
+
+
+--divisor[0] is divisor[0]
+--operation mode is input
+
+divisor[0] = INPUT();
+
+
+--divisor[1] is divisor[1]
+--operation mode is input
+
+divisor[1] = INPUT();
+
+
+--divisor[3] is divisor[3]
+--operation mode is input
+
+divisor[3] = INPUT();
+
+
+--quotient[0] is quotient[0]
+--operation mode is output
+
+quotient[0] = OUTPUT(A1L25);
+
+
+--quotient[1] is quotient[1]
+--operation mode is output
+
+quotient[1] = OUTPUT(A1L35);
+
+
+--quotient[2] is quotient[2]
+--operation mode is output
+
+quotient[2] = OUTPUT(A1L45);
+
+
+--quotient[3] is quotient[3]
+--operation mode is output
+
+quotient[3] = OUTPUT(A1L55);
+
+
+--remainder_r[0] is remainder_r[0]
+--operation mode is output
+
+remainder_r[0] = OUTPUT(A1L79);
+
+
+--remainder_r[1] is remainder_r[1]
+--operation mode is output
+
+remainder_r[1] = OUTPUT(A1L89);
+
+
+--remainder_r[2] is remainder_r[2]
+--operation mode is output
+
+remainder_r[2] = OUTPUT(A1L99);
+
+
+--remainder_r[3] is remainder_r[3]
+--operation mode is output
+
+remainder_r[3] = OUTPUT(GND);
+
+
+--remainder[0] is remainder[0]
+--operation mode is bidir
+
+remainder[0]_tri_out = TRI(A1L76Q, VCC);
+remainder[0] = BIDIR(remainder[0]_tri_out);
+
+
+--remainder[1] is remainder[1]
+--operation mode is bidir
+
+remainder[1]_tri_out = TRI(A1L07Q, VCC);
+remainder[1] = BIDIR(remainder[1]_tri_out);
+
+
+--remainder[2] is remainder[2]
+--operation mode is bidir
+
+remainder[2]_tri_out = TRI(A1L37Q, VCC);
+remainder[2] = BIDIR(remainder[2]_tri_out);
+
+
+--remainder[3] is remainder[3]
+--operation mode is bidir
+
+remainder[3]_tri_out = TRI(A1L67Q, VCC);
+remainder[3] = BIDIR(remainder[3]_tri_out);
+
+
+--remainder[4] is remainder[4]
+--operation mode is bidir
+
+remainder[4]_tri_out = TRI(A1L97Q, VCC);
+remainder[4] = BIDIR(remainder[4]_tri_out);
+
+
+--remainder[5] is remainder[5]
+--operation mode is bidir
+
+remainder[5]_tri_out = TRI(A1L28Q, VCC);
+remainder[5] = BIDIR(remainder[5]_tri_out);
+
+
+--remainder[6] is remainder[6]
+--operation mode is bidir
+
+remainder[6]_tri_out = TRI(A1L58Q, VCC);
+remainder[6] = BIDIR(remainder[6]_tri_out);
+
+
+--remainder[7] is remainder[7]
+--operation mode is bidir
+
+remainder[7]_tri_out = TRI(A1L88Q, VCC);
+remainder[7] = BIDIR(remainder[7]_tri_out);
+
+
+--remainder[8] is remainder[8]
+--operation mode is bidir
+
+remainder[8]_tri_out = TRI(A1L19Q, VCC);
+remainder[8] = BIDIR(remainder[8]_tri_out);
+
+
+--finish is finish
+--operation mode is bidir
+
+finish_tri_out = TRI(A1L64Q, VCC);
+finish = BIDIR(finish_tri_out);
+
+

@@ -1,0 +1,256 @@
+Simulator report for signext
+Sun Feb 26 00:11:18 2017
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 48 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 48           ;
+; Total output ports checked                          ; 48           ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 48           ;
+; Total output ports with no 1-value coverage         ; 48           ;
+; Total output ports with no 0-value coverage         ; 48           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------+
+; Missing 1-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |signext|y[0]  ; |signext|y[0]         ; padio            ;
+; |signext|y[1]  ; |signext|y[1]         ; padio            ;
+; |signext|y[2]  ; |signext|y[2]         ; padio            ;
+; |signext|y[3]  ; |signext|y[3]         ; padio            ;
+; |signext|y[4]  ; |signext|y[4]         ; padio            ;
+; |signext|y[5]  ; |signext|y[5]         ; padio            ;
+; |signext|y[6]  ; |signext|y[6]         ; padio            ;
+; |signext|y[7]  ; |signext|y[7]         ; padio            ;
+; |signext|y[8]  ; |signext|y[8]         ; padio            ;
+; |signext|y[9]  ; |signext|y[9]         ; padio            ;
+; |signext|y[10] ; |signext|y[10]        ; padio            ;
+; |signext|y[11] ; |signext|y[11]        ; padio            ;
+; |signext|y[12] ; |signext|y[12]        ; padio            ;
+; |signext|y[13] ; |signext|y[13]        ; padio            ;
+; |signext|y[14] ; |signext|y[14]        ; padio            ;
+; |signext|y[15] ; |signext|y[15]        ; padio            ;
+; |signext|y[16] ; |signext|y[16]        ; padio            ;
+; |signext|y[17] ; |signext|y[17]        ; padio            ;
+; |signext|y[18] ; |signext|y[18]        ; padio            ;
+; |signext|y[19] ; |signext|y[19]        ; padio            ;
+; |signext|y[20] ; |signext|y[20]        ; padio            ;
+; |signext|y[21] ; |signext|y[21]        ; padio            ;
+; |signext|y[22] ; |signext|y[22]        ; padio            ;
+; |signext|y[23] ; |signext|y[23]        ; padio            ;
+; |signext|y[24] ; |signext|y[24]        ; padio            ;
+; |signext|y[25] ; |signext|y[25]        ; padio            ;
+; |signext|y[26] ; |signext|y[26]        ; padio            ;
+; |signext|y[27] ; |signext|y[27]        ; padio            ;
+; |signext|y[28] ; |signext|y[28]        ; padio            ;
+; |signext|y[29] ; |signext|y[29]        ; padio            ;
+; |signext|y[30] ; |signext|y[30]        ; padio            ;
+; |signext|y[31] ; |signext|y[31]        ; padio            ;
+; |signext|a[0]  ; |signext|a[0]~corein  ; combout          ;
+; |signext|a[1]  ; |signext|a[1]~corein  ; combout          ;
+; |signext|a[2]  ; |signext|a[2]~corein  ; combout          ;
+; |signext|a[3]  ; |signext|a[3]~corein  ; combout          ;
+; |signext|a[4]  ; |signext|a[4]~corein  ; combout          ;
+; |signext|a[5]  ; |signext|a[5]~corein  ; combout          ;
+; |signext|a[6]  ; |signext|a[6]~corein  ; combout          ;
+; |signext|a[7]  ; |signext|a[7]~corein  ; combout          ;
+; |signext|a[8]  ; |signext|a[8]~corein  ; combout          ;
+; |signext|a[9]  ; |signext|a[9]~corein  ; combout          ;
+; |signext|a[10] ; |signext|a[10]~corein ; combout          ;
+; |signext|a[11] ; |signext|a[11]~corein ; combout          ;
+; |signext|a[12] ; |signext|a[12]~corein ; combout          ;
+; |signext|a[13] ; |signext|a[13]~corein ; combout          ;
+; |signext|a[14] ; |signext|a[14]~corein ; combout          ;
+; |signext|a[15] ; |signext|a[15]~corein ; combout          ;
++----------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------+
+; Missing 0-Value Coverage                                  ;
++----------------+-----------------------+------------------+
+; Node Name      ; Output Port Name      ; Output Port Type ;
++----------------+-----------------------+------------------+
+; |signext|y[0]  ; |signext|y[0]         ; padio            ;
+; |signext|y[1]  ; |signext|y[1]         ; padio            ;
+; |signext|y[2]  ; |signext|y[2]         ; padio            ;
+; |signext|y[3]  ; |signext|y[3]         ; padio            ;
+; |signext|y[4]  ; |signext|y[4]         ; padio            ;
+; |signext|y[5]  ; |signext|y[5]         ; padio            ;
+; |signext|y[6]  ; |signext|y[6]         ; padio            ;
+; |signext|y[7]  ; |signext|y[7]         ; padio            ;
+; |signext|y[8]  ; |signext|y[8]         ; padio            ;
+; |signext|y[9]  ; |signext|y[9]         ; padio            ;
+; |signext|y[10] ; |signext|y[10]        ; padio            ;
+; |signext|y[11] ; |signext|y[11]        ; padio            ;
+; |signext|y[12] ; |signext|y[12]        ; padio            ;
+; |signext|y[13] ; |signext|y[13]        ; padio            ;
+; |signext|y[14] ; |signext|y[14]        ; padio            ;
+; |signext|y[15] ; |signext|y[15]        ; padio            ;
+; |signext|y[16] ; |signext|y[16]        ; padio            ;
+; |signext|y[17] ; |signext|y[17]        ; padio            ;
+; |signext|y[18] ; |signext|y[18]        ; padio            ;
+; |signext|y[19] ; |signext|y[19]        ; padio            ;
+; |signext|y[20] ; |signext|y[20]        ; padio            ;
+; |signext|y[21] ; |signext|y[21]        ; padio            ;
+; |signext|y[22] ; |signext|y[22]        ; padio            ;
+; |signext|y[23] ; |signext|y[23]        ; padio            ;
+; |signext|y[24] ; |signext|y[24]        ; padio            ;
+; |signext|y[25] ; |signext|y[25]        ; padio            ;
+; |signext|y[26] ; |signext|y[26]        ; padio            ;
+; |signext|y[27] ; |signext|y[27]        ; padio            ;
+; |signext|y[28] ; |signext|y[28]        ; padio            ;
+; |signext|y[29] ; |signext|y[29]        ; padio            ;
+; |signext|y[30] ; |signext|y[30]        ; padio            ;
+; |signext|y[31] ; |signext|y[31]        ; padio            ;
+; |signext|a[0]  ; |signext|a[0]~corein  ; combout          ;
+; |signext|a[1]  ; |signext|a[1]~corein  ; combout          ;
+; |signext|a[2]  ; |signext|a[2]~corein  ; combout          ;
+; |signext|a[3]  ; |signext|a[3]~corein  ; combout          ;
+; |signext|a[4]  ; |signext|a[4]~corein  ; combout          ;
+; |signext|a[5]  ; |signext|a[5]~corein  ; combout          ;
+; |signext|a[6]  ; |signext|a[6]~corein  ; combout          ;
+; |signext|a[7]  ; |signext|a[7]~corein  ; combout          ;
+; |signext|a[8]  ; |signext|a[8]~corein  ; combout          ;
+; |signext|a[9]  ; |signext|a[9]~corein  ; combout          ;
+; |signext|a[10] ; |signext|a[10]~corein ; combout          ;
+; |signext|a[11] ; |signext|a[11]~corein ; combout          ;
+; |signext|a[12] ; |signext|a[12]~corein ; combout          ;
+; |signext|a[13] ; |signext|a[13]~corein ; combout          ;
+; |signext|a[14] ; |signext|a[14]~corein ; combout          ;
+; |signext|a[15] ; |signext|a[15]~corein ; combout          ;
++----------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Sun Feb 26 00:11:18 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off signext -c signext
+Info: Using vector source file "D:/JISUANJIZUCHENGDAZUOYE/signext/signext.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 165 megabytes
+    Info: Processing ended: Sun Feb 26 00:11:18 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

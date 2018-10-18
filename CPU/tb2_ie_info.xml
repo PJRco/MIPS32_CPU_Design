@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!--Created by Liquid XML 2008 (www.liquid-technologies.com) for ALTERA CORPORATION-->
+<ProgramExecution xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+	<AddressBits>32</AddressBits>
+	<DateInvoked>2017/04/26 19:10:48</DateInvoked>
+	<ElapsedTime>32</ElapsedTime>
+	<IsInternal>false</IsInternal>
+	<Name>quartus_fit</Name>
+	<PeakMemoryUsed>0</PeakMemoryUsed>
+	<QuartusUser>
+		<AlteraUserName/>
+		<FAEContactName/>
+		<UserID>228800458290165.149145663610768</UserID>
+		<UserName>ASUS</UserName>
+		<TalkbackStatus>
+			<DateSet/>
+			<TalkbackOn>true</TalkbackOn>
+		</TalkbackStatus>
+	</QuartusUser>
+	<Compilation>
+		<CompileID>228800458290165.149320502810612</CompileID>
+		<DeviceFamily>Cyclone</DeviceFamily>
+		<IncrementalCompilation>FULL_INCREMENTAL_COMPILATION</IncrementalCompilation>
+		<SOPCBuilderProjectID/>
+		<TopLevelEntityName>CPU</TopLevelEntityName>
+	</Compilation>
+	<License>
+		<Edition>Full Version</Edition>
+		<LicenseHostID/>
+	</License>
+	<SchemaVersion>schema_2008-12-15</SchemaVersion>
+	<ApplicationError>
+		<ErrorMessage>split_ok</ErrorMessage>
+		<Line>2370</Line>
+		<SourceFile>/quartus/comp/qfit/qfit_cmd.cpp</SourceFile>
+		<StackTrace>
+	0x00410074: quartus_fit + 0x10074
+	0x026bce32: comp_qexe + 0xce32 (?qexe_get_command_line@@YIPBDXZ + 0x3a2)
+		</StackTrace>
+		<Subsystem>QFIT</Subsystem>
+	</ApplicationError>
+	<QuartusInstallation>
+		<InstallationID>228800458290165.14914565040582</InstallationID>
+		<Version>
+			<Build>132</Build>
+			<BuildSite>SJ</BuildSite>
+			<BuildSuffix/>
+			<Edition>Full Version</Edition>
+			<ServicePack>0</ServicePack>
+			<VersionNumber>9</VersionNumber>
+		</Version>
+	</QuartusInstallation>
+	<ProjectRevision>
+		<ProjectName>CPU</ProjectName>
+		<Revision>CPU</Revision>
+	</ProjectRevision>
+	<Machine>
+		<CPUCountLogical>4</CPUCountLogical>
+		<CPUCountPhysical>1</CPUCountPhysical>
+		<CPUSpeed>2304</CPUSpeed>
+		<Hostname>DESKTOP-U0M5HAD</Hostname>
+		<OS>Windows Vista</OS>
+		<OSAddressBits>64</OSAddressBits>
+		<OSVersion>6.2</OSVersion>
+		<Platform>windows</Platform>
+		<ScreenResolution>unknown</ScreenResolution>
+		<TotalPhysicalRAM>4095</TotalPhysicalRAM>
+		<TotalVirtualRAM>0</TotalVirtualRAM>
+		<NIC>
+			<Address>d017c20a73f5</Address>
+		</NIC>
+		<NIC>
+			<Address>74c63b047c9d</Address>
+		</NIC>
+		<NIC>
+			<Address>16c63b047c9d</Address>
+		</NIC>
+	</Machine>
+</ProgramExecution>
+

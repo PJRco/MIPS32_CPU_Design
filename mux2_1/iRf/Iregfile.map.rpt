@@ -1,0 +1,1362 @@
+Analysis & Synthesis report for Iregfile
+Sun Mar 19 14:04:44 2017
+Quartus II Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Mar 19 14:04:44 2017    ;
+; Quartus II Version          ; 8.0 Build 215 05/29/2008 SJ Full Version ;
+; Revision Name               ; Iregfile                                 ;
+; Top-level Entity Name       ; Iregfile                                 ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 2,420                                    ;
+; Total pins                  ; 113                                      ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; DSP block 9-bit elements    ; N/A until Partition Merge                ;
+; Total PLLs                  ; 0                                        ;
+; Total DLLs                  ; N/A until Partition Merge                ;
++-----------------------------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                        ; Iregfile           ; Iregfile           ;
+; Family name                                                  ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Perform gate-level register retiming                         ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM Block Balancing                                     ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ;
++----------------------------------+-----------------+-----------------+--------------------------------------------+
+; Iregfile.vhd                     ; yes             ; User VHDL File  ; D:/JISUANJIZUCHENGDAZUOYE/iRf/Iregfile.vhd ;
++----------------------------------+-----------------+-----------------+--------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 2420  ;
+;     -- Combinational with no register       ; 1396  ;
+;     -- Register only                        ; 1024  ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 1362  ;
+;     -- 3 input functions                    ; 32    ;
+;     -- 2 input functions                    ; 2     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 2420  ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 1024  ;
+; I/O pins                                    ; 113   ;
+; Maximum fan-out node                        ; iclk  ;
+; Maximum fan-out                             ; 1024  ;
+; Total fan-out                               ; 8684  ;
+; Average fan-out                             ; 3.43  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |Iregfile                  ; 2420 (2420) ; 1024         ; 0           ; 113  ; 0            ; 1396 (1396)  ; 1024 (1024)       ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Iregfile           ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------+
+; Registers Removed During Synthesis                              ;
++------------------------------------------+----------------------+
+; Register name                            ; Reason for Removal   ;
++------------------------------------------+----------------------+
+; mem__dual~1024                           ; Merged with mem~1062 ;
+; mem__dual~1088                           ; Merged with mem~1126 ;
+; mem__dual~1216                           ; Merged with mem~1254 ;
+; mem__dual~1472                           ; Merged with mem~1510 ;
+; mem__dual~2048                           ; Merged with mem~2086 ;
+; mem__dual~66                             ; Merged with mem~104  ;
+; mem__dual~130                            ; Merged with mem~168  ;
+; mem__dual~194                            ; Merged with mem~232  ;
+; mem__dual~322                            ; Merged with mem~360  ;
+; mem__dual~450                            ; Merged with mem~488  ;
+; mem__dual~706                            ; Merged with mem~744  ;
+; mem__dual~962                            ; Merged with mem~1000 ;
+; mem__dual~1474                           ; Merged with mem~1512 ;
+; mem__dual~2050                           ; Merged with mem~2088 ;
+; mem__dual~68                             ; Merged with mem~106  ;
+; mem__dual~132                            ; Merged with mem~170  ;
+; mem__dual~196                            ; Merged with mem~234  ;
+; mem__dual~260                            ; Merged with mem~298  ;
+; mem__dual~324                            ; Merged with mem~362  ;
+; mem__dual~388                            ; Merged with mem~426  ;
+; mem__dual~452                            ; Merged with mem~490  ;
+; mem__dual~516                            ; Merged with mem~554  ;
+; mem__dual~580                            ; Merged with mem~618  ;
+; mem__dual~708                            ; Merged with mem~746  ;
+; mem__dual~836                            ; Merged with mem~874  ;
+; mem__dual~964                            ; Merged with mem~1002 ;
+; mem__dual~1220                           ; Merged with mem~1258 ;
+; mem__dual~1476                           ; Merged with mem~1514 ;
+; mem__dual~1732                           ; Merged with mem~1770 ;
+; mem__dual~1988                           ; Merged with mem~2026 ;
+; mem__dual~454                            ; Merged with mem~492  ;
+; mem__dual~966                            ; Merged with mem~1004 ;
+; mem__dual~1478                           ; Merged with mem~1516 ;
+; mem__dual~72                             ; Merged with mem~110  ;
+; mem__dual~200                            ; Merged with mem~238  ;
+; mem__dual~264                            ; Merged with mem~302  ;
+; mem__dual~328                            ; Merged with mem~366  ;
+; mem__dual~392                            ; Merged with mem~430  ;
+; mem__dual~456                            ; Merged with mem~494  ;
+; mem__dual~520                            ; Merged with mem~558  ;
+; mem__dual~584                            ; Merged with mem~622  ;
+; mem__dual~648                            ; Merged with mem~686  ;
+; mem__dual~712                            ; Merged with mem~750  ;
+; mem__dual~776                            ; Merged with mem~814  ;
+; mem__dual~840                            ; Merged with mem~878  ;
+; mem__dual~904                            ; Merged with mem~942  ;
+; mem__dual~968                            ; Merged with mem~1006 ;
+; mem__dual~1032                           ; Merged with mem~1070 ;
+; mem__dual~1096                           ; Merged with mem~1134 ;
+; mem__dual~1160                           ; Merged with mem~1198 ;
+; mem__dual~1224                           ; Merged with mem~1262 ;
+; mem__dual~1288                           ; Merged with mem~1326 ;
+; mem__dual~1352                           ; Merged with mem~1390 ;
+; mem__dual~1416                           ; Merged with mem~1454 ;
+; mem__dual~1480                           ; Merged with mem~1518 ;
+; mem__dual~1544                           ; Merged with mem~1582 ;
+; mem__dual~1608                           ; Merged with mem~1646 ;
+; mem__dual~1672                           ; Merged with mem~1710 ;
+; mem__dual~1736                           ; Merged with mem~1774 ;
+; mem__dual~1800                           ; Merged with mem~1838 ;
+; mem__dual~1864                           ; Merged with mem~1902 ;
+; mem__dual~1928                           ; Merged with mem~1966 ;
+; mem__dual~1992                           ; Merged with mem~2030 ;
+; mem__dual~74                             ; Merged with mem~112  ;
+; mem__dual~202                            ; Merged with mem~240  ;
+; mem__dual~330                            ; Merged with mem~368  ;
+; mem__dual~458                            ; Merged with mem~496  ;
+; mem__dual~586                            ; Merged with mem~624  ;
+; mem__dual~714                            ; Merged with mem~752  ;
+; mem__dual~842                            ; Merged with mem~880  ;
+; mem__dual~970                            ; Merged with mem~1008 ;
+; mem__dual~1226                           ; Merged with mem~1264 ;
+; mem__dual~1482                           ; Merged with mem~1520 ;
+; mem__dual~1738                           ; Merged with mem~1776 ;
+; mem__dual~1994                           ; Merged with mem~2032 ;
+; mem__dual~204                            ; Merged with mem~242  ;
+; mem__dual~460                            ; Merged with mem~498  ;
+; mem__dual~972                            ; Merged with mem~1010 ;
+; mem__dual~1484                           ; Merged with mem~1522 ;
+; mem__dual~1996                           ; Merged with mem~2034 ;
+; mem__dual~462                            ; Merged with mem~500  ;
+; mem__dual~974                            ; Merged with mem~1012 ;
+; mem__dual~1486                           ; Merged with mem~1524 ;
+; mem__dual~208                            ; Merged with mem~246  ;
+; mem__dual~464                            ; Merged with mem~502  ;
+; mem__dual~720                            ; Merged with mem~758  ;
+; mem__dual~976                            ; Merged with mem~1014 ;
+; mem__dual~1232                           ; Merged with mem~1270 ;
+; mem__dual~1360                           ; Merged with mem~1398 ;
+; mem__dual~1488                           ; Merged with mem~1526 ;
+; mem__dual~1616                           ; Merged with mem~1654 ;
+; mem__dual~1744                           ; Merged with mem~1782 ;
+; mem__dual~1872                           ; Merged with mem~1910 ;
+; mem__dual~2000                           ; Merged with mem~2038 ;
+; mem__dual~82                             ; Merged with mem~120  ;
+; mem__dual~210                            ; Merged with mem~248  ;
+; mem__dual~338                            ; Merged with mem~376  ;
+; mem__dual~466                            ; Merged with mem~504  ;
+; mem__dual~594                            ; Merged with mem~632  ;
+; mem__dual~722                            ; Merged with mem~760  ;
+; Total Number of Removed Registers = 1024 ;                      ;
++------------------------------------------+----------------------+
+* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1024  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1024  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Sun Mar 19 14:04:37 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Iregfile -c Iregfile
+Info: Found 2 design units, including 1 entities, in source file Iregfile.vhd
+    Info: Found design unit 1: Iregfile-behave
+    Info: Found entity 1: Iregfile
+Info: Elaborating entity "Iregfile" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at Iregfile.vhd(34): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Iregfile.vhd(37): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info: Found 2 instances of uninferred RAM logic
+    Info: RAM logic "mem" is uninferred due to asynchronous read logic
+    Info: RAM logic "mem__dual" is uninferred due to asynchronous read logic
+Info: Duplicate registers merged to single register
+    Info (13350): Duplicate register "mem__dual~1024" merged to single register "mem~1062"
+    Info (13350): Duplicate register "mem__dual~1088" merged to single register "mem~1126"
+    Info (13350): Duplicate register "mem__dual~1216" merged to single register "mem~1254"
+    Info (13350): Duplicate register "mem__dual~1472" merged to single register "mem~1510"
+    Info (13350): Duplicate register "mem__dual~2048" merged to single register "mem~2086"
+    Info (13350): Duplicate register "mem__dual~66" merged to single register "mem~104"
+    Info (13350): Duplicate register "mem__dual~130" merged to single register "mem~168"
+    Info (13350): Duplicate register "mem__dual~194" merged to single register "mem~232"
+    Info (13350): Duplicate register "mem__dual~322" merged to single register "mem~360"
+    Info (13350): Duplicate register "mem__dual~450" merged to single register "mem~488"
+    Info (13350): Duplicate register "mem__dual~706" merged to single register "mem~744"
+    Info (13350): Duplicate register "mem__dual~962" merged to single register "mem~1000"
+    Info (13350): Duplicate register "mem__dual~1474" merged to single register "mem~1512"
+    Info (13350): Duplicate register "mem__dual~2050" merged to single register "mem~2088"
+    Info (13350): Duplicate register "mem__dual~68" merged to single register "mem~106"
+    Info (13350): Duplicate register "mem__dual~132" merged to single register "mem~170"
+    Info (13350): Duplicate register "mem__dual~196" merged to single register "mem~234"
+    Info (13350): Duplicate register "mem__dual~260" merged to single register "mem~298"
+    Info (13350): Duplicate register "mem__dual~324" merged to single register "mem~362"
+    Info (13350): Duplicate register "mem__dual~388" merged to single register "mem~426"
+    Info (13350): Duplicate register "mem__dual~452" merged to single register "mem~490"
+    Info (13350): Duplicate register "mem__dual~516" merged to single register "mem~554"
+    Info (13350): Duplicate register "mem__dual~580" merged to single register "mem~618"
+    Info (13350): Duplicate register "mem__dual~708" merged to single register "mem~746"
+    Info (13350): Duplicate register "mem__dual~836" merged to single register "mem~874"
+    Info (13350): Duplicate register "mem__dual~964" merged to single register "mem~1002"
+    Info (13350): Duplicate register "mem__dual~1220" merged to single register "mem~1258"
+    Info (13350): Duplicate register "mem__dual~1476" merged to single register "mem~1514"
+    Info (13350): Duplicate register "mem__dual~1732" merged to single register "mem~1770"
+    Info (13350): Duplicate register "mem__dual~1988" merged to single register "mem~2026"
+    Info (13350): Duplicate register "mem__dual~454" merged to single register "mem~492"
+    Info (13350): Duplicate register "mem__dual~966" merged to single register "mem~1004"
+    Info (13350): Duplicate register "mem__dual~1478" merged to single register "mem~1516"
+    Info (13350): Duplicate register "mem__dual~72" merged to single register "mem~110"
+    Info (13350): Duplicate register "mem__dual~200" merged to single register "mem~238"
+    Info (13350): Duplicate register "mem__dual~264" merged to single register "mem~302"
+    Info (13350): Duplicate register "mem__dual~328" merged to single register "mem~366"
+    Info (13350): Duplicate register "mem__dual~392" merged to single register "mem~430"
+    Info (13350): Duplicate register "mem__dual~456" merged to single register "mem~494"
+    Info (13350): Duplicate register "mem__dual~520" merged to single register "mem~558"
+    Info (13350): Duplicate register "mem__dual~584" merged to single register "mem~622"
+    Info (13350): Duplicate register "mem__dual~648" merged to single register "mem~686"
+    Info (13350): Duplicate register "mem__dual~712" merged to single register "mem~750"
+    Info (13350): Duplicate register "mem__dual~776" merged to single register "mem~814"
+    Info (13350): Duplicate register "mem__dual~840" merged to single register "mem~878"
+    Info (13350): Duplicate register "mem__dual~904" merged to single register "mem~942"
+    Info (13350): Duplicate register "mem__dual~968" merged to single register "mem~1006"
+    Info (13350): Duplicate register "mem__dual~1032" merged to single register "mem~1070"
+    Info (13350): Duplicate register "mem__dual~1096" merged to single register "mem~1134"
+    Info (13350): Duplicate register "mem__dual~1160" merged to single register "mem~1198"
+    Info (13350): Duplicate register "mem__dual~1224" merged to single register "mem~1262"
+    Info (13350): Duplicate register "mem__dual~1288" merged to single register "mem~1326"
+    Info (13350): Duplicate register "mem__dual~1352" merged to single register "mem~1390"
+    Info (13350): Duplicate register "mem__dual~1416" merged to single register "mem~1454"
+    Info (13350): Duplicate register "mem__dual~1480" merged to single register "mem~1518"
+    Info (13350): Duplicate register "mem__dual~1544" merged to single register "mem~1582"
+    Info (13350): Duplicate register "mem__dual~1608" merged to single register "mem~1646"
+    Info (13350): Duplicate register "mem__dual~1672" merged to single register "mem~1710"
+    Info (13350): Duplicate register "mem__dual~1736" merged to single register "mem~1774"
+    Info (13350): Duplicate register "mem__dual~1800" merged to single register "mem~1838"
+    Info (13350): Duplicate register "mem__dual~1864" merged to single register "mem~1902"
+    Info (13350): Duplicate register "mem__dual~1928" merged to single register "mem~1966"
+    Info (13350): Duplicate register "mem__dual~1992" merged to single register "mem~2030"
+    Info (13350): Duplicate register "mem__dual~74" merged to single register "mem~112"
+    Info (13350): Duplicate register "mem__dual~202" merged to single register "mem~240"
+    Info (13350): Duplicate register "mem__dual~330" merged to single register "mem~368"
+    Info (13350): Duplicate register "mem__dual~458" merged to single register "mem~496"
+    Info (13350): Duplicate register "mem__dual~586" merged to single register "mem~624"
+    Info (13350): Duplicate register "mem__dual~714" merged to single register "mem~752"
+    Info (13350): Duplicate register "mem__dual~842" merged to single register "mem~880"
+    Info (13350): Duplicate register "mem__dual~970" merged to single register "mem~1008"
+    Info (13350): Duplicate register "mem__dual~1226" merged to single register "mem~1264"
+    Info (13350): Duplicate register "mem__dual~1482" merged to single register "mem~1520"
+    Info (13350): Duplicate register "mem__dual~1738" merged to single register "mem~1776"
+    Info (13350): Duplicate register "mem__dual~1994" merged to single register "mem~2032"
+    Info (13350): Duplicate register "mem__dual~204" merged to single register "mem~242"
+    Info (13350): Duplicate register "mem__dual~460" merged to single register "mem~498"
+    Info (13350): Duplicate register "mem__dual~972" merged to single register "mem~1010"
+    Info (13350): Duplicate register "mem__dual~1484" merged to single register "mem~1522"
+    Info (13350): Duplicate register "mem__dual~1996" merged to single register "mem~2034"
+    Info (13350): Duplicate register "mem__dual~462" merged to single register "mem~500"
+    Info (13350): Duplicate register "mem__dual~974" merged to single register "mem~1012"
+    Info (13350): Duplicate register "mem__dual~1486" merged to single register "mem~1524"
+    Info (13350): Duplicate register "mem__dual~208" merged to single register "mem~246"
+    Info (13350): Duplicate register "mem__dual~464" merged to single register "mem~502"
+    Info (13350): Duplicate register "mem__dual~720" merged to single register "mem~758"
+    Info (13350): Duplicate register "mem__dual~976" merged to single register "mem~1014"
+    Info (13350): Duplicate register "mem__dual~1232" merged to single register "mem~1270"
+    Info (13350): Duplicate register "mem__dual~1360" merged to single register "mem~1398"
+    Info (13350): Duplicate register "mem__dual~1488" merged to single register "mem~1526"
+    Info (13350): Duplicate register "mem__dual~1616" merged to single register "mem~1654"
+    Info (13350): Duplicate register "mem__dual~1744" merged to single register "mem~1782"
+    Info (13350): Duplicate register "mem__dual~1872" merged to single register "mem~1910"
+    Info (13350): Duplicate register "mem__dual~2000" merged to single register "mem~2038"
+    Info (13350): Duplicate register "mem__dual~82" merged to single register "mem~120"
+    Info (13350): Duplicate register "mem__dual~210" merged to single register "mem~248"
+    Info (13350): Duplicate register "mem__dual~338" merged to single register "mem~376"
+    Info (13350): Duplicate register "mem__dual~466" merged to single register "mem~504"
+    Info (13350): Duplicate register "mem__dual~594" merged to single register "mem~632"
+    Info (13350): Duplicate register "mem__dual~722" merged to single register "mem~760"
+    Info (13350): Duplicate register "mem__dual~850" merged to single register "mem~888"
+    Info (13350): Duplicate register "mem__dual~978" merged to single register "mem~1016"
+    Info (13350): Duplicate register "mem__dual~1106" merged to single register "mem~1144"
+    Info (13350): Duplicate register "mem__dual~1234" merged to single register "mem~1272"
+    Info (13350): Duplicate register "mem__dual~1298" merged to single register "mem~1336"
+    Info (13350): Duplicate register "mem__dual~1362" merged to single register "mem~1400"
+    Info (13350): Duplicate register "mem__dual~1426" merged to single register "mem~1464"
+    Info (13350): Duplicate register "mem__dual~1490" merged to single register "mem~1528"
+    Info (13350): Duplicate register "mem__dual~1554" merged to single register "mem~1592"
+    Info (13350): Duplicate register "mem__dual~1618" merged to single register "mem~1656"
+    Info (13350): Duplicate register "mem__dual~1682" merged to single register "mem~1720"
+    Info (13350): Duplicate register "mem__dual~1746" merged to single register "mem~1784"
+    Info (13350): Duplicate register "mem__dual~1810" merged to single register "mem~1848"
+    Info (13350): Duplicate register "mem__dual~1874" merged to single register "mem~1912"
+    Info (13350): Duplicate register "mem__dual~1938" merged to single register "mem~1976"
+    Info (13350): Duplicate register "mem__dual~2002" merged to single register "mem~2040"
+    Info (13350): Duplicate register "mem__dual~2066" merged to single register "mem~2104"
+    Info (13350): Duplicate register "mem__dual~84" merged to single register "mem~122"
+    Info (13350): Duplicate register "mem__dual~148" merged to single register "mem~186"
+    Info (13350): Duplicate register "mem__dual~212" merged to single register "mem~250"
+    Info (13350): Duplicate register "mem__dual~276" merged to single register "mem~314"
+    Info (13350): Duplicate register "mem__dual~340" merged to single register "mem~378"
+    Info (13350): Duplicate register "mem__dual~404" merged to single register "mem~442"
+    Info (13350): Duplicate register "mem__dual~468" merged to single register "mem~506"
+    Info (13350): Duplicate register "mem__dual~532" merged to single register "mem~570"
+    Info (13350): Duplicate register "mem__dual~596" merged to single register "mem~634"
+    Info (13350): Duplicate register "mem__dual~660" merged to single register "mem~698"
+    Info (13350): Duplicate register "mem__dual~724" merged to single register "mem~762"
+    Info (13350): Duplicate register "mem__dual~788" merged to single register "mem~826"
+    Info (13350): Duplicate register "mem__dual~852" merged to single register "mem~890"
+    Info (13350): Duplicate register "mem__dual~916" merged to single register "mem~954"
+    Info (13350): Duplicate register "mem__dual~980" merged to single register "mem~1018"
+    Info (13350): Duplicate register "mem__dual~1044" merged to single register "mem~1082"
+    Info (13350): Duplicate register "mem__dual~1108" merged to single register "mem~1146"
+    Info (13350): Duplicate register "mem__dual~1172" merged to single register "mem~1210"
+    Info (13350): Duplicate register "mem__dual~1236" merged to single register "mem~1274"
+    Info (13350): Duplicate register "mem__dual~1300" merged to single register "mem~1338"
+    Info (13350): Duplicate register "mem__dual~1364" merged to single register "mem~1402"
+    Info (13350): Duplicate register "mem__dual~1428" merged to single register "mem~1466"
+    Info (13350): Duplicate register "mem__dual~1492" merged to single register "mem~1530"
+    Info (13350): Duplicate register "mem__dual~1556" merged to single register "mem~1594"
+    Info (13350): Duplicate register "mem__dual~1620" merged to single register "mem~1658"
+    Info (13350): Duplicate register "mem__dual~1684" merged to single register "mem~1722"
+    Info (13350): Duplicate register "mem__dual~1748" merged to single register "mem~1786"
+    Info (13350): Duplicate register "mem__dual~1812" merged to single register "mem~1850"
+    Info (13350): Duplicate register "mem__dual~1876" merged to single register "mem~1914"
+    Info (13350): Duplicate register "mem__dual~1940" merged to single register "mem~1978"
+    Info (13350): Duplicate register "mem__dual~2004" merged to single register "mem~2042"
+    Info (13350): Duplicate register "mem__dual~2068" merged to single register "mem~2106"
+    Info (13350): Duplicate register "mem__dual~86" merged to single register "mem~124"
+    Info (13350): Duplicate register "mem__dual~150" merged to single register "mem~188"
+    Info (13350): Duplicate register "mem__dual~214" merged to single register "mem~252"
+    Info (13350): Duplicate register "mem__dual~278" merged to single register "mem~316"
+    Info (13350): Duplicate register "mem__dual~342" merged to single register "mem~380"
+    Info (13350): Duplicate register "mem__dual~406" merged to single register "mem~444"
+    Info (13350): Duplicate register "mem__dual~470" merged to single register "mem~508"
+    Info (13350): Duplicate register "mem__dual~534" merged to single register "mem~572"
+    Info (13350): Duplicate register "mem__dual~598" merged to single register "mem~636"
+    Info (13350): Duplicate register "mem__dual~662" merged to single register "mem~700"
+    Info (13350): Duplicate register "mem__dual~726" merged to single register "mem~764"
+    Info (13350): Duplicate register "mem__dual~790" merged to single register "mem~828"
+    Info (13350): Duplicate register "mem__dual~854" merged to single register "mem~892"
+    Info (13350): Duplicate register "mem__dual~918" merged to single register "mem~956"
+    Info (13350): Duplicate register "mem__dual~982" merged to single register "mem~1020"
+    Info (13350): Duplicate register "mem__dual~1046" merged to single register "mem~1084"
+    Info (13350): Duplicate register "mem__dual~1110" merged to single register "mem~1148"
+    Info (13350): Duplicate register "mem__dual~1174" merged to single register "mem~1212"
+    Info (13350): Duplicate register "mem__dual~1238" merged to single register "mem~1276"
+    Info (13350): Duplicate register "mem__dual~1302" merged to single register "mem~1340"
+    Info (13350): Duplicate register "mem__dual~1366" merged to single register "mem~1404"
+    Info (13350): Duplicate register "mem__dual~1494" merged to single register "mem~1532"
+    Info (13350): Duplicate register "mem__dual~1622" merged to single register "mem~1660"
+    Info (13350): Duplicate register "mem__dual~1750" merged to single register "mem~1788"
+    Info (13350): Duplicate register "mem__dual~1878" merged to single register "mem~1916"
+    Info (13350): Duplicate register "mem__dual~2006" merged to single register "mem~2044"
+    Info (13350): Duplicate register "mem__dual~88" merged to single register "mem~126"
+    Info (13350): Duplicate register "mem__dual~216" merged to single register "mem~254"
+    Info (13350): Duplicate register "mem__dual~344" merged to single register "mem~382"
+    Info (13350): Duplicate register "mem__dual~472" merged to single register "mem~510"
+    Info (13350): Duplicate register "mem__dual~600" merged to single register "mem~638"
+    Info (13350): Duplicate register "mem__dual~728" merged to single register "mem~766"
+    Info (13350): Duplicate register "mem__dual~856" merged to single register "mem~894"
+    Info (13350): Duplicate register "mem__dual~984" merged to single register "mem~1022"
+    Info (13350): Duplicate register "mem__dual~1112" merged to single register "mem~1150"
+    Info (13350): Duplicate register "mem__dual~1240" merged to single register "mem~1278"
+    Info (13350): Duplicate register "mem__dual~1368" merged to single register "mem~1406"
+    Info (13350): Duplicate register "mem__dual~1496" merged to single register "mem~1534"
+    Info (13350): Duplicate register "mem__dual~1752" merged to single register "mem~1790"
+    Info (13350): Duplicate register "mem__dual~2008" merged to single register "mem~2046"
+    Info (13350): Duplicate register "mem__dual~218" merged to single register "mem~256"
+    Info (13350): Duplicate register "mem__dual~474" merged to single register "mem~512"
+    Info (13350): Duplicate register "mem__dual~730" merged to single register "mem~768"
+    Info (13350): Duplicate register "mem__dual~986" merged to single register "mem~1024"
+    Info (13350): Duplicate register "mem__dual~1242" merged to single register "mem~1280"
+    Info (13350): Duplicate register "mem__dual~1498" merged to single register "mem~1536"
+    Info (13350): Duplicate register "mem__dual~1754" merged to single register "mem~1792"
+    Info (13350): Duplicate register "mem__dual~2010" merged to single register "mem~2048"
+    Info (13350): Duplicate register "mem__dual~220" merged to single register "mem~258"
+    Info (13350): Duplicate register "mem__dual~476" merged to single register "mem~514"
+    Info (13350): Duplicate register "mem__dual~732" merged to single register "mem~770"
+    Info (13350): Duplicate register "mem__dual~988" merged to single register "mem~1026"
+    Info (13350): Duplicate register "mem__dual~1244" merged to single register "mem~1282"
+    Info (13350): Duplicate register "mem__dual~1500" merged to single register "mem~1538"
+    Info (13350): Duplicate register "mem__dual~2012" merged to single register "mem~2050"
+    Info (13350): Duplicate register "mem__dual~478" merged to single register "mem~516"
+    Info (13350): Duplicate register "mem__dual~990" merged to single register "mem~1028"
+    Info (13350): Duplicate register "mem__dual~1502" merged to single register "mem~1540"
+    Info (13350): Duplicate register "mem__dual~480" merged to single register "mem~518"
+    Info (13350): Duplicate register "mem__dual~992" merged to single register "mem~1030"
+    Info (13350): Duplicate register "mem__dual~1504" merged to single register "mem~1542"
+    Info (13350): Duplicate register "mem__dual~2016" merged to single register "mem~2054"
+    Info (13350): Duplicate register "mem__dual~482" merged to single register "mem~520"
+    Info (13350): Duplicate register "mem__dual~994" merged to single register "mem~1032"
+    Info (13350): Duplicate register "mem__dual~1506" merged to single register "mem~1544"
+    Info (13350): Duplicate register "mem__dual~2018" merged to single register "mem~2056"
+    Info (13350): Duplicate register "mem__dual~484" merged to single register "mem~522"
+    Info (13350): Duplicate register "mem__dual~996" merged to single register "mem~1034"
+    Info (13350): Duplicate register "mem__dual~1508" merged to single register "mem~1546"
+    Info (13350): Duplicate register "mem__dual~2020" merged to single register "mem~2058"
+    Info (13350): Duplicate register "mem__dual~486" merged to single register "mem~524"
+    Info (13350): Duplicate register "mem__dual~998" merged to single register "mem~1036"
+    Info (13350): Duplicate register "mem__dual~1254" merged to single register "mem~1292"
+    Info (13350): Duplicate register "mem__dual~1510" merged to single register "mem~1548"
+    Info (13350): Duplicate register "mem__dual~1766" merged to single register "mem~1804"
+    Info (13350): Duplicate register "mem__dual~2022" merged to single register "mem~2060"
+    Info (13350): Duplicate register "mem__dual~232" merged to single register "mem~270"
+    Info (13350): Duplicate register "mem__dual~488" merged to single register "mem~526"
+    Info (13350): Duplicate register "mem__dual~744" merged to single register "mem~782"
+    Info (13350): Duplicate register "mem__dual~1000" merged to single register "mem~1038"
+    Info (13350): Duplicate register "mem__dual~1256" merged to single register "mem~1294"
+    Info (13350): Duplicate register "mem__dual~1512" merged to single register "mem~1550"
+    Info (13350): Duplicate register "mem__dual~1768" merged to single register "mem~1806"
+    Info (13350): Duplicate register "mem__dual~2024" merged to single register "mem~2062"
+    Info (13350): Duplicate register "mem__dual~234" merged to single register "mem~272"
+    Info (13350): Duplicate register "mem__dual~490" merged to single register "mem~528"
+    Info (13350): Duplicate register "mem__dual~746" merged to single register "mem~784"
+    Info (13350): Duplicate register "mem__dual~1002" merged to single register "mem~1040"
+    Info (13350): Duplicate register "mem__dual~1258" merged to single register "mem~1296"
+    Info (13350): Duplicate register "mem__dual~1514" merged to single register "mem~1552"
+    Info (13350): Duplicate register "mem__dual~1770" merged to single register "mem~1808"
+    Info (13350): Duplicate register "mem__dual~2026" merged to single register "mem~2064"
+    Info (13350): Duplicate register "mem__dual~236" merged to single register "mem~274"
+    Info (13350): Duplicate register "mem__dual~492" merged to single register "mem~530"
+    Info (13350): Duplicate register "mem__dual~748" merged to single register "mem~786"
+    Info (13350): Duplicate register "mem__dual~1004" merged to single register "mem~1042"
+    Info (13350): Duplicate register "mem__dual~1260" merged to single register "mem~1298"
+    Info (13350): Duplicate register "mem__dual~1516" merged to single register "mem~1554"
+    Info (13350): Duplicate register "mem__dual~1772" merged to single register "mem~1810"
+    Info (13350): Duplicate register "mem__dual~2028" merged to single register "mem~2066"
+    Info (13350): Duplicate register "mem__dual~238" merged to single register "mem~276"
+    Info (13350): Duplicate register "mem__dual~494" merged to single register "mem~532"
+    Info (13350): Duplicate register "mem__dual~750" merged to single register "mem~788"
+    Info (13350): Duplicate register "mem__dual~1006" merged to single register "mem~1044"
+    Info (13350): Duplicate register "mem__dual~1262" merged to single register "mem~1300"
+    Info (13350): Duplicate register "mem__dual~1518" merged to single register "mem~1556"
+    Info (13350): Duplicate register "mem__dual~1774" merged to single register "mem~1812"
+    Info (13350): Duplicate register "mem__dual~2030" merged to single register "mem~2068"
+    Info (13350): Duplicate register "mem__dual~240" merged to single register "mem~278"
+    Info (13350): Duplicate register "mem__dual~496" merged to single register "mem~534"
+    Info (13350): Duplicate register "mem__dual~752" merged to single register "mem~790"
+    Info (13350): Duplicate register "mem__dual~1008" merged to single register "mem~1046"
+    Info (13350): Duplicate register "mem__dual~1264" merged to single register "mem~1302"
+    Info (13350): Duplicate register "mem__dual~1520" merged to single register "mem~1558"
+    Info (13350): Duplicate register "mem__dual~1776" merged to single register "mem~1814"
+    Info (13350): Duplicate register "mem__dual~2032" merged to single register "mem~2070"
+    Info (13350): Duplicate register "mem__dual~242" merged to single register "mem~280"
+    Info (13350): Duplicate register "mem__dual~498" merged to single register "mem~536"
+    Info (13350): Duplicate register "mem__dual~754" merged to single register "mem~792"
+    Info (13350): Duplicate register "mem__dual~1010" merged to single register "mem~1048"
+    Info (13350): Duplicate register "mem__dual~1266" merged to single register "mem~1304"
+    Info (13350): Duplicate register "mem__dual~1522" merged to single register "mem~1560"
+    Info (13350): Duplicate register "mem__dual~1650" merged to single register "mem~1688"
+    Info (13350): Duplicate register "mem__dual~1778" merged to single register "mem~1816"
+    Info (13350): Duplicate register "mem__dual~1906" merged to single register "mem~1944"
+    Info (13350): Duplicate register "mem__dual~2034" merged to single register "mem~2072"
+    Info (13350): Duplicate register "mem__dual~116" merged to single register "mem~154"
+    Info (13350): Duplicate register "mem__dual~244" merged to single register "mem~282"
+    Info (13350): Duplicate register "mem__dual~372" merged to single register "mem~410"
+    Info (13350): Duplicate register "mem__dual~500" merged to single register "mem~538"
+    Info (13350): Duplicate register "mem__dual~628" merged to single register "mem~666"
+    Info (13350): Duplicate register "mem__dual~756" merged to single register "mem~794"
+    Info (13350): Duplicate register "mem__dual~884" merged to single register "mem~922"
+    Info (13350): Duplicate register "mem__dual~1012" merged to single register "mem~1050"
+    Info (13350): Duplicate register "mem__dual~1140" merged to single register "mem~1178"
+    Info (13350): Duplicate register "mem__dual~1268" merged to single register "mem~1306"
+    Info (13350): Duplicate register "mem__dual~1396" merged to single register "mem~1434"
+    Info (13350): Duplicate register "mem__dual~1524" merged to single register "mem~1562"
+    Info (13350): Duplicate register "mem__dual~1652" merged to single register "mem~1690"
+    Info (13350): Duplicate register "mem__dual~1780" merged to single register "mem~1818"
+    Info (13350): Duplicate register "mem__dual~1908" merged to single register "mem~1946"
+    Info (13350): Duplicate register "mem__dual~2036" merged to single register "mem~2074"
+    Info (13350): Duplicate register "mem__dual~118" merged to single register "mem~156"
+    Info (13350): Duplicate register "mem__dual~246" merged to single register "mem~284"
+    Info (13350): Duplicate register "mem__dual~374" merged to single register "mem~412"
+    Info (13350): Duplicate register "mem__dual~502" merged to single register "mem~540"
+    Info (13350): Duplicate register "mem__dual~630" merged to single register "mem~668"
+    Info (13350): Duplicate register "mem__dual~758" merged to single register "mem~796"
+    Info (13350): Duplicate register "mem__dual~886" merged to single register "mem~924"
+    Info (13350): Duplicate register "mem__dual~1014" merged to single register "mem~1052"
+    Info (13350): Duplicate register "mem__dual~1142" merged to single register "mem~1180"
+    Info (13350): Duplicate register "mem__dual~1270" merged to single register "mem~1308"
+    Info (13350): Duplicate register "mem__dual~1398" merged to single register "mem~1436"
+    Info (13350): Duplicate register "mem__dual~1526" merged to single register "mem~1564"
+    Info (13350): Duplicate register "mem__dual~1654" merged to single register "mem~1692"
+    Info (13350): Duplicate register "mem__dual~1782" merged to single register "mem~1820"
+    Info (13350): Duplicate register "mem__dual~1910" merged to single register "mem~1948"
+    Info (13350): Duplicate register "mem__dual~2038" merged to single register "mem~2076"
+    Info (13350): Duplicate register "mem__dual~120" merged to single register "mem~158"
+    Info (13350): Duplicate register "mem__dual~248" merged to single register "mem~286"
+    Info (13350): Duplicate register "mem__dual~376" merged to single register "mem~414"
+    Info (13350): Duplicate register "mem__dual~504" merged to single register "mem~542"
+    Info (13350): Duplicate register "mem__dual~632" merged to single register "mem~670"
+    Info (13350): Duplicate register "mem__dual~760" merged to single register "mem~798"
+    Info (13350): Duplicate register "mem__dual~888" merged to single register "mem~926"
+    Info (13350): Duplicate register "mem__dual~1016" merged to single register "mem~1054"
+    Info (13350): Duplicate register "mem__dual~1144" merged to single register "mem~1182"
+    Info (13350): Duplicate register "mem__dual~1272" merged to single register "mem~1310"
+    Info (13350): Duplicate register "mem__dual~1400" merged to single register "mem~1438"
+    Info (13350): Duplicate register "mem__dual~1528" merged to single register "mem~1566"
+    Info (13350): Duplicate register "mem__dual~1656" merged to single register "mem~1694"
+    Info (13350): Duplicate register "mem__dual~1784" merged to single register "mem~1822"
+    Info (13350): Duplicate register "mem__dual~1848" merged to single register "mem~1886"
+    Info (13350): Duplicate register "mem__dual~1912" merged to single register "mem~1950"
+    Info (13350): Duplicate register "mem__dual~1976" merged to single register "mem~2014"
+    Info (13350): Duplicate register "mem__dual~2040" merged to single register "mem~2078"
+    Info (13350): Duplicate register "mem__dual~2104" merged to single register "mem~2142"
+    Info (13350): Duplicate register "mem__dual~122" merged to single register "mem~160"
+    Info (13350): Duplicate register "mem__dual~186" merged to single register "mem~224"
+    Info (13350): Duplicate register "mem__dual~250" merged to single register "mem~288"
+    Info (13350): Duplicate register "mem__dual~314" merged to single register "mem~352"
+    Info (13350): Duplicate register "mem__dual~378" merged to single register "mem~416"
+    Info (13350): Duplicate register "mem__dual~442" merged to single register "mem~480"
+    Info (13350): Duplicate register "mem__dual~506" merged to single register "mem~544"
+    Info (13350): Duplicate register "mem__dual~570" merged to single register "mem~608"
+    Info (13350): Duplicate register "mem__dual~634" merged to single register "mem~672"
+    Info (13350): Duplicate register "mem__dual~698" merged to single register "mem~736"
+    Info (13350): Duplicate register "mem__dual~762" merged to single register "mem~800"
+    Info (13350): Duplicate register "mem__dual~826" merged to single register "mem~864"
+    Info (13350): Duplicate register "mem__dual~890" merged to single register "mem~928"
+    Info (13350): Duplicate register "mem__dual~954" merged to single register "mem~992"
+    Info (13350): Duplicate register "mem__dual~1018" merged to single register "mem~1056"
+    Info (13350): Duplicate register "mem__dual~1082" merged to single register "mem~1120"
+    Info (13350): Duplicate register "mem__dual~1146" merged to single register "mem~1184"
+    Info (13350): Duplicate register "mem__dual~1210" merged to single register "mem~1248"
+    Info (13350): Duplicate register "mem__dual~1274" merged to single register "mem~1312"
+    Info (13350): Duplicate register "mem__dual~1338" merged to single register "mem~1376"
+    Info (13350): Duplicate register "mem__dual~1402" merged to single register "mem~1440"
+    Info (13350): Duplicate register "mem__dual~1466" merged to single register "mem~1504"
+    Info (13350): Duplicate register "mem__dual~1530" merged to single register "mem~1568"
+    Info (13350): Duplicate register "mem__dual~1594" merged to single register "mem~1632"
+    Info (13350): Duplicate register "mem__dual~1658" merged to single register "mem~1696"
+    Info (13350): Duplicate register "mem__dual~1722" merged to single register "mem~1760"
+    Info (13350): Duplicate register "mem__dual~1786" merged to single register "mem~1824"
+    Info (13350): Duplicate register "mem__dual~1850" merged to single register "mem~1888"
+    Info (13350): Duplicate register "mem__dual~1914" merged to single register "mem~1952"
+    Info (13350): Duplicate register "mem__dual~1978" merged to single register "mem~2016"
+    Info (13350): Duplicate register "mem__dual~2042" merged to single register "mem~2080"
+    Info (13350): Duplicate register "mem__dual~2106" merged to single register "mem~2144"
+    Info (13350): Duplicate register "mem__dual~124" merged to single register "mem~162"
+    Info (13350): Duplicate register "mem__dual~188" merged to single register "mem~226"
+    Info (13350): Duplicate register "mem__dual~252" merged to single register "mem~290"
+    Info (13350): Duplicate register "mem__dual~316" merged to single register "mem~354"
+    Info (13350): Duplicate register "mem__dual~380" merged to single register "mem~418"
+    Info (13350): Duplicate register "mem__dual~444" merged to single register "mem~482"
+    Info (13350): Duplicate register "mem__dual~508" merged to single register "mem~546"
+    Info (13350): Duplicate register "mem__dual~572" merged to single register "mem~610"
+    Info (13350): Duplicate register "mem__dual~636" merged to single register "mem~674"
+    Info (13350): Duplicate register "mem__dual~700" merged to single register "mem~738"
+    Info (13350): Duplicate register "mem__dual~764" merged to single register "mem~802"
+    Info (13350): Duplicate register "mem__dual~828" merged to single register "mem~866"
+    Info (13350): Duplicate register "mem__dual~892" merged to single register "mem~930"
+    Info (13350): Duplicate register "mem__dual~956" merged to single register "mem~994"
+    Info (13350): Duplicate register "mem__dual~1020" merged to single register "mem~1058"
+    Info (13350): Duplicate register "mem__dual~1084" merged to single register "mem~1122"
+    Info (13350): Duplicate register "mem__dual~1148" merged to single register "mem~1186"
+    Info (13350): Duplicate register "mem__dual~1212" merged to single register "mem~1250"
+    Info (13350): Duplicate register "mem__dual~1276" merged to single register "mem~1314"
+    Info (13350): Duplicate register "mem__dual~1340" merged to single register "mem~1378"
+    Info (13350): Duplicate register "mem__dual~1404" merged to single register "mem~1442"
+    Info (13350): Duplicate register "mem__dual~1468" merged to single register "mem~1506"
+    Info (13350): Duplicate register "mem__dual~1532" merged to single register "mem~1570"
+    Info (13350): Duplicate register "mem__dual~1596" merged to single register "mem~1634"
+    Info (13350): Duplicate register "mem__dual~1660" merged to single register "mem~1698"
+    Info (13350): Duplicate register "mem__dual~1724" merged to single register "mem~1762"
+    Info (13350): Duplicate register "mem__dual~1788" merged to single register "mem~1826"
+    Info (13350): Duplicate register "mem__dual~1852" merged to single register "mem~1890"
+    Info (13350): Duplicate register "mem__dual~1916" merged to single register "mem~1954"
+    Info (13350): Duplicate register "mem__dual~1980" merged to single register "mem~2018"
+    Info (13350): Duplicate register "mem__dual~2044" merged to single register "mem~2082"
+    Info (13350): Duplicate register "mem__dual~2108" merged to single register "mem~2146"
+    Info (13350): Duplicate register "mem__dual~126" merged to single register "mem~164"
+    Info (13350): Duplicate register "mem__dual~190" merged to single register "mem~228"
+    Info (13350): Duplicate register "mem__dual~254" merged to single register "mem~292"
+    Info (13350): Duplicate register "mem__dual~318" merged to single register "mem~356"
+    Info (13350): Duplicate register "mem__dual~382" merged to single register "mem~420"
+    Info (13350): Duplicate register "mem__dual~446" merged to single register "mem~484"
+    Info (13350): Duplicate register "mem__dual~510" merged to single register "mem~548"
+    Info (13350): Duplicate register "mem__dual~574" merged to single register "mem~612"
+    Info (13350): Duplicate register "mem__dual~638" merged to single register "mem~676"
+    Info (13350): Duplicate register "mem__dual~702" merged to single register "mem~740"
+    Info (13350): Duplicate register "mem__dual~766" merged to single register "mem~804"
+    Info (13350): Duplicate register "mem__dual~830" merged to single register "mem~868"
+    Info (13350): Duplicate register "mem__dual~894" merged to single register "mem~932"
+    Info (13350): Duplicate register "mem__dual~958" merged to single register "mem~996"
+    Info (13350): Duplicate register "mem__dual~1022" merged to single register "mem~1060"
+    Info (13350): Duplicate register "mem__dual~1086" merged to single register "mem~1124"
+    Info (13350): Duplicate register "mem__dual~1150" merged to single register "mem~1188"
+    Info (13350): Duplicate register "mem__dual~1214" merged to single register "mem~1252"
+    Info (13350): Duplicate register "mem__dual~1278" merged to single register "mem~1316"
+    Info (13350): Duplicate register "mem__dual~1342" merged to single register "mem~1380"
+    Info (13350): Duplicate register "mem__dual~1406" merged to single register "mem~1444"
+    Info (13350): Duplicate register "mem__dual~1470" merged to single register "mem~1508"
+    Info (13350): Duplicate register "mem__dual~1534" merged to single register "mem~1572"
+    Info (13350): Duplicate register "mem__dual~1598" merged to single register "mem~1636"
+    Info (13350): Duplicate register "mem__dual~1662" merged to single register "mem~1700"
+    Info (13350): Duplicate register "mem__dual~1726" merged to single register "mem~1764"
+    Info (13350): Duplicate register "mem__dual~1790" merged to single register "mem~1828"
+    Info (13350): Duplicate register "mem__dual~1854" merged to single register "mem~1892"
+    Info (13350): Duplicate register "mem__dual~1918" merged to single register "mem~1956"
+    Info (13350): Duplicate register "mem__dual~1982" merged to single register "mem~2020"
+    Info (13350): Duplicate register "mem__dual~2046" merged to single register "mem~2084"
+    Info (13350): Duplicate register "mem__dual~832" merged to single register "mem~870"
+    Info (13350): Duplicate register "mem__dual~896" merged to single register "mem~934"
+    Info (13350): Duplicate register "mem__dual~1728" merged to single register "mem~1766"
+    Info (13350): Duplicate register "mem__dual~1856" merged to single register "mem~1894"
+    Info (13350): Duplicate register "mem__dual~1920" merged to single register "mem~1958"
+    Info (13350): Duplicate register "mem__dual~1218" merged to single register "mem~1256"
+    Info (13350): Duplicate register "mem__dual~1346" merged to single register "mem~1384"
+    Info (13350): Duplicate register "mem__dual~1094" merged to single register "mem~1132"
+    Info (13350): Duplicate register "mem__dual~1222" merged to single register "mem~1260"
+    Info (13350): Duplicate register "mem__dual~1350" merged to single register "mem~1388"
+    Info (13350): Duplicate register "mem__dual~136" merged to single register "mem~174"
+    Info (13350): Duplicate register "mem__dual~206" merged to single register "mem~244"
+    Info (13350): Duplicate register "mem__dual~336" merged to single register "mem~374"
+    Info (13350): Duplicate register "mem__dual~1552" merged to single register "mem~1590"
+    Info (13350): Duplicate register "mem__dual~1808" merged to single register "mem~1846"
+    Info (13350): Duplicate register "mem__dual~2064" merged to single register "mem~2102"
+    Info (13350): Duplicate register "mem__dual~274" merged to single register "mem~312"
+    Info (13350): Duplicate register "mem__dual~530" merged to single register "mem~568"
+    Info (13350): Duplicate register "mem__dual~786" merged to single register "mem~824"
+    Info (13350): Duplicate register "mem__dual~1042" merged to single register "mem~1080"
+    Info (13350): Duplicate register "mem__dual~222" merged to single register "mem~260"
+    Info (13350): Duplicate register "mem__dual~736" merged to single register "mem~774"
+    Info (13350): Duplicate register "mem__dual~740" merged to single register "mem~778"
+    Info (13350): Duplicate register "mem__dual~614" merged to single register "mem~652"
+    Info (13350): Duplicate register "mem__dual~870" merged to single register "mem~908"
+    Info (13350): Duplicate register "mem__dual~1894" merged to single register "mem~1932"
+    Info (13350): Duplicate register "mem__dual~872" merged to single register "mem~910"
+    Info (13350): Duplicate register "mem__dual~1896" merged to single register "mem~1934"
+    Info (13350): Duplicate register "mem__dual~874" merged to single register "mem~912"
+    Info (13350): Duplicate register "mem__dual~1322" merged to single register "mem~1360"
+    Info (13350): Duplicate register "mem__dual~1450" merged to single register "mem~1488"
+    Info (13350): Duplicate register "mem__dual~1834" merged to single register "mem~1872"
+    Info (13350): Duplicate register "mem__dual~1898" merged to single register "mem~1936"
+    Info (13350): Duplicate register "mem__dual~1962" merged to single register "mem~2000"
+    Info (13350): Duplicate register "mem__dual~300" merged to single register "mem~338"
+    Info (13350): Duplicate register "mem__dual~428" merged to single register "mem~466"
+    Info (13350): Duplicate register "mem__dual~812" merged to single register "mem~850"
+    Info (13350): Duplicate register "mem__dual~876" merged to single register "mem~914"
+    Info (13350): Duplicate register "mem__dual~940" merged to single register "mem~978"
+    Info (13350): Duplicate register "mem__dual~1324" merged to single register "mem~1362"
+    Info (13350): Duplicate register "mem__dual~1452" merged to single register "mem~1490"
+    Info (13350): Duplicate register "mem__dual~1836" merged to single register "mem~1874"
+    Info (13350): Duplicate register "mem__dual~1900" merged to single register "mem~1938"
+    Info (13350): Duplicate register "mem__dual~1964" merged to single register "mem~2002"
+    Info (13350): Duplicate register "mem__dual~302" merged to single register "mem~340"
+    Info (13350): Duplicate register "mem__dual~430" merged to single register "mem~468"
+    Info (13350): Duplicate register "mem__dual~814" merged to single register "mem~852"
+    Info (13350): Duplicate register "mem__dual~878" merged to single register "mem~916"
+    Info (13350): Duplicate register "mem__dual~942" merged to single register "mem~980"
+    Info (13350): Duplicate register "mem__dual~1326" merged to single register "mem~1364"
+    Info (13350): Duplicate register "mem__dual~1454" merged to single register "mem~1492"
+    Info (13350): Duplicate register "mem__dual~1838" merged to single register "mem~1876"
+    Info (13350): Duplicate register "mem__dual~1902" merged to single register "mem~1940"
+    Info (13350): Duplicate register "mem__dual~1966" merged to single register "mem~2004"
+    Info (13350): Duplicate register "mem__dual~304" merged to single register "mem~342"
+    Info (13350): Duplicate register "mem__dual~432" merged to single register "mem~470"
+    Info (13350): Duplicate register "mem__dual~816" merged to single register "mem~854"
+    Info (13350): Duplicate register "mem__dual~880" merged to single register "mem~918"
+    Info (13350): Duplicate register "mem__dual~944" merged to single register "mem~982"
+    Info (13350): Duplicate register "mem__dual~1328" merged to single register "mem~1366"
+    Info (13350): Duplicate register "mem__dual~1456" merged to single register "mem~1494"
+    Info (13350): Duplicate register "mem__dual~1840" merged to single register "mem~1878"
+    Info (13350): Duplicate register "mem__dual~1904" merged to single register "mem~1942"
+    Info (13350): Duplicate register "mem__dual~1968" merged to single register "mem~2006"
+    Info (13350): Duplicate register "mem__dual~306" merged to single register "mem~344"
+    Info (13350): Duplicate register "mem__dual~434" merged to single register "mem~472"
+    Info (13350): Duplicate register "mem__dual~818" merged to single register "mem~856"
+    Info (13350): Duplicate register "mem__dual~882" merged to single register "mem~920"
+    Info (13350): Duplicate register "mem__dual~1202" merged to single register "mem~1240"
+    Info (13350): Duplicate register "mem__dual~1586" merged to single register "mem~1624"
+    Info (13350): Duplicate register "mem__dual~2098" merged to single register "mem~2136"
+    Info (13350): Duplicate register "mem__dual~564" merged to single register "mem~602"
+    Info (13350): Duplicate register "mem__dual~1076" merged to single register "mem~1114"
+    Info (13350): Duplicate register "mem__dual~1588" merged to single register "mem~1626"
+    Info (13350): Duplicate register "mem__dual~2100" merged to single register "mem~2138"
+    Info (13350): Duplicate register "mem__dual~566" merged to single register "mem~604"
+    Info (13350): Duplicate register "mem__dual~1078" merged to single register "mem~1116"
+    Info (13350): Duplicate register "mem__dual~1590" merged to single register "mem~1628"
+    Info (13350): Duplicate register "mem__dual~2102" merged to single register "mem~2140"
+    Info (13350): Duplicate register "mem__dual~568" merged to single register "mem~606"
+    Info (13350): Duplicate register "mem__dual~1602" merged to single register "mem~1640"
+    Info (13350): Duplicate register "mem__dual~1794" merged to single register "mem~1832"
+    Info (13350): Duplicate register "mem__dual~1858" merged to single register "mem~1896"
+    Info (13350): Duplicate register "mem__dual~1922" merged to single register "mem~1960"
+    Info (13350): Duplicate register "mem__dual~716" merged to single register "mem~754"
+    Info (13350): Duplicate register "mem__dual~1104" merged to single register "mem~1142"
+    Info (13350): Duplicate register "mem__dual~1168" merged to single register "mem~1206"
+    Info (13350): Duplicate register "mem__dual~1424" merged to single register "mem~1462"
+    Info (13350): Duplicate register "mem__dual~1936" merged to single register "mem~1974"
+    Info (13350): Duplicate register "mem__dual~402" merged to single register "mem~440"
+    Info (13350): Duplicate register "mem__dual~914" merged to single register "mem~952"
+    Info (13350): Duplicate register "mem__dual~1758" merged to single register "mem~1796"
+    Info (13350): Duplicate register "mem__dual~1760" merged to single register "mem~1798"
+    Info (13350): Duplicate register "mem__dual~1124" merged to single register "mem~1162"
+    Info (13350): Duplicate register "mem__dual~1252" merged to single register "mem~1290"
+    Info (13350): Duplicate register "mem__dual~1380" merged to single register "mem~1418"
+    Info (13350): Duplicate register "mem__dual~1638" merged to single register "mem~1676"
+    Info (13350): Duplicate register "mem__dual~360" merged to single register "mem~398"
+    Info (13350): Duplicate register "mem__dual~1128" merged to single register "mem~1166"
+    Info (13350): Duplicate register "mem__dual~1704" merged to single register "mem~1742"
+    Info (13350): Duplicate register "mem__dual~1960" merged to single register "mem~1998"
+    Info (13350): Duplicate register "mem__dual~298" merged to single register "mem~336"
+    Info (13350): Duplicate register "mem__dual~426" merged to single register "mem~464"
+    Info (13350): Duplicate register "mem__dual~810" merged to single register "mem~848"
+    Info (13350): Duplicate register "mem__dual~1066" merged to single register "mem~1104"
+    Info (13350): Duplicate register "mem__dual~1194" merged to single register "mem~1232"
+    Info (13350): Duplicate register "mem__dual~1386" merged to single register "mem~1424"
+    Info (13350): Duplicate register "mem__dual~1578" merged to single register "mem~1616"
+    Info (13350): Duplicate register "mem__dual~1706" merged to single register "mem~1744"
+    Info (13350): Duplicate register "mem__dual~1068" merged to single register "mem~1106"
+    Info (13350): Duplicate register "mem__dual~1132" merged to single register "mem~1170"
+    Info (13350): Duplicate register "mem__dual~1196" merged to single register "mem~1234"
+    Info (13350): Duplicate register "mem__dual~1580" merged to single register "mem~1618"
+    Info (13350): Duplicate register "mem__dual~1644" merged to single register "mem~1682"
+    Info (13350): Duplicate register "mem__dual~1708" merged to single register "mem~1746"
+    Info (13350): Duplicate register "mem__dual~1070" merged to single register "mem~1108"
+    Info (13350): Duplicate register "mem__dual~1198" merged to single register "mem~1236"
+    Info (13350): Duplicate register "mem__dual~1390" merged to single register "mem~1428"
+    Info (13350): Duplicate register "mem__dual~1582" merged to single register "mem~1620"
+    Info (13350): Duplicate register "mem__dual~1710" merged to single register "mem~1748"
+    Info (13350): Duplicate register "mem__dual~560" merged to single register "mem~598"
+    Info (13350): Duplicate register "mem__dual~1392" merged to single register "mem~1430"
+    Info (13350): Duplicate register "mem__dual~178" merged to single register "mem~216"
+    Info (13350): Duplicate register "mem__dual~690" merged to single register "mem~728"
+    Info (13350): Duplicate register "mem__dual~1330" merged to single register "mem~1368"
+    Info (13350): Duplicate register "mem__dual~1842" merged to single register "mem~1880"
+    Info (13350): Duplicate register "mem__dual~436" merged to single register "mem~474"
+    Info (13350): Duplicate register "mem__dual~1204" merged to single register "mem~1242"
+    Info (13350): Duplicate register "mem__dual~1844" merged to single register "mem~1882"
+    Info (13350): Duplicate register "mem__dual~704" merged to single register "mem~742"
+    Info (13350): Duplicate register "mem__dual~1614" merged to single register "mem~1652"
+    Info (13350): Duplicate register "mem__dual~1870" merged to single register "mem~1908"
+    Info (13350): Duplicate register "mem__dual~80" merged to single register "mem~118"
+    Info (13350): Duplicate register "mem__dual~848" merged to single register "mem~886"
+    Info (13350): Duplicate register "mem__dual~1296" merged to single register "mem~1334"
+    Info (13350): Duplicate register "mem__dual~146" merged to single register "mem~184"
+    Info (13350): Duplicate register "mem__dual~1170" merged to single register "mem~1208"
+    Info (13350): Duplicate register "mem__dual~224" merged to single register "mem~262"
+    Info (13350): Duplicate register "mem__dual~1250" merged to single register "mem~1288"
+    Info (13350): Duplicate register "mem__dual~868" merged to single register "mem~906"
+    Info (13350): Duplicate register "mem__dual~104" merged to single register "mem~142"
+    Info (13350): Duplicate register "mem__dual~808" merged to single register "mem~846"
+    Info (13350): Duplicate register "mem__dual~1064" merged to single register "mem~1102"
+    Info (13350): Duplicate register "mem__dual~1320" merged to single register "mem~1358"
+    Info (13350): Duplicate register "mem__dual~1384" merged to single register "mem~1422"
+    Info (13350): Duplicate register "mem__dual~1448" merged to single register "mem~1486"
+    Info (13350): Duplicate register "mem__dual~2088" merged to single register "mem~2126"
+    Info (13350): Duplicate register "mem__dual~170" merged to single register "mem~208"
+    Info (13350): Duplicate register "mem__dual~362" merged to single register "mem~400"
+    Info (13350): Duplicate register "mem__dual~554" merged to single register "mem~592"
+    Info (13350): Duplicate register "mem__dual~682" merged to single register "mem~720"
+    Info (13350): Duplicate register "mem__dual~2090" merged to single register "mem~2128"
+    Info (13350): Duplicate register "mem__dual~108" merged to single register "mem~146"
+    Info (13350): Duplicate register "mem__dual~172" merged to single register "mem~210"
+    Info (13350): Duplicate register "mem__dual~556" merged to single register "mem~594"
+    Info (13350): Duplicate register "mem__dual~620" merged to single register "mem~658"
+    Info (13350): Duplicate register "mem__dual~684" merged to single register "mem~722"
+    Info (13350): Duplicate register "mem__dual~2092" merged to single register "mem~2130"
+    Info (13350): Duplicate register "mem__dual~110" merged to single register "mem~148"
+    Info (13350): Duplicate register "mem__dual~174" merged to single register "mem~212"
+    Info (13350): Duplicate register "mem__dual~558" merged to single register "mem~596"
+    Info (13350): Duplicate register "mem__dual~622" merged to single register "mem~660"
+    Info (13350): Duplicate register "mem__dual~686" merged to single register "mem~724"
+    Info (13350): Duplicate register "mem__dual~2094" merged to single register "mem~2132"
+    Info (13350): Duplicate register "mem__dual~1200" merged to single register "mem~1238"
+    Info (13350): Duplicate register "mem__dual~1648" merged to single register "mem~1686"
+    Info (13350): Duplicate register "mem__dual~2096" merged to single register "mem~2134"
+    Info (13350): Duplicate register "mem__dual~1606" merged to single register "mem~1644"
+    Info (13350): Duplicate register "mem__dual~1734" merged to single register "mem~1772"
+    Info (13350): Duplicate register "mem__dual~1798" merged to single register "mem~1836"
+    Info (13350): Duplicate register "mem__dual~1862" merged to single register "mem~1900"
+    Info (13350): Duplicate register "mem__dual~1926" merged to single register "mem~1964"
+    Info (13350): Duplicate register "mem__dual~2054" merged to single register "mem~2092"
+    Info (13350): Duplicate register "mem__dual~1866" merged to single register "mem~1904"
+    Info (13350): Duplicate register "mem__dual~1740" merged to single register "mem~1778"
+    Info (13350): Duplicate register "mem__dual~1102" merged to single register "mem~1140"
+    Info (13350): Duplicate register "mem__dual~1358" merged to single register "mem~1396"
+    Info (13350): Duplicate register "mem__dual~1040" merged to single register "mem~1078"
+    Info (13350): Duplicate register "mem__dual~658" merged to single register "mem~696"
+    Info (13350): Duplicate register "mem__dual~738" merged to single register "mem~776"
+    Info (13350): Duplicate register "mem__dual~100" merged to single register "mem~138"
+    Info (13350): Duplicate register "mem__dual~356" merged to single register "mem~394"
+    Info (13350): Duplicate register "mem__dual~1636" merged to single register "mem~1674"
+    Info (13350): Duplicate register "mem__dual~1892" merged to single register "mem~1930"
+    Info (13350): Duplicate register "mem__dual~424" merged to single register "mem~462"
+    Info (13350): Duplicate register "mem__dual~936" merged to single register "mem~974"
+    Info (13350): Duplicate register "mem__dual~1576" merged to single register "mem~1614"
+    Info (13350): Duplicate register "mem__dual~1832" merged to single register "mem~1870"
+    Info (13350): Duplicate register "mem__dual~106" merged to single register "mem~144"
+    Info (13350): Duplicate register "mem__dual~1642" merged to single register "mem~1680"
+    Info (13350): Duplicate register "mem__dual~626" merged to single register "mem~664"
+    Info (13350): Duplicate register "mem__dual~1742" merged to single register "mem~1780"
+    Info (13350): Duplicate register "mem__dual~784" merged to single register "mem~822"
+    Info (13350): Duplicate register "mem__dual~1680" merged to single register "mem~1718"
+    Info (13350): Duplicate register "mem__dual~1248" merged to single register "mem~1286"
+    Info (13350): Duplicate register "mem__dual~1634" merged to single register "mem~1672"
+    Info (13350): Duplicate register "mem__dual~1762" merged to single register "mem~1800"
+    Info (13350): Duplicate register "mem__dual~1890" merged to single register "mem~1928"
+    Info (13350): Duplicate register "mem__dual~612" merged to single register "mem~650"
+    Info (13350): Duplicate register "mem__dual~742" merged to single register "mem~780"
+    Info (13350): Duplicate register "mem__dual~1574" merged to single register "mem~1612"
+    Info (13350): Duplicate register "mem__dual~1830" merged to single register "mem~1868"
+    Info (13350): Duplicate register "mem__dual~2086" merged to single register "mem~2124"
+    Info (13350): Duplicate register "mem__dual~296" merged to single register "mem~334"
+    Info (13350): Duplicate register "mem__dual~1192" merged to single register "mem~1230"
+    Info (13350): Duplicate register "mem__dual~176" merged to single register "mem~214"
+    Info (13350): Duplicate register "mem__dual~624" merged to single register "mem~662"
+    Info (13350): Duplicate register "mem__dual~1072" merged to single register "mem~1110"
+    Info (13350): Duplicate register "mem__dual~734" merged to single register "mem~772"
+    Info (13350): Duplicate register "mem__dual~610" merged to single register "mem~648"
+    Info (13350): Duplicate register "mem__dual~1318" merged to single register "mem~1356"
+    Info (13350): Duplicate register "mem__dual~1382" merged to single register "mem~1420"
+    Info (13350): Duplicate register "mem__dual~1446" merged to single register "mem~1484"
+    Info (13350): Duplicate register "mem__dual~1958" merged to single register "mem~1996"
+    Info (13350): Duplicate register "mem__dual~552" merged to single register "mem~590"
+    Info (13350): Duplicate register "mem__dual~680" merged to single register "mem~718"
+    Info (13350): Duplicate register "mem__dual~1640" merged to single register "mem~1678"
+    Info (13350): Duplicate register "mem__dual~364" merged to single register "mem~402"
+    Info (13350): Duplicate register "mem__dual~368" merged to single register "mem~406"
+    Info (13350): Duplicate register "mem__dual~226" merged to single register "mem~264"
+    Info (13350): Duplicate register "mem__dual~1122" merged to single register "mem~1160"
+    Info (13350): Duplicate register "mem__dual~102" merged to single register "mem~140"
+    Info (13350): Duplicate register "mem__dual~230" merged to single register "mem~268"
+    Info (13350): Duplicate register "mem__dual~358" merged to single register "mem~396"
+    Info (13350): Duplicate register "mem__dual~1702" merged to single register "mem~1740"
+    Info (13350): Duplicate register "mem__dual~618" merged to single register "mem~656"
+    Info (13350): Duplicate register "mem__dual~938" merged to single register "mem~976"
+    Info (13350): Duplicate register "mem__dual~688" merged to single register "mem~726"
+    Info (13350): Duplicate register "mem__dual~1394" merged to single register "mem~1432"
+    Info (13350): Duplicate register "mem__dual~866" merged to single register "mem~904"
+    Info (13350): Duplicate register "mem__dual~1764" merged to single register "mem~1802"
+    Info (13350): Duplicate register "mem__dual~806" merged to single register "mem~844"
+    Info (13350): Duplicate register "mem__dual~1062" merged to single register "mem~1100"
+    Info (13350): Duplicate register "mem__dual~1190" merged to single register "mem~1228"
+    Info (13350): Duplicate register "mem__dual~1378" merged to single register "mem~1416"
+    Info (13350): Duplicate register "mem__dual~934" merged to single register "mem~972"
+    Info (13350): Duplicate register "mem__dual~168" merged to single register "mem~206"
+    Info (13350): Duplicate register "mem__dual~616" merged to single register "mem~654"
+    Info (13350): Duplicate register "mem__dual~112" merged to single register "mem~150"
+    Info (13350): Duplicate register "mem__dual~678" merged to single register "mem~716"
+    Info (13350): Duplicate register "mem__dual~1126" merged to single register "mem~1164"
+    Info (13350): Duplicate register "mem__dual~1388" merged to single register "mem~1426"
+    Info (13350): Duplicate register "mem__dual~370" merged to single register "mem~408"
+    Info (13350): Duplicate register "mem__dual~1646" merged to single register "mem~1684"
+    Info (13350): Duplicate register "mem__dual~1138" merged to single register "mem~1176"
+    Info (13350): Duplicate register "mem__dual~1136" merged to single register "mem~1174"
+Info: Duplicate registers merged to single register
+    Info (13350): Duplicate register "mem__dual~640" merged to single register "mem~678"
+    Info (13350): Duplicate register "mem__dual~576" merged to single register "mem~614"
+    Info (13350): Duplicate register "mem__dual~768" merged to single register "mem~806"
+    Info (13350): Duplicate register "mem__dual~384" merged to single register "mem~422"
+    Info (13350): Duplicate register "mem__dual~448" merged to single register "mem~486"
+    Info (13350): Duplicate register "mem__dual~320" merged to single register "mem~358"
+    Info (13350): Duplicate register "mem__dual~512" merged to single register "mem~550"
+    Info (13350): Duplicate register "mem__dual~192" merged to single register "mem~230"
+    Info (13350): Duplicate register "mem__dual~128" merged to single register "mem~166"
+    Info (13350): Duplicate register "mem__dual~64" merged to single register "mem~102"
+    Info (13350): Duplicate register "mem__dual~256" merged to single register "mem~294"
+    Info (13350): Duplicate register "mem__dual~960" merged to single register "mem~998"
+    Info (13350): Duplicate register "mem__dual~1984" merged to single register "mem~2022"
+    Info (13350): Duplicate register "mem__dual~1664" merged to single register "mem~1702"
+    Info (13350): Duplicate register "mem__dual~1408" merged to single register "mem~1446"
+    Info (13350): Duplicate register "mem__dual~1152" merged to single register "mem~1190"
+    Info (13350): Duplicate register "mem__dual~1344" merged to single register "mem~1382"
+    Info (13350): Duplicate register "mem__dual~1600" merged to single register "mem~1638"
+    Info (13350): Duplicate register "mem__dual~1792" merged to single register "mem~1830"
+    Info (13350): Duplicate register "mem__dual~1536" merged to single register "mem~1574"
+    Info (13350): Duplicate register "mem__dual~1280" merged to single register "mem~1318"
+    Info (13350): Duplicate register "mem__dual~386" merged to single register "mem~424"
+    Info (13350): Duplicate register "mem__dual~514" merged to single register "mem~552"
+    Info (13350): Duplicate register "mem__dual~642" merged to single register "mem~680"
+    Info (13350): Duplicate register "mem__dual~578" merged to single register "mem~616"
+    Info (13350): Duplicate register "mem__dual~770" merged to single register "mem~808"
+    Info (13350): Duplicate register "mem__dual~258" merged to single register "mem~296"
+    Info (13350): Duplicate register "mem__dual~898" merged to single register "mem~936"
+    Info (13350): Duplicate register "mem__dual~834" merged to single register "mem~872"
+    Info (13350): Duplicate register "mem__dual~1026" merged to single register "mem~1064"
+    Info (13350): Duplicate register "mem__dual~1410" merged to single register "mem~1448"
+    Info (13350): Duplicate register "mem__dual~1666" merged to single register "mem~1704"
+    Info (13350): Duplicate register "mem__dual~1154" merged to single register "mem~1192"
+    Info (13350): Duplicate register "mem__dual~1730" merged to single register "mem~1768"
+    Info (13350): Duplicate register "mem__dual~1986" merged to single register "mem~2024"
+    Info (13350): Duplicate register "mem__dual~1090" merged to single register "mem~1128"
+    Info (13350): Duplicate register "mem__dual~1538" merged to single register "mem~1576"
+    Info (13350): Duplicate register "mem__dual~1282" merged to single register "mem~1320"
+    Info (13350): Duplicate register "mem__dual~644" merged to single register "mem~682"
+    Info (13350): Duplicate register "mem__dual~772" merged to single register "mem~810"
+    Info (13350): Duplicate register "mem__dual~900" merged to single register "mem~938"
+    Info (13350): Duplicate register "mem__dual~1028" merged to single register "mem~1066"
+    Info (13350): Duplicate register "mem__dual~1668" merged to single register "mem~1706"
+    Info (13350): Duplicate register "mem__dual~1412" merged to single register "mem~1450"
+    Info (13350): Duplicate register "mem__dual~1156" merged to single register "mem~1194"
+    Info (13350): Duplicate register "mem__dual~1924" merged to single register "mem~1962"
+    Info (13350): Duplicate register "mem__dual~1348" merged to single register "mem~1386"
+    Info (13350): Duplicate register "mem__dual~1604" merged to single register "mem~1642"
+    Info (13350): Duplicate register "mem__dual~1092" merged to single register "mem~1130"
+    Info (13350): Duplicate register "mem__dual~1860" merged to single register "mem~1898"
+    Info (13350): Duplicate register "mem__dual~1796" merged to single register "mem~1834"
+    Info (13350): Duplicate register "mem__dual~1540" merged to single register "mem~1578"
+    Info (13350): Duplicate register "mem__dual~1284" merged to single register "mem~1322"
+    Info (13350): Duplicate register "mem__dual~2052" merged to single register "mem~2090"
+    Info (13350): Duplicate register "mem__dual~390" merged to single register "mem~428"
+    Info (13350): Duplicate register "mem__dual~326" merged to single register "mem~364"
+    Info (13350): Duplicate register "mem__dual~518" merged to single register "mem~556"
+    Info (13350): Duplicate register "mem__dual~646" merged to single register "mem~684"
+    Info (13350): Duplicate register "mem__dual~710" merged to single register "mem~748"
+    Info (13350): Duplicate register "mem__dual~582" merged to single register "mem~620"
+    Info (13350): Duplicate register "mem__dual~774" merged to single register "mem~812"
+    Info (13350): Duplicate register "mem__dual~134" merged to single register "mem~172"
+    Info (13350): Duplicate register "mem__dual~198" merged to single register "mem~236"
+    Info (13350): Duplicate register "mem__dual~70" merged to single register "mem~108"
+    Info (13350): Duplicate register "mem__dual~262" merged to single register "mem~300"
+    Info (13350): Duplicate register "mem__dual~902" merged to single register "mem~940"
+    Info (13350): Duplicate register "mem__dual~838" merged to single register "mem~876"
+    Info (13350): Duplicate register "mem__dual~1030" merged to single register "mem~1068"
+    Info (13350): Duplicate register "mem__dual~1414" merged to single register "mem~1452"
+    Info (13350): Duplicate register "mem__dual~1670" merged to single register "mem~1708"
+    Info (13350): Duplicate register "mem__dual~1158" merged to single register "mem~1196"
+    Info (13350): Duplicate register "mem__dual~1990" merged to single register "mem~2028"
+    Info (13350): Duplicate register "mem__dual~1542" merged to single register "mem~1580"
+    Info (13350): Duplicate register "mem__dual~1286" merged to single register "mem~1324"
+    Info (13350): Duplicate register "mem__dual~2056" merged to single register "mem~2094"
+    Info (13350): Duplicate register "mem__dual~394" merged to single register "mem~432"
+    Info (13350): Duplicate register "mem__dual~522" merged to single register "mem~560"
+    Info (13350): Duplicate register "mem__dual~650" merged to single register "mem~688"
+    Info (13350): Duplicate register "mem__dual~778" merged to single register "mem~816"
+    Info (13350): Duplicate register "mem__dual~138" merged to single register "mem~176"
+    Info (13350): Duplicate register "mem__dual~266" merged to single register "mem~304"
+    Info (13350): Duplicate register "mem__dual~906" merged to single register "mem~944"
+    Info (13350): Duplicate register "mem__dual~1034" merged to single register "mem~1072"
+    Info (13350): Duplicate register "mem__dual~1418" merged to single register "mem~1456"
+    Info (13350): Duplicate register "mem__dual~1674" merged to single register "mem~1712"
+    Info (13350): Duplicate register "mem__dual~1162" merged to single register "mem~1200"
+    Info (13350): Duplicate register "mem__dual~1930" merged to single register "mem~1968"
+    Info (13350): Duplicate register "mem__dual~1610" merged to single register "mem~1648"
+    Info (13350): Duplicate register "mem__dual~1354" merged to single register "mem~1392"
+    Info (13350): Duplicate register "mem__dual~1098" merged to single register "mem~1136"
+    Info (13350): Duplicate register "mem__dual~1546" merged to single register "mem~1584"
+    Info (13350): Duplicate register "mem__dual~1802" merged to single register "mem~1840"
+    Info (13350): Duplicate register "mem__dual~1290" merged to single register "mem~1328"
+    Info (13350): Duplicate register "mem__dual~2058" merged to single register "mem~2096"
+    Info (13350): Duplicate register "mem__dual~652" merged to single register "mem~690"
+    Info (13350): Duplicate register "mem__dual~588" merged to single register "mem~626"
+    Info (13350): Duplicate register "mem__dual~780" merged to single register "mem~818"
+    Info (13350): Duplicate register "mem__dual~396" merged to single register "mem~434"
+    Info (13350): Duplicate register "mem__dual~332" merged to single register "mem~370"
+    Info (13350): Duplicate register "mem__dual~524" merged to single register "mem~562"
+    Info (13350): Duplicate register "mem__dual~140" merged to single register "mem~178"
+    Info (13350): Duplicate register "mem__dual~76" merged to single register "mem~114"
+    Info (13350): Duplicate register "mem__dual~268" merged to single register "mem~306"
+    Info (13350): Duplicate register "mem__dual~908" merged to single register "mem~946"
+    Info (13350): Duplicate register "mem__dual~844" merged to single register "mem~882"
+    Info (13350): Duplicate register "mem__dual~1036" merged to single register "mem~1074"
+    Info (13350): Duplicate register "mem__dual~1228" merged to single register "mem~1266"
+    Info (13350): Duplicate register "mem__dual~1676" merged to single register "mem~1714"
+    Info (13350): Duplicate register "mem__dual~1420" merged to single register "mem~1458"
+    Info (13350): Duplicate register "mem__dual~1164" merged to single register "mem~1202"
+    Info (13350): Duplicate register "mem__dual~1932" merged to single register "mem~1970"
+    Info (13350): Duplicate register "mem__dual~1356" merged to single register "mem~1394"
+    Info (13350): Duplicate register "mem__dual~1612" merged to single register "mem~1650"
+    Info (13350): Duplicate register "mem__dual~1100" merged to single register "mem~1138"
+    Info (13350): Duplicate register "mem__dual~1868" merged to single register "mem~1906"
+    Info (13350): Duplicate register "mem__dual~1804" merged to single register "mem~1842"
+    Info (13350): Duplicate register "mem__dual~1548" merged to single register "mem~1586"
+    Info (13350): Duplicate register "mem__dual~1292" merged to single register "mem~1330"
+    Info (13350): Duplicate register "mem__dual~2060" merged to single register "mem~2098"
+    Info (13350): Duplicate register "mem__dual~398" merged to single register "mem~436"
+    Info (13350): Duplicate register "mem__dual~334" merged to single register "mem~372"
+    Info (13350): Duplicate register "mem__dual~526" merged to single register "mem~564"
+    Info (13350): Duplicate register "mem__dual~654" merged to single register "mem~692"
+    Info (13350): Duplicate register "mem__dual~718" merged to single register "mem~756"
+    Info (13350): Duplicate register "mem__dual~590" merged to single register "mem~628"
+    Info (13350): Duplicate register "mem__dual~782" merged to single register "mem~820"
+    Info (13350): Duplicate register "mem__dual~142" merged to single register "mem~180"
+    Info (13350): Duplicate register "mem__dual~78" merged to single register "mem~116"
+    Info (13350): Duplicate register "mem__dual~270" merged to single register "mem~308"
+    Info (13350): Duplicate register "mem__dual~910" merged to single register "mem~948"
+    Info (13350): Duplicate register "mem__dual~846" merged to single register "mem~884"
+    Info (13350): Duplicate register "mem__dual~1038" merged to single register "mem~1076"
+    Info (13350): Duplicate register "mem__dual~1422" merged to single register "mem~1460"
+    Info (13350): Duplicate register "mem__dual~1678" merged to single register "mem~1716"
+    Info (13350): Duplicate register "mem__dual~1166" merged to single register "mem~1204"
+    Info (13350): Duplicate register "mem__dual~1934" merged to single register "mem~1972"
+    Info (13350): Duplicate register "mem__dual~1230" merged to single register "mem~1268"
+    Info (13350): Duplicate register "mem__dual~1998" merged to single register "mem~2036"
+    Info (13350): Duplicate register "mem__dual~1550" merged to single register "mem~1588"
+    Info (13350): Duplicate register "mem__dual~1806" merged to single register "mem~1844"
+    Info (13350): Duplicate register "mem__dual~1294" merged to single register "mem~1332"
+    Info (13350): Duplicate register "mem__dual~2062" merged to single register "mem~2100"
+    Info (13350): Duplicate register "mem__dual~656" merged to single register "mem~694"
+    Info (13350): Duplicate register "mem__dual~592" merged to single register "mem~630"
+    Info (13350): Duplicate register "mem__dual~400" merged to single register "mem~438"
+    Info (13350): Duplicate register "mem__dual~528" merged to single register "mem~566"
+    Info (13350): Duplicate register "mem__dual~144" merged to single register "mem~182"
+    Info (13350): Duplicate register "mem__dual~272" merged to single register "mem~310"
+    Info (13350): Duplicate register "mem__dual~912" merged to single register "mem~950"
+    Info (13350): Duplicate register "mem__dual~1430" merged to single register "mem~1468"
+    Info (13350): Duplicate register "mem__dual~1686" merged to single register "mem~1724"
+    Info (13350): Duplicate register "mem__dual~1942" merged to single register "mem~1980"
+    Info (13350): Duplicate register "mem__dual~1558" merged to single register "mem~1596"
+    Info (13350): Duplicate register "mem__dual~1814" merged to single register "mem~1852"
+    Info (13350): Duplicate register "mem__dual~2070" merged to single register "mem~2108"
+    Info (13350): Duplicate register "mem__dual~664" merged to single register "mem~702"
+    Info (13350): Duplicate register "mem__dual~792" merged to single register "mem~830"
+    Info (13350): Duplicate register "mem__dual~408" merged to single register "mem~446"
+    Info (13350): Duplicate register "mem__dual~536" merged to single register "mem~574"
+    Info (13350): Duplicate register "mem__dual~152" merged to single register "mem~190"
+    Info (13350): Duplicate register "mem__dual~280" merged to single register "mem~318"
+    Info (13350): Duplicate register "mem__dual~920" merged to single register "mem~958"
+    Info (13350): Duplicate register "mem__dual~1048" merged to single register "mem~1086"
+    Info (13350): Duplicate register "mem__dual~1688" merged to single register "mem~1726"
+    Info (13350): Duplicate register "mem__dual~1432" merged to single register "mem~1470"
+    Info (13350): Duplicate register "mem__dual~1176" merged to single register "mem~1214"
+    Info (13350): Duplicate register "mem__dual~1944" merged to single register "mem~1982"
+    Info (13350): Duplicate register "mem__dual~1624" merged to single register "mem~1662"
+    Info (13350): Duplicate register "mem__dual~1880" merged to single register "mem~1918"
+    Info (13350): Duplicate register "mem__dual~1816" merged to single register "mem~1854"
+    Info (13350): Duplicate register "mem__dual~1560" merged to single register "mem~1598"
+    Info (13350): Duplicate register "mem__dual~1304" merged to single register "mem~1342"
+    Info (13350): Duplicate register "mem__dual~2072" merged to single register "mem~2110"
+    Info (13350): Duplicate register "mem__dual~410" merged to single register "mem~448"
+    Info (13350): Duplicate register "mem__dual~346" merged to single register "mem~384"
+    Info (13350): Duplicate register "mem__dual~538" merged to single register "mem~576"
+    Info (13350): Duplicate register "mem__dual~666" merged to single register "mem~704"
+    Info (13350): Duplicate register "mem__dual~602" merged to single register "mem~640"
+    Info (13350): Duplicate register "mem__dual~794" merged to single register "mem~832"
+    Info (13350): Duplicate register "mem__dual~154" merged to single register "mem~192"
+    Info (13350): Duplicate register "mem__dual~90" merged to single register "mem~128"
+    Info (13350): Duplicate register "mem__dual~282" merged to single register "mem~320"
+    Info (13350): Duplicate register "mem__dual~922" merged to single register "mem~960"
+    Info (13350): Duplicate register "mem__dual~858" merged to single register "mem~896"
+    Info (13350): Duplicate register "mem__dual~1050" merged to single register "mem~1088"
+    Info (13350): Duplicate register "mem__dual~1434" merged to single register "mem~1472"
+    Info (13350): Duplicate register "mem__dual~1690" merged to single register "mem~1728"
+    Info (13350): Duplicate register "mem__dual~1178" merged to single register "mem~1216"
+    Info (13350): Duplicate register "mem__dual~1946" merged to single register "mem~1984"
+    Info (13350): Duplicate register "mem__dual~1626" merged to single register "mem~1664"
+    Info (13350): Duplicate register "mem__dual~1370" merged to single register "mem~1408"
+    Info (13350): Duplicate register "mem__dual~1114" merged to single register "mem~1152"
+    Info (13350): Duplicate register "mem__dual~1882" merged to single register "mem~1920"
+    Info (13350): Duplicate register "mem__dual~1562" merged to single register "mem~1600"
+    Info (13350): Duplicate register "mem__dual~1818" merged to single register "mem~1856"
+    Info (13350): Duplicate register "mem__dual~1306" merged to single register "mem~1344"
+    Info (13350): Duplicate register "mem__dual~2074" merged to single register "mem~2112"
+    Info (13350): Duplicate register "mem__dual~668" merged to single register "mem~706"
+    Info (13350): Duplicate register "mem__dual~604" merged to single register "mem~642"
+    Info (13350): Duplicate register "mem__dual~796" merged to single register "mem~834"
+    Info (13350): Duplicate register "mem__dual~412" merged to single register "mem~450"
+    Info (13350): Duplicate register "mem__dual~348" merged to single register "mem~386"
+    Info (13350): Duplicate register "mem__dual~540" merged to single register "mem~578"
+    Info (13350): Duplicate register "mem__dual~156" merged to single register "mem~194"
+    Info (13350): Duplicate register "mem__dual~92" merged to single register "mem~130"
+    Info (13350): Duplicate register "mem__dual~284" merged to single register "mem~322"
+    Info (13350): Duplicate register "mem__dual~924" merged to single register "mem~962"
+    Info (13350): Duplicate register "mem__dual~860" merged to single register "mem~898"
+    Info (13350): Duplicate register "mem__dual~1052" merged to single register "mem~1090"
+    Info (13350): Duplicate register "mem__dual~1756" merged to single register "mem~1794"
+    Info (13350): Duplicate register "mem__dual~1692" merged to single register "mem~1730"
+    Info (13350): Duplicate register "mem__dual~1436" merged to single register "mem~1474"
+    Info (13350): Duplicate register "mem__dual~1180" merged to single register "mem~1218"
+    Info (13350): Duplicate register "mem__dual~1948" merged to single register "mem~1986"
+    Info (13350): Duplicate register "mem__dual~1372" merged to single register "mem~1410"
+    Info (13350): Duplicate register "mem__dual~1628" merged to single register "mem~1666"
+    Info (13350): Duplicate register "mem__dual~1116" merged to single register "mem~1154"
+    Info (13350): Duplicate register "mem__dual~1884" merged to single register "mem~1922"
+    Info (13350): Duplicate register "mem__dual~1820" merged to single register "mem~1858"
+    Info (13350): Duplicate register "mem__dual~1564" merged to single register "mem~1602"
+    Info (13350): Duplicate register "mem__dual~1308" merged to single register "mem~1346"
+    Info (13350): Duplicate register "mem__dual~2076" merged to single register "mem~2114"
+    Info (13350): Duplicate register "mem__dual~414" merged to single register "mem~452"
+    Info (13350): Duplicate register "mem__dual~350" merged to single register "mem~388"
+    Info (13350): Duplicate register "mem__dual~542" merged to single register "mem~580"
+    Info (13350): Duplicate register "mem__dual~670" merged to single register "mem~708"
+    Info (13350): Duplicate register "mem__dual~606" merged to single register "mem~644"
+    Info (13350): Duplicate register "mem__dual~798" merged to single register "mem~836"
+    Info (13350): Duplicate register "mem__dual~158" merged to single register "mem~196"
+    Info (13350): Duplicate register "mem__dual~94" merged to single register "mem~132"
+    Info (13350): Duplicate register "mem__dual~286" merged to single register "mem~324"
+    Info (13350): Duplicate register "mem__dual~926" merged to single register "mem~964"
+    Info (13350): Duplicate register "mem__dual~862" merged to single register "mem~900"
+    Info (13350): Duplicate register "mem__dual~1054" merged to single register "mem~1092"
+    Info (13350): Duplicate register "mem__dual~1438" merged to single register "mem~1476"
+    Info (13350): Duplicate register "mem__dual~1694" merged to single register "mem~1732"
+    Info (13350): Duplicate register "mem__dual~1182" merged to single register "mem~1220"
+    Info (13350): Duplicate register "mem__dual~1950" merged to single register "mem~1988"
+    Info (13350): Duplicate register "mem__dual~1246" merged to single register "mem~1284"
+    Info (13350): Duplicate register "mem__dual~2014" merged to single register "mem~2052"
+    Info (13350): Duplicate register "mem__dual~1630" merged to single register "mem~1668"
+    Info (13350): Duplicate register "mem__dual~1374" merged to single register "mem~1412"
+    Info (13350): Duplicate register "mem__dual~1118" merged to single register "mem~1156"
+    Info (13350): Duplicate register "mem__dual~1886" merged to single register "mem~1924"
+    Info (13350): Duplicate register "mem__dual~1566" merged to single register "mem~1604"
+    Info (13350): Duplicate register "mem__dual~1822" merged to single register "mem~1860"
+    Info (13350): Duplicate register "mem__dual~1310" merged to single register "mem~1348"
+    Info (13350): Duplicate register "mem__dual~2078" merged to single register "mem~2116"
+    Info (13350): Duplicate register "mem__dual~672" merged to single register "mem~710"
+    Info (13350): Duplicate register "mem__dual~608" merged to single register "mem~646"
+    Info (13350): Duplicate register "mem__dual~800" merged to single register "mem~838"
+    Info (13350): Duplicate register "mem__dual~416" merged to single register "mem~454"
+    Info (13350): Duplicate register "mem__dual~352" merged to single register "mem~390"
+    Info (13350): Duplicate register "mem__dual~544" merged to single register "mem~582"
+    Info (13350): Duplicate register "mem__dual~160" merged to single register "mem~198"
+    Info (13350): Duplicate register "mem__dual~96" merged to single register "mem~134"
+    Info (13350): Duplicate register "mem__dual~288" merged to single register "mem~326"
+    Info (13350): Duplicate register "mem__dual~928" merged to single register "mem~966"
+    Info (13350): Duplicate register "mem__dual~864" merged to single register "mem~902"
+    Info (13350): Duplicate register "mem__dual~1056" merged to single register "mem~1094"
+    Info (13350): Duplicate register "mem__dual~1696" merged to single register "mem~1734"
+    Info (13350): Duplicate register "mem__dual~1440" merged to single register "mem~1478"
+    Info (13350): Duplicate register "mem__dual~1184" merged to single register "mem~1222"
+    Info (13350): Duplicate register "mem__dual~1952" merged to single register "mem~1990"
+    Info (13350): Duplicate register "mem__dual~1376" merged to single register "mem~1414"
+    Info (13350): Duplicate register "mem__dual~1632" merged to single register "mem~1670"
+    Info (13350): Duplicate register "mem__dual~1120" merged to single register "mem~1158"
+    Info (13350): Duplicate register "mem__dual~1888" merged to single register "mem~1926"
+    Info (13350): Duplicate register "mem__dual~1824" merged to single register "mem~1862"
+    Info (13350): Duplicate register "mem__dual~1568" merged to single register "mem~1606"
+    Info (13350): Duplicate register "mem__dual~1312" merged to single register "mem~1350"
+    Info (13350): Duplicate register "mem__dual~2080" merged to single register "mem~2118"
+    Info (13350): Duplicate register "mem__dual~418" merged to single register "mem~456"
+    Info (13350): Duplicate register "mem__dual~354" merged to single register "mem~392"
+    Info (13350): Duplicate register "mem__dual~546" merged to single register "mem~584"
+    Info (13350): Duplicate register "mem__dual~674" merged to single register "mem~712"
+    Info (13350): Duplicate register "mem__dual~802" merged to single register "mem~840"
+    Info (13350): Duplicate register "mem__dual~162" merged to single register "mem~200"
+    Info (13350): Duplicate register "mem__dual~98" merged to single register "mem~136"
+    Info (13350): Duplicate register "mem__dual~290" merged to single register "mem~328"
+    Info (13350): Duplicate register "mem__dual~930" merged to single register "mem~968"
+    Info (13350): Duplicate register "mem__dual~1058" merged to single register "mem~1096"
+    Info (13350): Duplicate register "mem__dual~1442" merged to single register "mem~1480"
+    Info (13350): Duplicate register "mem__dual~1698" merged to single register "mem~1736"
+    Info (13350): Duplicate register "mem__dual~1186" merged to single register "mem~1224"
+    Info (13350): Duplicate register "mem__dual~1954" merged to single register "mem~1992"
+    Info (13350): Duplicate register "mem__dual~1570" merged to single register "mem~1608"
+    Info (13350): Duplicate register "mem__dual~1826" merged to single register "mem~1864"
+    Info (13350): Duplicate register "mem__dual~1314" merged to single register "mem~1352"
+    Info (13350): Duplicate register "mem__dual~2082" merged to single register "mem~2120"
+    Info (13350): Duplicate register "mem__dual~676" merged to single register "mem~714"
+    Info (13350): Duplicate register "mem__dual~804" merged to single register "mem~842"
+    Info (13350): Duplicate register "mem__dual~420" merged to single register "mem~458"
+    Info (13350): Duplicate register "mem__dual~548" merged to single register "mem~586"
+    Info (13350): Duplicate register "mem__dual~228" merged to single register "mem~266"
+    Info (13350): Duplicate register "mem__dual~164" merged to single register "mem~202"
+    Info (13350): Duplicate register "mem__dual~292" merged to single register "mem~330"
+    Info (13350): Duplicate register "mem__dual~932" merged to single register "mem~970"
+    Info (13350): Duplicate register "mem__dual~1060" merged to single register "mem~1098"
+    Info (13350): Duplicate register "mem__dual~1700" merged to single register "mem~1738"
+    Info (13350): Duplicate register "mem__dual~1444" merged to single register "mem~1482"
+    Info (13350): Duplicate register "mem__dual~1188" merged to single register "mem~1226"
+    Info (13350): Duplicate register "mem__dual~1956" merged to single register "mem~1994"
+    Info (13350): Duplicate register "mem__dual~1828" merged to single register "mem~1866"
+    Info (13350): Duplicate register "mem__dual~1572" merged to single register "mem~1610"
+    Info (13350): Duplicate register "mem__dual~1316" merged to single register "mem~1354"
+    Info (13350): Duplicate register "mem__dual~2084" merged to single register "mem~2122"
+    Info (13350): Duplicate register "mem__dual~422" merged to single register "mem~460"
+    Info (13350): Duplicate register "mem__dual~550" merged to single register "mem~588"
+    Info (13350): Duplicate register "mem__dual~166" merged to single register "mem~204"
+    Info (13350): Duplicate register "mem__dual~294" merged to single register "mem~332"
+    Info (13350): Duplicate register "mem__dual~1130" merged to single register "mem~1168"
+    Info (13350): Duplicate register "mem__dual~366" merged to single register "mem~404"
+    Info (13350): Duplicate register "mem__dual~1134" merged to single register "mem~1172"
+    Info (13350): Duplicate register "mem__dual~1712" merged to single register "mem~1750"
+    Info (13350): Duplicate register "mem__dual~1584" merged to single register "mem~1622"
+    Info (13350): Duplicate register "mem__dual~562" merged to single register "mem~600"
+    Info (13350): Duplicate register "mem__dual~114" merged to single register "mem~152"
+    Info (13350): Duplicate register "mem__dual~946" merged to single register "mem~984"
+    Info (13350): Duplicate register "mem__dual~1074" merged to single register "mem~1112"
+    Info (13350): Duplicate register "mem__dual~1458" merged to single register "mem~1496"
+    Info (13350): Duplicate register "mem__dual~1714" merged to single register "mem~1752"
+    Info (13350): Duplicate register "mem__dual~1970" merged to single register "mem~2008"
+    Info (13350): Duplicate register "mem__dual~692" merged to single register "mem~730"
+    Info (13350): Duplicate register "mem__dual~820" merged to single register "mem~858"
+    Info (13350): Duplicate register "mem__dual~180" merged to single register "mem~218"
+    Info (13350): Duplicate register "mem__dual~308" merged to single register "mem~346"
+    Info (13350): Duplicate register "mem__dual~948" merged to single register "mem~986"
+    Info (13350): Duplicate register "mem__dual~1716" merged to single register "mem~1754"
+    Info (13350): Duplicate register "mem__dual~1460" merged to single register "mem~1498"
+    Info (13350): Duplicate register "mem__dual~1972" merged to single register "mem~2010"
+    Info (13350): Duplicate register "mem__dual~1332" merged to single register "mem~1370"
+    Info (13350): Duplicate register "mem__dual~438" merged to single register "mem~476"
+    Info (13350): Duplicate register "mem__dual~694" merged to single register "mem~732"
+    Info (13350): Duplicate register "mem__dual~822" merged to single register "mem~860"
+    Info (13350): Duplicate register "mem__dual~182" merged to single register "mem~220"
+    Info (13350): Duplicate register "mem__dual~310" merged to single register "mem~348"
+    Info (13350): Duplicate register "mem__dual~950" merged to single register "mem~988"
+    Info (13350): Duplicate register "mem__dual~1462" merged to single register "mem~1500"
+    Info (13350): Duplicate register "mem__dual~1718" merged to single register "mem~1756"
+    Info (13350): Duplicate register "mem__dual~1206" merged to single register "mem~1244"
+    Info (13350): Duplicate register "mem__dual~1974" merged to single register "mem~2012"
+    Info (13350): Duplicate register "mem__dual~1846" merged to single register "mem~1884"
+    Info (13350): Duplicate register "mem__dual~1334" merged to single register "mem~1372"
+    Info (13350): Duplicate register "mem__dual~696" merged to single register "mem~734"
+    Info (13350): Duplicate register "mem__dual~824" merged to single register "mem~862"
+    Info (13350): Duplicate register "mem__dual~440" merged to single register "mem~478"
+    Info (13350): Duplicate register "mem__dual~184" merged to single register "mem~222"
+    Info (13350): Duplicate register "mem__dual~312" merged to single register "mem~350"
+    Info (13350): Duplicate register "mem__dual~952" merged to single register "mem~990"
+    Info (13350): Duplicate register "mem__dual~1080" merged to single register "mem~1118"
+    Info (13350): Duplicate register "mem__dual~1720" merged to single register "mem~1758"
+    Info (13350): Duplicate register "mem__dual~1464" merged to single register "mem~1502"
+    Info (13350): Duplicate register "mem__dual~1208" merged to single register "mem~1246"
+    Info (13350): Duplicate register "mem__dual~1592" merged to single register "mem~1630"
+    Info (13350): Duplicate register "mem__dual~1336" merged to single register "mem~1374"
+    Info (13350): Duplicate register "mem__dual~2110" merged to single register "mem~2148"
+Info: Implemented 2533 device resources after synthesis - the final resource count might be different
+    Info: Implemented 49 input pins
+    Info: Implemented 64 output pins
+    Info: Implemented 2420 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 259 megabytes
+    Info: Processing ended: Sun Mar 19 14:04:44 2017
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+

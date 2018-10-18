@@ -1,0 +1,291 @@
+Analysis & Synthesis report for new1
+Tue Apr 11 21:21:56 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. General Register Statistics
+  8. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Apr 11 21:21:56 2017    ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name               ; new1                                     ;
+; Top-level Entity Name       ; new1                                     ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 96                                       ;
+; Total pins                  ; 163                                      ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                          ; new1               ; new1               ;
+; Family name                                                    ; Cyclone            ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+
+; new1.vhd                         ; yes             ; User VHDL File  ; C:/Users/ASUS/Desktop/JISUANJIZUCHENGDAZUOYE1/new1/new1.vhd ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Total logic elements                        ; 96     ;
+;     -- Combinational with no register       ; 32     ;
+;     -- Register only                        ; 32     ;
+;     -- Combinational with a register        ; 32     ;
+;                                             ;        ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 0      ;
+;     -- 3 input functions                    ; 0      ;
+;     -- 2 input functions                    ; 63     ;
+;     -- 1 input functions                    ; 1      ;
+;     -- 0 input functions                    ; 0      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 66     ;
+;     -- arithmetic mode                      ; 30     ;
+;     -- qfbk mode                            ; 0      ;
+;     -- register cascade mode                ; 0      ;
+;     -- synchronous clear/load mode          ; 0      ;
+;     -- asynchronous clear/load mode         ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 64     ;
+; Total logic cells in carry chains           ; 31     ;
+; I/O pins                                    ; 163    ;
+; Maximum fan-out node                        ; aluopt ;
+; Maximum fan-out                             ; 96     ;
+; Total fan-out                               ; 383    ;
+; Average fan-out                             ; 1.48   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |new1                      ; 96 (96)     ; 64           ; 0           ; 163  ; 0            ; 32 (32)      ; 32 (32)           ; 32 (32)          ; 31 (31)         ; 0 (0)      ; |new1               ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue Apr 11 21:21:55 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off new1 -c new1
+Info: Found 2 design units, including 1 entities, in source file new1.vhd
+    Info: Found design unit 1: new1-behav
+    Info: Found entity 1: new1
+Info: Elaborating entity "new1" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at new1.vhd(15): used implicit default value for signal "zero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10492): VHDL Process Statement warning at new1.vhd(24): signal "aluopt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at new1.vhd(26): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at new1.vhd(30): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at new1.vhd(33): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at new1.vhd(38): signal "buff1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "zero" is stuck at GND
+Warning: Design contains 64 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a1[0]"
+    Warning (15610): No output dependent on input pin "a1[1]"
+    Warning (15610): No output dependent on input pin "a1[2]"
+    Warning (15610): No output dependent on input pin "a1[3]"
+    Warning (15610): No output dependent on input pin "a1[4]"
+    Warning (15610): No output dependent on input pin "a1[5]"
+    Warning (15610): No output dependent on input pin "a1[6]"
+    Warning (15610): No output dependent on input pin "a1[7]"
+    Warning (15610): No output dependent on input pin "a1[8]"
+    Warning (15610): No output dependent on input pin "a1[9]"
+    Warning (15610): No output dependent on input pin "a1[10]"
+    Warning (15610): No output dependent on input pin "a1[11]"
+    Warning (15610): No output dependent on input pin "a1[12]"
+    Warning (15610): No output dependent on input pin "a1[13]"
+    Warning (15610): No output dependent on input pin "a1[14]"
+    Warning (15610): No output dependent on input pin "a1[15]"
+    Warning (15610): No output dependent on input pin "a1[16]"
+    Warning (15610): No output dependent on input pin "a1[17]"
+    Warning (15610): No output dependent on input pin "a1[18]"
+    Warning (15610): No output dependent on input pin "a1[19]"
+    Warning (15610): No output dependent on input pin "a1[20]"
+    Warning (15610): No output dependent on input pin "a1[21]"
+    Warning (15610): No output dependent on input pin "a1[22]"
+    Warning (15610): No output dependent on input pin "a1[23]"
+    Warning (15610): No output dependent on input pin "a1[24]"
+    Warning (15610): No output dependent on input pin "a1[25]"
+    Warning (15610): No output dependent on input pin "a1[26]"
+    Warning (15610): No output dependent on input pin "a1[27]"
+    Warning (15610): No output dependent on input pin "a1[28]"
+    Warning (15610): No output dependent on input pin "a1[29]"
+    Warning (15610): No output dependent on input pin "a1[30]"
+    Warning (15610): No output dependent on input pin "a1[31]"
+    Warning (15610): No output dependent on input pin "b1[0]"
+    Warning (15610): No output dependent on input pin "b1[1]"
+    Warning (15610): No output dependent on input pin "b1[2]"
+    Warning (15610): No output dependent on input pin "b1[3]"
+    Warning (15610): No output dependent on input pin "b1[4]"
+    Warning (15610): No output dependent on input pin "b1[5]"
+    Warning (15610): No output dependent on input pin "b1[6]"
+    Warning (15610): No output dependent on input pin "b1[7]"
+    Warning (15610): No output dependent on input pin "b1[8]"
+    Warning (15610): No output dependent on input pin "b1[9]"
+    Warning (15610): No output dependent on input pin "b1[10]"
+    Warning (15610): No output dependent on input pin "b1[11]"
+    Warning (15610): No output dependent on input pin "b1[12]"
+    Warning (15610): No output dependent on input pin "b1[13]"
+    Warning (15610): No output dependent on input pin "b1[14]"
+    Warning (15610): No output dependent on input pin "b1[15]"
+    Warning (15610): No output dependent on input pin "b1[16]"
+    Warning (15610): No output dependent on input pin "b1[17]"
+    Warning (15610): No output dependent on input pin "b1[18]"
+    Warning (15610): No output dependent on input pin "b1[19]"
+    Warning (15610): No output dependent on input pin "b1[20]"
+    Warning (15610): No output dependent on input pin "b1[21]"
+    Warning (15610): No output dependent on input pin "b1[22]"
+    Warning (15610): No output dependent on input pin "b1[23]"
+    Warning (15610): No output dependent on input pin "b1[24]"
+    Warning (15610): No output dependent on input pin "b1[25]"
+    Warning (15610): No output dependent on input pin "b1[26]"
+    Warning (15610): No output dependent on input pin "b1[27]"
+    Warning (15610): No output dependent on input pin "b1[28]"
+    Warning (15610): No output dependent on input pin "b1[29]"
+    Warning (15610): No output dependent on input pin "b1[30]"
+    Warning (15610): No output dependent on input pin "b1[31]"
+Info: Implemented 259 device resources after synthesis - the final resource count might be different
+    Info: Implemented 66 input pins
+    Info: Implemented 97 output pins
+    Info: Implemented 96 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Tue Apr 11 21:21:56 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity alu is
+port(
+     								-- ????????D?o?¡ê¡§??¨º?/???-¡ê?
+     a1:in std_logic_vector(31 downto 0);			-- 2¨´¡Á¡Â??
+     aluopt:in std_logic;				    
+     b1:in std_logic_vector(31 downto 0);			-- ¦Ì¨²¨°?2¨´¡Á¡Â¨ºy¡ê¡§operand¡ê?
+     alucontr:in std_logic_vector(3 downto 0);			-- ¦Ì¨²?t2¨´¡Á¡Â¨ºy
+     result:buffer std_logic_vector(31 downto 0);
+     buff1:buffer std_logic_vector(31 downto 0);
+     buff2:buffer std_logic_vector(31 downto 0);		-- ?????¨¢1?
+     zero: out std_logic							-- ?????¨¢1?¡À¨º????flag
+    );
+end alu;
+
+architecture behav of alu is
+begin
+ process(a1,b1,alucontr)
+ variable x1:integer;
+ begin
+   if(aluopt='1') then
+   x1:=8;
+   buff2<=a1;
+   while(x1>0)loop
+   buff1<=buff2+1;
+   buff2<=buff1;
+   x1:=x1-1;
+   end loop;
+   result<=buff1;
+   else result<=x"00000000" ;
+  end if;
+  end process;
+end behav;

@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Successful - Sat Feb 25 23:37:14 2017
+Quartus II 64-Bit Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : and_gate
+Top-level Entity Name : and_gate
+Family : Cyclone
+Total logic elements : 1
+Total pins : 3
+Total virtual pins : 0
+Total memory bits : 0
+DSP block 9-bit elements : N/A until Partition Merge
+Total PLLs : 0
+Total DLLs : N/A until Partition Merge

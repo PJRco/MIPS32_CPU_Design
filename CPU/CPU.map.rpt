@@ -1,0 +1,618 @@
+Analysis & Synthesis report for CPU
+Wed Apr 26 19:10:47 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. Removed Registers Triggering Further Register Optimizations
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: mux2_1:z3
+ 12. Parameter Settings for User Entity Instance: mux2_11:z4
+ 13. Parameter Settings for User Entity Instance: mux2_11:z5
+ 14. Parameter Settings for User Entity Instance: mux2_11:z6
+ 15. Parameter Settings for User Entity Instance: mux2_11:z7
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                           ;
++-----------------------------+------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Apr 26 19:10:47 2017    ;
+; Quartus II Version          ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name               ; CPU                                      ;
+; Top-level Entity Name       ; CPU                                      ;
+; Family                      ; Cyclone                                  ;
+; Total logic elements        ; 4,930                                    ;
+; Total pins                  ; 66                                       ;
+; Total virtual pins          ; 0                                        ;
+; Total memory bits           ; 0                                        ;
+; Total PLLs                  ; 0                                        ;
++-----------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Device                                                         ; EP1C6Q240C8        ;                    ;
+; Top-level entity name                                          ; CPU                ; CPU                ;
+; Family name                                                    ; Cyclone            ; Cyclone IV GX      ;
+; Type of Retiming Performed During Resynthesis                  ; Full               ;                    ;
+; Resynthesis Optimization Effort                                ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                       ; Normal             ;                    ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Synchronization Register Chain Length                          ; 2                  ; 3                  ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                      ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+
+; CPU.vhd                          ; yes             ; User VHDL File        ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/CPU.vhd        ;
+; Add4.vhd                         ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/Add4.vhd       ;
+; and_gate.vhd                     ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/and_gate.vhd   ;
+; mux2_1.vhd                       ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/mux2_1.vhd     ;
+; mux2_11.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/mux2_11.vhd    ;
+; regfile.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/regfile.vhd    ;
+; signext.vhd                      ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/signext.vhd    ;
+; pc.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/pc.vhd         ;
+; IM.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/IM.vhd         ;
+; add.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/add.vhd        ;
+; controller.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/controller.vhd ;
+; alu.vhd                          ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/alu.vhd        ;
+; alucontrol.vhd                   ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/alucontrol.vhd ;
+; dm.vhd                           ; yes             ; Auto-Found VHDL File  ; C:/Users/ASUS/Desktop/¼ÆËã»ú41Åí¼ÎºÀ2141806023/CPU/dm.vhd         ;
++----------------------------------+-----------------+-----------------------+-------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 4930  ;
+;     -- Combinational with no register       ; 2948  ;
+;     -- Register only                        ; 1862  ;
+;     -- Combinational with a register        ; 120   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 2401  ;
+;     -- 3 input functions                    ; 443   ;
+;     -- 2 input functions                    ; 108   ;
+;     -- 1 input functions                    ; 116   ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 4859  ;
+;     -- arithmetic mode                      ; 71    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 4     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 1982  ;
+; Total logic cells in carry chains           ; 75    ;
+; I/O pins                                    ; 66    ;
+; Maximum fan-out node                        ; clk1  ;
+; Maximum fan-out                             ; 1982  ;
+; Total fan-out                               ; 17099 ;
+; Average fan-out                             ; 3.42  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                   ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+; |CPU                       ; 4930 (57)   ; 1982         ; 0           ; 66   ; 0            ; 2948 (0)     ; 1862 (52)         ; 120 (5)          ; 75 (0)          ; 0 (0)      ; |CPU                ; work         ;
+;    |Add4:z1|               ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |CPU|Add4:z1        ; work         ;
+;    |IM:z13|                ; 45 (45)     ; 0            ; 0           ; 0    ; 0            ; 45 (45)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|IM:z13         ; work         ;
+;    |add:z14|               ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 5 (5)           ; 0 (0)      ; |CPU|add:z14        ; work         ;
+;    |alu:z16|               ; 507 (507)   ; 0            ; 0           ; 0    ; 0            ; 507 (507)    ; 0 (0)             ; 0 (0)            ; 65 (65)         ; 0 (0)      ; |CPU|alu:z16        ; work         ;
+;    |alucontrol:z17|        ; 8 (8)       ; 0            ; 0           ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|alucontrol:z17 ; work         ;
+;    |and_gate:z2|           ; 15 (15)     ; 0            ; 0           ; 0    ; 0            ; 15 (15)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|and_gate:z2    ; work         ;
+;    |controller:z15|        ; 4 (4)       ; 0            ; 0           ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|controller:z15 ; work         ;
+;    |dm:z18|                ; 1731 (1731) ; 1024         ; 0           ; 0    ; 0            ; 707 (707)    ; 972 (972)         ; 52 (52)          ; 0 (0)           ; 0 (0)      ; |CPU|dm:z18         ; work         ;
+;    |mux2_11:z4|            ; 33 (33)     ; 0            ; 0           ; 0    ; 0            ; 33 (33)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|mux2_11:z4     ; work         ;
+;    |mux2_11:z5|            ; 254 (254)   ; 0            ; 0           ; 0    ; 0            ; 254 (254)    ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|mux2_11:z5     ; work         ;
+;    |mux2_1:z3|             ; 5 (5)       ; 0            ; 0           ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |CPU|mux2_1:z3      ; work         ;
+;    |pc:z12|                ; 5 (5)       ; 5            ; 0           ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |CPU|pc:z12         ; work         ;
+;    |regfile:z8|            ; 2256 (2256) ; 896          ; 0           ; 0    ; 0            ; 1360 (1360)  ; 838 (838)         ; 58 (58)          ; 0 (0)           ; 0 (0)      ; |CPU|regfile:z8     ; work         ;
++----------------------------+-------------+--------------+-------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; rout1[4]~reg0                           ; Stuck at GND due to stuck port data_in      ;
+; rout1[6]~reg0                           ; Stuck at GND due to stuck port data_in      ;
+; rout1[7]~reg0                           ; Stuck at GND due to stuck port data_in      ;
+; rout1[8]~reg0                           ; Stuck at GND due to stuck port data_in      ;
+; rout1[9]~reg0                           ; Stuck at GND due to stuck port data_in      ;
+; rout1[10]~reg0                          ; Stuck at GND due to stuck port data_in      ;
+; rout1[30]~reg0                          ; Stuck at GND due to stuck port data_in      ;
+; pc:z12|pc_out[5..31]                    ; Lost fanout                                 ;
+; regfile:z8|mem~902                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~903                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~904                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~905                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~906                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~915                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~923                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~916                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~933                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~918                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~913                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~929                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~917                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~924                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~914                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~907                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~930                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~932                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~922                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~920                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~928                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~927                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~925                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~931                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~926                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~921                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~919                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~912                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~909                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~911                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~908                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~910                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~806                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~807                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~808                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~809                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~810                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~819                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~827                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~820                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~837                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~822                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~817                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~833                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~821                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~828                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~818                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~811                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~834                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~836                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~826                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~824                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~832                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~831                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~829                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~835                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~830                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~825                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~823                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~816                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~813                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~815                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~812                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~814                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1030                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1031                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1032                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1033                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1034                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1043                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1051                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1044                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1061                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1046                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1041                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1057                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1045                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1052                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1042                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1035                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1058                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1060                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1050                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1048                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1056                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1055                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1053                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1059                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1054                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1049                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1047                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1040                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1037                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1039                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1036                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~1038                     ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~134                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~135                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~136                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~137                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~138                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~147                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~155                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~148                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~165                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~150                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~145                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~161                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~149                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~156                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~146                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~139                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~162                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~164                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~154                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~152                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~160                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~159                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~157                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~163                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~158                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~153                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~151                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~144                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~141                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~143                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~140                      ; Stuck at GND due to stuck port clock_enable ;
+; regfile:z8|mem~142                      ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 162 ;                                             ;
++-----------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                          ;
++-------------------+--------------------+-----------------------------------------------------------------------------+
+; Register name     ; Reason for Removal ; Registers Removed due to This Register                                      ;
++-------------------+--------------------+-----------------------------------------------------------------------------+
+; pc:z12|pc_out[31] ; Lost Fanouts       ; pc:z12|pc_out[30], pc:z12|pc_out[29], pc:z12|pc_out[28], pc:z12|pc_out[27], ;
+;                   ;                    ; pc:z12|pc_out[26], pc:z12|pc_out[25], pc:z12|pc_out[24]                     ;
++-------------------+--------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1982  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1925  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |CPU|pc:z12|pc_out[4]      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |CPU|pc:z12|pc_out[26]     ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |CPU|pc:z12|pc_out[3]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; No         ; |CPU|alu:z16|Add0          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |CPU|alu:z16|Add0          ;
+; 22:1               ; 8 bits    ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |CPU|mux2_11:z5|y1[22]     ;
+; 22:1               ; 8 bits    ; 112 LEs       ; 56 LEs               ; 56 LEs                 ; No         ; |CPU|mux2_11:z5|y1[10]     ;
+; 23:1               ; 4 bits    ; 60 LEs        ; 32 LEs               ; 28 LEs                 ; No         ; |CPU|mux2_11:z5|y1[27]     ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 18 LEs               ; 12 LEs                 ; No         ; |CPU|alu:z16|Mux29         ;
+; 23:1               ; 3 bits    ; 45 LEs        ; 24 LEs               ; 21 LEs                 ; No         ; |CPU|mux2_11:z5|y1[5]      ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 18 LEs               ; 14 LEs                 ; No         ; |CPU|mux2_11:z5|y1[29]     ;
+; 25:1               ; 2 bits    ; 32 LEs        ; 18 LEs               ; 14 LEs                 ; No         ; |CPU|mux2_11:z5|y1[31]     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_1:z3 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; width          ; 5     ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_11:z4 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; width          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_11:z5 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; width          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_11:z6 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; width          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2_11:z7 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; width          ; 32    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Wed Apr 26 19:10:28 2017
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
+Info: Found 2 design units, including 1 entities, in source file CPU.vhd
+    Info: Found design unit 1: CPU-behave
+    Info: Found entity 1: CPU
+Info: Elaborating entity "CPU" for the top level hierarchy
+Warning: Using design file Add4.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: Add4-behavioral
+    Info: Found entity 1: Add4
+Info: Elaborating entity "Add4" for hierarchy "Add4:z1"
+Warning: Using design file and_gate.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: and_gate-dataflow
+    Info: Found entity 1: and_gate
+Info: Elaborating entity "and_gate" for hierarchy "and_gate:z2"
+Warning: Using design file mux2_1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: mux2_1-BEHAV
+    Info: Found entity 1: mux2_1
+Info: Elaborating entity "mux2_1" for hierarchy "mux2_1:z3"
+Warning: Using design file mux2_11.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: mux2_11-BEHAV
+    Info: Found entity 1: mux2_11
+Info: Elaborating entity "mux2_11" for hierarchy "mux2_11:z4"
+Warning: Using design file regfile.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: regfile-behave
+    Info: Found entity 1: regfile
+Info: Elaborating entity "regfile" for hierarchy "regfile:z8"
+Warning (10492): VHDL Process Statement warning at regfile.vhd(42): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at regfile.vhd(45): signal "mem" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Using design file signext.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: signext-behave
+    Info: Found entity 1: signext
+Info: Elaborating entity "signext" for hierarchy "signext:z9"
+Warning: Using design file pc.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: pc-behave
+    Info: Found entity 1: pc
+Info: Elaborating entity "pc" for hierarchy "pc:z12"
+Warning: Using design file IM.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: IM-behavioral
+    Info: Found entity 1: IM
+Info: Elaborating entity "IM" for hierarchy "IM:z13"
+Warning (10492): VHDL Process Statement warning at IM.vhd(35): signal "mem_initial" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(36): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(37): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(38): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(39): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(40): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(41): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(42): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at IM.vhd(43): signal "im_ex" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning: Using design file add.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: add-behavioral
+    Info: Found entity 1: add
+Info: Elaborating entity "add" for hierarchy "add:z14"
+Warning: Using design file controller.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: controller-Behavioral
+    Info: Found entity 1: controller
+Info: Elaborating entity "controller" for hierarchy "controller:z15"
+Warning: Using design file alu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: alu-behav
+    Info: Found entity 1: alu
+Info: Elaborating entity "alu" for hierarchy "alu:z16"
+Warning: Using design file alucontrol.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: alucontrol-behav
+    Info: Found entity 1: alucontrol
+Info: Elaborating entity "alucontrol" for hierarchy "alucontrol:z17"
+Warning: Using design file dm.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: dm-behav
+    Info: Found entity 1: dm
+Info: Elaborating entity "dm" for hierarchy "dm:z18"
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted tri-state buffer "dm:z18|data_out[13]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[12]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[11]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[10]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[9]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[8]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[7]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[6]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[5]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[4]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[3]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[2]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[1]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[0]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[14]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[15]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[16]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[17]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[18]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[19]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[20]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[21]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[22]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[23]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[24]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[25]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[26]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[27]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[28]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[29]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[30]" feeding internal logic into a wire
+    Warning: Converted tri-state buffer "dm:z18|data_out[31]" feeding internal logic into a wire
+Info: Found 3 instances of uninferred RAM logic
+    Info: RAM logic "IM:z13|mem_initial" is uninferred due to illegal secondary signals in read logic
+    Info: RAM logic "dm:z18|sram" is uninferred due to asynchronous read logic
+    Info: RAM logic "regfile:z8|mem" is uninferred due to asynchronous read logic
+Warning: 14 out of 32 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning: Addresses ranging from 18 to 31 are not initialized
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "rout1[4]" is stuck at GND
+    Warning (13410): Pin "rout1[6]" is stuck at GND
+    Warning (13410): Pin "rout1[7]" is stuck at GND
+    Warning (13410): Pin "rout1[8]" is stuck at GND
+    Warning (13410): Pin "rout1[9]" is stuck at GND
+    Warning (13410): Pin "rout1[10]" is stuck at GND
+    Warning (13410): Pin "rout1[30]" is stuck at GND
+Info: 27 registers lost all their fanouts during netlist optimizations. The first 27 are displayed below.
+    Info: Register "pc:z12|pc_out[31]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[30]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[29]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[28]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[27]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[26]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[25]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[24]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[23]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[22]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[21]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[20]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[19]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[18]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[17]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[16]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[15]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[14]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[13]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[12]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[11]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[10]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[9]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[8]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[7]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[6]" lost all its fanouts during netlist optimizations.
+    Info: Register "pc:z12|pc_out[5]" lost all its fanouts during netlist optimizations.
+Info: Implemented 4996 device resources after synthesis - the final resource count might be different
+    Info: Implemented 2 input pins
+    Info: Implemented 64 output pins
+    Info: Implemented 4930 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 270 megabytes
+    Info: Processing ended: Wed Apr 26 19:10:47 2017
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:17
+
+

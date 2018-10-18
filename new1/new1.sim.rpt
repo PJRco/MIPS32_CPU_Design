@@ -1,0 +1,592 @@
+Simulator report for new1
+Tue Apr 11 21:22:05 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 10.0 us      ;
+; Simulation Netlist Size     ; 259 nodes    ;
+; Simulation Coverage         ;      24.50 % ;
+; Total Number of Transitions ; 9456         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      24.50 % ;
+; Total nodes checked                                 ; 259          ;
+; Total output ports checked                          ; 249          ;
+; Total output ports with complete 1/0-value coverage ; 61           ;
+; Total output ports with no 1/0-value coverage       ; 182          ;
+; Total output ports with no 1-value coverage         ; 182          ;
+; Total output ports with no 0-value coverage         ; 188          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                         ;
++---------------------+----------------------------+------------------+
+; Node Name           ; Output Port Name           ; Output Port Type ;
++---------------------+----------------------------+------------------+
+; |new1|buff1[1]~reg0 ; |new1|buff1[1]~reg0        ; regout           ;
+; |new1|buff1[1]~reg0 ; |new1|buff1[1]~1           ; cout0            ;
+; |new1|buff1[1]~reg0 ; |new1|buff1[1]~1COUT1_89   ; cout1            ;
+; |new1|buff1[2]~reg0 ; |new1|buff1[2]~reg0        ; regout           ;
+; |new1|buff1[2]~reg0 ; |new1|buff1[2]~3           ; cout0            ;
+; |new1|buff1[2]~reg0 ; |new1|buff1[2]~3COUT1_91   ; cout1            ;
+; |new1|buff1[3]~reg0 ; |new1|buff1[3]~reg0        ; regout           ;
+; |new1|buff1[3]~reg0 ; |new1|buff1[3]~5           ; cout0            ;
+; |new1|buff1[3]~reg0 ; |new1|buff1[3]~5COUT1_93   ; cout1            ;
+; |new1|buff1[4]~reg0 ; |new1|buff1[4]~reg0        ; regout           ;
+; |new1|buff1[4]~reg0 ; |new1|buff1[4]~7           ; cout0            ;
+; |new1|buff1[4]~reg0 ; |new1|buff1[4]~7COUT1_95   ; cout1            ;
+; |new1|buff1[5]~reg0 ; |new1|buff1[5]~reg0        ; regout           ;
+; |new1|buff1[5]~reg0 ; |new1|buff1[5]~9           ; cout             ;
+; |new1|buff1[6]~reg0 ; |new1|buff1[6]~reg0        ; regout           ;
+; |new1|buff1[6]~reg0 ; |new1|buff1[6]~11COUT1_97  ; cout1            ;
+; |new1|buff1[7]~reg0 ; |new1|buff1[7]~reg0        ; regout           ;
+; |new1|buff1[7]~reg0 ; |new1|buff1[7]~13COUT1_99  ; cout1            ;
+; |new1|buff1[8]~reg0 ; |new1|buff1[8]~15COUT1_101 ; cout1            ;
+; |new1|buff1[0]~reg0 ; |new1|buff1[0]~reg0        ; regout           ;
+; |new1|result~32     ; |new1|result~32            ; combout          ;
+; |new1|result~33     ; |new1|result~33            ; combout          ;
+; |new1|result~34     ; |new1|result~34            ; combout          ;
+; |new1|result~35     ; |new1|result~35            ; combout          ;
+; |new1|result~36     ; |new1|result~36            ; combout          ;
+; |new1|result~37     ; |new1|result~37            ; combout          ;
+; |new1|result~38     ; |new1|result~38            ; combout          ;
+; |new1|result~39     ; |new1|result~39            ; combout          ;
+; |new1|buff2[0]~reg0 ; |new1|buff2[0]~reg0        ; regout           ;
+; |new1|buff2[1]~reg0 ; |new1|buff2[1]~reg0        ; regout           ;
+; |new1|buff2[2]~reg0 ; |new1|buff2[2]~reg0        ; regout           ;
+; |new1|buff2[3]~reg0 ; |new1|buff2[3]~reg0        ; regout           ;
+; |new1|buff2[4]~reg0 ; |new1|buff2[4]~reg0        ; regout           ;
+; |new1|buff2[5]~reg0 ; |new1|buff2[5]~reg0        ; regout           ;
+; |new1|buff2[6]~reg0 ; |new1|buff2[6]~reg0        ; regout           ;
+; |new1|buff2[7]~reg0 ; |new1|buff2[7]~reg0        ; regout           ;
+; |new1|result[0]     ; |new1|result[0]            ; padio            ;
+; |new1|result[1]     ; |new1|result[1]            ; padio            ;
+; |new1|result[2]     ; |new1|result[2]            ; padio            ;
+; |new1|result[3]     ; |new1|result[3]            ; padio            ;
+; |new1|result[4]     ; |new1|result[4]            ; padio            ;
+; |new1|result[5]     ; |new1|result[5]            ; padio            ;
+; |new1|result[6]     ; |new1|result[6]            ; padio            ;
+; |new1|result[7]     ; |new1|result[7]            ; padio            ;
+; |new1|buff1[0]      ; |new1|buff1[0]             ; padio            ;
+; |new1|buff1[1]      ; |new1|buff1[1]             ; padio            ;
+; |new1|buff1[2]      ; |new1|buff1[2]             ; padio            ;
+; |new1|buff1[3]      ; |new1|buff1[3]             ; padio            ;
+; |new1|buff1[4]      ; |new1|buff1[4]             ; padio            ;
+; |new1|buff1[5]      ; |new1|buff1[5]             ; padio            ;
+; |new1|buff1[6]      ; |new1|buff1[6]             ; padio            ;
+; |new1|buff1[7]      ; |new1|buff1[7]             ; padio            ;
+; |new1|buff2[0]      ; |new1|buff2[0]             ; padio            ;
+; |new1|buff2[1]      ; |new1|buff2[1]             ; padio            ;
+; |new1|buff2[2]      ; |new1|buff2[2]             ; padio            ;
+; |new1|buff2[3]      ; |new1|buff2[3]             ; padio            ;
+; |new1|buff2[4]      ; |new1|buff2[4]             ; padio            ;
+; |new1|buff2[5]      ; |new1|buff2[5]             ; padio            ;
+; |new1|buff2[6]      ; |new1|buff2[6]             ; padio            ;
+; |new1|buff2[7]      ; |new1|buff2[7]             ; padio            ;
+; |new1|clk           ; |new1|clk~corein           ; combout          ;
++---------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------+
+; Missing 1-Value Coverage                                              ;
++----------------------+-----------------------------+------------------+
+; Node Name            ; Output Port Name            ; Output Port Type ;
++----------------------+-----------------------------+------------------+
+; |new1|buff1[6]~reg0  ; |new1|buff1[6]~11           ; cout0            ;
+; |new1|buff1[7]~reg0  ; |new1|buff1[7]~13           ; cout0            ;
+; |new1|buff1[8]~reg0  ; |new1|buff1[8]~15           ; cout0            ;
+; |new1|buff1[9]~reg0  ; |new1|buff1[9]~reg0         ; regout           ;
+; |new1|buff1[9]~reg0  ; |new1|buff1[9]~17           ; cout0            ;
+; |new1|buff1[9]~reg0  ; |new1|buff1[9]~17COUT1_103  ; cout1            ;
+; |new1|buff1[10]~reg0 ; |new1|buff1[10]~reg0        ; regout           ;
+; |new1|buff1[10]~reg0 ; |new1|buff1[10]~19          ; cout             ;
+; |new1|buff1[11]~reg0 ; |new1|buff1[11]~reg0        ; regout           ;
+; |new1|buff1[11]~reg0 ; |new1|buff1[11]~21          ; cout0            ;
+; |new1|buff1[11]~reg0 ; |new1|buff1[11]~21COUT1_105 ; cout1            ;
+; |new1|buff1[12]~reg0 ; |new1|buff1[12]~reg0        ; regout           ;
+; |new1|buff1[12]~reg0 ; |new1|buff1[12]~23          ; cout0            ;
+; |new1|buff1[12]~reg0 ; |new1|buff1[12]~23COUT1_107 ; cout1            ;
+; |new1|buff1[13]~reg0 ; |new1|buff1[13]~reg0        ; regout           ;
+; |new1|buff1[13]~reg0 ; |new1|buff1[13]~25          ; cout0            ;
+; |new1|buff1[13]~reg0 ; |new1|buff1[13]~25COUT1_109 ; cout1            ;
+; |new1|buff1[14]~reg0 ; |new1|buff1[14]~reg0        ; regout           ;
+; |new1|buff1[14]~reg0 ; |new1|buff1[14]~27          ; cout0            ;
+; |new1|buff1[14]~reg0 ; |new1|buff1[14]~27COUT1_111 ; cout1            ;
+; |new1|buff1[15]~reg0 ; |new1|buff1[15]~reg0        ; regout           ;
+; |new1|buff1[15]~reg0 ; |new1|buff1[15]~29          ; cout             ;
+; |new1|buff1[16]~reg0 ; |new1|buff1[16]~reg0        ; regout           ;
+; |new1|buff1[16]~reg0 ; |new1|buff1[16]~31          ; cout0            ;
+; |new1|buff1[16]~reg0 ; |new1|buff1[16]~31COUT1_113 ; cout1            ;
+; |new1|buff1[17]~reg0 ; |new1|buff1[17]~reg0        ; regout           ;
+; |new1|buff1[17]~reg0 ; |new1|buff1[17]~33          ; cout0            ;
+; |new1|buff1[17]~reg0 ; |new1|buff1[17]~33COUT1_115 ; cout1            ;
+; |new1|buff1[18]~reg0 ; |new1|buff1[18]~reg0        ; regout           ;
+; |new1|buff1[18]~reg0 ; |new1|buff1[18]~35          ; cout0            ;
+; |new1|buff1[18]~reg0 ; |new1|buff1[18]~35COUT1_117 ; cout1            ;
+; |new1|buff1[19]~reg0 ; |new1|buff1[19]~reg0        ; regout           ;
+; |new1|buff1[19]~reg0 ; |new1|buff1[19]~37          ; cout0            ;
+; |new1|buff1[19]~reg0 ; |new1|buff1[19]~37COUT1_119 ; cout1            ;
+; |new1|buff1[20]~reg0 ; |new1|buff1[20]~reg0        ; regout           ;
+; |new1|buff1[20]~reg0 ; |new1|buff1[20]~39          ; cout             ;
+; |new1|buff1[21]~reg0 ; |new1|buff1[21]~reg0        ; regout           ;
+; |new1|buff1[21]~reg0 ; |new1|buff1[21]~41          ; cout0            ;
+; |new1|buff1[21]~reg0 ; |new1|buff1[21]~41COUT1_121 ; cout1            ;
+; |new1|buff1[22]~reg0 ; |new1|buff1[22]~reg0        ; regout           ;
+; |new1|buff1[22]~reg0 ; |new1|buff1[22]~43          ; cout0            ;
+; |new1|buff1[22]~reg0 ; |new1|buff1[22]~43COUT1_123 ; cout1            ;
+; |new1|buff1[23]~reg0 ; |new1|buff1[23]~reg0        ; regout           ;
+; |new1|buff1[23]~reg0 ; |new1|buff1[23]~45          ; cout0            ;
+; |new1|buff1[23]~reg0 ; |new1|buff1[23]~45COUT1_125 ; cout1            ;
+; |new1|buff1[24]~reg0 ; |new1|buff1[24]~reg0        ; regout           ;
+; |new1|buff1[24]~reg0 ; |new1|buff1[24]~47          ; cout0            ;
+; |new1|buff1[24]~reg0 ; |new1|buff1[24]~47COUT1_127 ; cout1            ;
+; |new1|buff1[25]~reg0 ; |new1|buff1[25]~reg0        ; regout           ;
+; |new1|buff1[25]~reg0 ; |new1|buff1[25]~49          ; cout             ;
+; |new1|buff1[26]~reg0 ; |new1|buff1[26]~reg0        ; regout           ;
+; |new1|buff1[26]~reg0 ; |new1|buff1[26]~51          ; cout0            ;
+; |new1|buff1[26]~reg0 ; |new1|buff1[26]~51COUT1_129 ; cout1            ;
+; |new1|buff1[27]~reg0 ; |new1|buff1[27]~reg0        ; regout           ;
+; |new1|buff1[27]~reg0 ; |new1|buff1[27]~53          ; cout0            ;
+; |new1|buff1[27]~reg0 ; |new1|buff1[27]~53COUT1_131 ; cout1            ;
+; |new1|buff1[28]~reg0 ; |new1|buff1[28]~reg0        ; regout           ;
+; |new1|buff1[28]~reg0 ; |new1|buff1[28]~55          ; cout0            ;
+; |new1|buff1[28]~reg0 ; |new1|buff1[28]~55COUT1_133 ; cout1            ;
+; |new1|buff1[29]~reg0 ; |new1|buff1[29]~reg0        ; regout           ;
+; |new1|buff1[29]~reg0 ; |new1|buff1[29]~57          ; cout0            ;
+; |new1|buff1[29]~reg0 ; |new1|buff1[29]~57COUT1_135 ; cout1            ;
+; |new1|buff1[30]~reg0 ; |new1|buff1[30]~reg0        ; regout           ;
+; |new1|buff1[30]~reg0 ; |new1|buff1[30]~59          ; cout             ;
+; |new1|buff1[31]~reg0 ; |new1|buff1[31]~reg0        ; regout           ;
+; |new1|result~41      ; |new1|result~41             ; combout          ;
+; |new1|result~42      ; |new1|result~42             ; combout          ;
+; |new1|result~43      ; |new1|result~43             ; combout          ;
+; |new1|result~44      ; |new1|result~44             ; combout          ;
+; |new1|result~45      ; |new1|result~45             ; combout          ;
+; |new1|result~46      ; |new1|result~46             ; combout          ;
+; |new1|result~47      ; |new1|result~47             ; combout          ;
+; |new1|result~48      ; |new1|result~48             ; combout          ;
+; |new1|result~49      ; |new1|result~49             ; combout          ;
+; |new1|result~50      ; |new1|result~50             ; combout          ;
+; |new1|result~51      ; |new1|result~51             ; combout          ;
+; |new1|result~52      ; |new1|result~52             ; combout          ;
+; |new1|result~53      ; |new1|result~53             ; combout          ;
+; |new1|result~54      ; |new1|result~54             ; combout          ;
+; |new1|result~55      ; |new1|result~55             ; combout          ;
+; |new1|result~56      ; |new1|result~56             ; combout          ;
+; |new1|result~57      ; |new1|result~57             ; combout          ;
+; |new1|result~58      ; |new1|result~58             ; combout          ;
+; |new1|result~59      ; |new1|result~59             ; combout          ;
+; |new1|result~60      ; |new1|result~60             ; combout          ;
+; |new1|result~61      ; |new1|result~61             ; combout          ;
+; |new1|result~62      ; |new1|result~62             ; combout          ;
+; |new1|result~63      ; |new1|result~63             ; combout          ;
+; |new1|buff2[9]~reg0  ; |new1|buff2[9]~reg0         ; regout           ;
+; |new1|buff2[10]~reg0 ; |new1|buff2[10]~reg0        ; regout           ;
+; |new1|buff2[11]~reg0 ; |new1|buff2[11]~reg0        ; regout           ;
+; |new1|buff2[12]~reg0 ; |new1|buff2[12]~reg0        ; regout           ;
+; |new1|buff2[13]~reg0 ; |new1|buff2[13]~reg0        ; regout           ;
+; |new1|buff2[14]~reg0 ; |new1|buff2[14]~reg0        ; regout           ;
+; |new1|buff2[15]~reg0 ; |new1|buff2[15]~reg0        ; regout           ;
+; |new1|buff2[16]~reg0 ; |new1|buff2[16]~reg0        ; regout           ;
+; |new1|buff2[17]~reg0 ; |new1|buff2[17]~reg0        ; regout           ;
+; |new1|buff2[18]~reg0 ; |new1|buff2[18]~reg0        ; regout           ;
+; |new1|buff2[19]~reg0 ; |new1|buff2[19]~reg0        ; regout           ;
+; |new1|buff2[20]~reg0 ; |new1|buff2[20]~reg0        ; regout           ;
+; |new1|buff2[21]~reg0 ; |new1|buff2[21]~reg0        ; regout           ;
+; |new1|buff2[22]~reg0 ; |new1|buff2[22]~reg0        ; regout           ;
+; |new1|buff2[23]~reg0 ; |new1|buff2[23]~reg0        ; regout           ;
+; |new1|buff2[24]~reg0 ; |new1|buff2[24]~reg0        ; regout           ;
+; |new1|buff2[25]~reg0 ; |new1|buff2[25]~reg0        ; regout           ;
+; |new1|buff2[26]~reg0 ; |new1|buff2[26]~reg0        ; regout           ;
+; |new1|buff2[27]~reg0 ; |new1|buff2[27]~reg0        ; regout           ;
+; |new1|buff2[28]~reg0 ; |new1|buff2[28]~reg0        ; regout           ;
+; |new1|buff2[29]~reg0 ; |new1|buff2[29]~reg0        ; regout           ;
+; |new1|buff2[30]~reg0 ; |new1|buff2[30]~reg0        ; regout           ;
+; |new1|buff2[31]~reg0 ; |new1|buff2[31]~reg0        ; regout           ;
+; |new1|result[9]      ; |new1|result[9]             ; padio            ;
+; |new1|result[10]     ; |new1|result[10]            ; padio            ;
+; |new1|result[11]     ; |new1|result[11]            ; padio            ;
+; |new1|result[12]     ; |new1|result[12]            ; padio            ;
+; |new1|result[13]     ; |new1|result[13]            ; padio            ;
+; |new1|result[14]     ; |new1|result[14]            ; padio            ;
+; |new1|result[15]     ; |new1|result[15]            ; padio            ;
+; |new1|result[16]     ; |new1|result[16]            ; padio            ;
+; |new1|result[17]     ; |new1|result[17]            ; padio            ;
+; |new1|result[18]     ; |new1|result[18]            ; padio            ;
+; |new1|result[19]     ; |new1|result[19]            ; padio            ;
+; |new1|result[20]     ; |new1|result[20]            ; padio            ;
+; |new1|result[21]     ; |new1|result[21]            ; padio            ;
+; |new1|result[22]     ; |new1|result[22]            ; padio            ;
+; |new1|result[23]     ; |new1|result[23]            ; padio            ;
+; |new1|result[24]     ; |new1|result[24]            ; padio            ;
+; |new1|result[25]     ; |new1|result[25]            ; padio            ;
+; |new1|result[26]     ; |new1|result[26]            ; padio            ;
+; |new1|result[27]     ; |new1|result[27]            ; padio            ;
+; |new1|result[28]     ; |new1|result[28]            ; padio            ;
+; |new1|result[29]     ; |new1|result[29]            ; padio            ;
+; |new1|result[30]     ; |new1|result[30]            ; padio            ;
+; |new1|result[31]     ; |new1|result[31]            ; padio            ;
+; |new1|buff1[9]       ; |new1|buff1[9]              ; padio            ;
+; |new1|buff1[10]      ; |new1|buff1[10]             ; padio            ;
+; |new1|buff1[11]      ; |new1|buff1[11]             ; padio            ;
+; |new1|buff1[12]      ; |new1|buff1[12]             ; padio            ;
+; |new1|buff1[13]      ; |new1|buff1[13]             ; padio            ;
+; |new1|buff1[14]      ; |new1|buff1[14]             ; padio            ;
+; |new1|buff1[15]      ; |new1|buff1[15]             ; padio            ;
+; |new1|buff1[16]      ; |new1|buff1[16]             ; padio            ;
+; |new1|buff1[17]      ; |new1|buff1[17]             ; padio            ;
+; |new1|buff1[18]      ; |new1|buff1[18]             ; padio            ;
+; |new1|buff1[19]      ; |new1|buff1[19]             ; padio            ;
+; |new1|buff1[20]      ; |new1|buff1[20]             ; padio            ;
+; |new1|buff1[21]      ; |new1|buff1[21]             ; padio            ;
+; |new1|buff1[22]      ; |new1|buff1[22]             ; padio            ;
+; |new1|buff1[23]      ; |new1|buff1[23]             ; padio            ;
+; |new1|buff1[24]      ; |new1|buff1[24]             ; padio            ;
+; |new1|buff1[25]      ; |new1|buff1[25]             ; padio            ;
+; |new1|buff1[26]      ; |new1|buff1[26]             ; padio            ;
+; |new1|buff1[27]      ; |new1|buff1[27]             ; padio            ;
+; |new1|buff1[28]      ; |new1|buff1[28]             ; padio            ;
+; |new1|buff1[29]      ; |new1|buff1[29]             ; padio            ;
+; |new1|buff1[30]      ; |new1|buff1[30]             ; padio            ;
+; |new1|buff1[31]      ; |new1|buff1[31]             ; padio            ;
+; |new1|buff2[9]       ; |new1|buff2[9]              ; padio            ;
+; |new1|buff2[10]      ; |new1|buff2[10]             ; padio            ;
+; |new1|buff2[11]      ; |new1|buff2[11]             ; padio            ;
+; |new1|buff2[12]      ; |new1|buff2[12]             ; padio            ;
+; |new1|buff2[13]      ; |new1|buff2[13]             ; padio            ;
+; |new1|buff2[14]      ; |new1|buff2[14]             ; padio            ;
+; |new1|buff2[15]      ; |new1|buff2[15]             ; padio            ;
+; |new1|buff2[16]      ; |new1|buff2[16]             ; padio            ;
+; |new1|buff2[17]      ; |new1|buff2[17]             ; padio            ;
+; |new1|buff2[18]      ; |new1|buff2[18]             ; padio            ;
+; |new1|buff2[19]      ; |new1|buff2[19]             ; padio            ;
+; |new1|buff2[20]      ; |new1|buff2[20]             ; padio            ;
+; |new1|buff2[21]      ; |new1|buff2[21]             ; padio            ;
+; |new1|buff2[22]      ; |new1|buff2[22]             ; padio            ;
+; |new1|buff2[23]      ; |new1|buff2[23]             ; padio            ;
+; |new1|buff2[24]      ; |new1|buff2[24]             ; padio            ;
+; |new1|buff2[25]      ; |new1|buff2[25]             ; padio            ;
+; |new1|buff2[26]      ; |new1|buff2[26]             ; padio            ;
+; |new1|buff2[27]      ; |new1|buff2[27]             ; padio            ;
+; |new1|buff2[28]      ; |new1|buff2[28]             ; padio            ;
+; |new1|buff2[29]      ; |new1|buff2[29]             ; padio            ;
+; |new1|buff2[30]      ; |new1|buff2[30]             ; padio            ;
+; |new1|buff2[31]      ; |new1|buff2[31]             ; padio            ;
+; |new1|zero           ; |new1|zero                  ; padio            ;
+; |new1|aluopt         ; |new1|aluopt~corein         ; combout          ;
++----------------------+-----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------+
+; Missing 0-Value Coverage                                              ;
++----------------------+-----------------------------+------------------+
+; Node Name            ; Output Port Name            ; Output Port Type ;
++----------------------+-----------------------------+------------------+
+; |new1|buff1[6]~reg0  ; |new1|buff1[6]~11           ; cout0            ;
+; |new1|buff1[7]~reg0  ; |new1|buff1[7]~13           ; cout0            ;
+; |new1|buff1[8]~reg0  ; |new1|buff1[8]~reg0         ; regout           ;
+; |new1|buff1[8]~reg0  ; |new1|buff1[8]~15           ; cout0            ;
+; |new1|buff1[9]~reg0  ; |new1|buff1[9]~reg0         ; regout           ;
+; |new1|buff1[9]~reg0  ; |new1|buff1[9]~17           ; cout0            ;
+; |new1|buff1[9]~reg0  ; |new1|buff1[9]~17COUT1_103  ; cout1            ;
+; |new1|buff1[10]~reg0 ; |new1|buff1[10]~reg0        ; regout           ;
+; |new1|buff1[10]~reg0 ; |new1|buff1[10]~19          ; cout             ;
+; |new1|buff1[11]~reg0 ; |new1|buff1[11]~reg0        ; regout           ;
+; |new1|buff1[11]~reg0 ; |new1|buff1[11]~21          ; cout0            ;
+; |new1|buff1[11]~reg0 ; |new1|buff1[11]~21COUT1_105 ; cout1            ;
+; |new1|buff1[12]~reg0 ; |new1|buff1[12]~reg0        ; regout           ;
+; |new1|buff1[12]~reg0 ; |new1|buff1[12]~23          ; cout0            ;
+; |new1|buff1[12]~reg0 ; |new1|buff1[12]~23COUT1_107 ; cout1            ;
+; |new1|buff1[13]~reg0 ; |new1|buff1[13]~reg0        ; regout           ;
+; |new1|buff1[13]~reg0 ; |new1|buff1[13]~25          ; cout0            ;
+; |new1|buff1[13]~reg0 ; |new1|buff1[13]~25COUT1_109 ; cout1            ;
+; |new1|buff1[14]~reg0 ; |new1|buff1[14]~reg0        ; regout           ;
+; |new1|buff1[14]~reg0 ; |new1|buff1[14]~27          ; cout0            ;
+; |new1|buff1[14]~reg0 ; |new1|buff1[14]~27COUT1_111 ; cout1            ;
+; |new1|buff1[15]~reg0 ; |new1|buff1[15]~reg0        ; regout           ;
+; |new1|buff1[15]~reg0 ; |new1|buff1[15]~29          ; cout             ;
+; |new1|buff1[16]~reg0 ; |new1|buff1[16]~reg0        ; regout           ;
+; |new1|buff1[16]~reg0 ; |new1|buff1[16]~31          ; cout0            ;
+; |new1|buff1[16]~reg0 ; |new1|buff1[16]~31COUT1_113 ; cout1            ;
+; |new1|buff1[17]~reg0 ; |new1|buff1[17]~reg0        ; regout           ;
+; |new1|buff1[17]~reg0 ; |new1|buff1[17]~33          ; cout0            ;
+; |new1|buff1[17]~reg0 ; |new1|buff1[17]~33COUT1_115 ; cout1            ;
+; |new1|buff1[18]~reg0 ; |new1|buff1[18]~reg0        ; regout           ;
+; |new1|buff1[18]~reg0 ; |new1|buff1[18]~35          ; cout0            ;
+; |new1|buff1[18]~reg0 ; |new1|buff1[18]~35COUT1_117 ; cout1            ;
+; |new1|buff1[19]~reg0 ; |new1|buff1[19]~reg0        ; regout           ;
+; |new1|buff1[19]~reg0 ; |new1|buff1[19]~37          ; cout0            ;
+; |new1|buff1[19]~reg0 ; |new1|buff1[19]~37COUT1_119 ; cout1            ;
+; |new1|buff1[20]~reg0 ; |new1|buff1[20]~reg0        ; regout           ;
+; |new1|buff1[20]~reg0 ; |new1|buff1[20]~39          ; cout             ;
+; |new1|buff1[21]~reg0 ; |new1|buff1[21]~reg0        ; regout           ;
+; |new1|buff1[21]~reg0 ; |new1|buff1[21]~41          ; cout0            ;
+; |new1|buff1[21]~reg0 ; |new1|buff1[21]~41COUT1_121 ; cout1            ;
+; |new1|buff1[22]~reg0 ; |new1|buff1[22]~reg0        ; regout           ;
+; |new1|buff1[22]~reg0 ; |new1|buff1[22]~43          ; cout0            ;
+; |new1|buff1[22]~reg0 ; |new1|buff1[22]~43COUT1_123 ; cout1            ;
+; |new1|buff1[23]~reg0 ; |new1|buff1[23]~reg0        ; regout           ;
+; |new1|buff1[23]~reg0 ; |new1|buff1[23]~45          ; cout0            ;
+; |new1|buff1[23]~reg0 ; |new1|buff1[23]~45COUT1_125 ; cout1            ;
+; |new1|buff1[24]~reg0 ; |new1|buff1[24]~reg0        ; regout           ;
+; |new1|buff1[24]~reg0 ; |new1|buff1[24]~47          ; cout0            ;
+; |new1|buff1[24]~reg0 ; |new1|buff1[24]~47COUT1_127 ; cout1            ;
+; |new1|buff1[25]~reg0 ; |new1|buff1[25]~reg0        ; regout           ;
+; |new1|buff1[25]~reg0 ; |new1|buff1[25]~49          ; cout             ;
+; |new1|buff1[26]~reg0 ; |new1|buff1[26]~reg0        ; regout           ;
+; |new1|buff1[26]~reg0 ; |new1|buff1[26]~51          ; cout0            ;
+; |new1|buff1[26]~reg0 ; |new1|buff1[26]~51COUT1_129 ; cout1            ;
+; |new1|buff1[27]~reg0 ; |new1|buff1[27]~reg0        ; regout           ;
+; |new1|buff1[27]~reg0 ; |new1|buff1[27]~53          ; cout0            ;
+; |new1|buff1[27]~reg0 ; |new1|buff1[27]~53COUT1_131 ; cout1            ;
+; |new1|buff1[28]~reg0 ; |new1|buff1[28]~reg0        ; regout           ;
+; |new1|buff1[28]~reg0 ; |new1|buff1[28]~55          ; cout0            ;
+; |new1|buff1[28]~reg0 ; |new1|buff1[28]~55COUT1_133 ; cout1            ;
+; |new1|buff1[29]~reg0 ; |new1|buff1[29]~reg0        ; regout           ;
+; |new1|buff1[29]~reg0 ; |new1|buff1[29]~57          ; cout0            ;
+; |new1|buff1[29]~reg0 ; |new1|buff1[29]~57COUT1_135 ; cout1            ;
+; |new1|buff1[30]~reg0 ; |new1|buff1[30]~reg0        ; regout           ;
+; |new1|buff1[30]~reg0 ; |new1|buff1[30]~59          ; cout             ;
+; |new1|buff1[31]~reg0 ; |new1|buff1[31]~reg0        ; regout           ;
+; |new1|result~40      ; |new1|result~40             ; combout          ;
+; |new1|result~41      ; |new1|result~41             ; combout          ;
+; |new1|result~42      ; |new1|result~42             ; combout          ;
+; |new1|result~43      ; |new1|result~43             ; combout          ;
+; |new1|result~44      ; |new1|result~44             ; combout          ;
+; |new1|result~45      ; |new1|result~45             ; combout          ;
+; |new1|result~46      ; |new1|result~46             ; combout          ;
+; |new1|result~47      ; |new1|result~47             ; combout          ;
+; |new1|result~48      ; |new1|result~48             ; combout          ;
+; |new1|result~49      ; |new1|result~49             ; combout          ;
+; |new1|result~50      ; |new1|result~50             ; combout          ;
+; |new1|result~51      ; |new1|result~51             ; combout          ;
+; |new1|result~52      ; |new1|result~52             ; combout          ;
+; |new1|result~53      ; |new1|result~53             ; combout          ;
+; |new1|result~54      ; |new1|result~54             ; combout          ;
+; |new1|result~55      ; |new1|result~55             ; combout          ;
+; |new1|result~56      ; |new1|result~56             ; combout          ;
+; |new1|result~57      ; |new1|result~57             ; combout          ;
+; |new1|result~58      ; |new1|result~58             ; combout          ;
+; |new1|result~59      ; |new1|result~59             ; combout          ;
+; |new1|result~60      ; |new1|result~60             ; combout          ;
+; |new1|result~61      ; |new1|result~61             ; combout          ;
+; |new1|result~62      ; |new1|result~62             ; combout          ;
+; |new1|result~63      ; |new1|result~63             ; combout          ;
+; |new1|buff2[8]~reg0  ; |new1|buff2[8]~reg0         ; regout           ;
+; |new1|buff2[9]~reg0  ; |new1|buff2[9]~reg0         ; regout           ;
+; |new1|buff2[10]~reg0 ; |new1|buff2[10]~reg0        ; regout           ;
+; |new1|buff2[11]~reg0 ; |new1|buff2[11]~reg0        ; regout           ;
+; |new1|buff2[12]~reg0 ; |new1|buff2[12]~reg0        ; regout           ;
+; |new1|buff2[13]~reg0 ; |new1|buff2[13]~reg0        ; regout           ;
+; |new1|buff2[14]~reg0 ; |new1|buff2[14]~reg0        ; regout           ;
+; |new1|buff2[15]~reg0 ; |new1|buff2[15]~reg0        ; regout           ;
+; |new1|buff2[16]~reg0 ; |new1|buff2[16]~reg0        ; regout           ;
+; |new1|buff2[17]~reg0 ; |new1|buff2[17]~reg0        ; regout           ;
+; |new1|buff2[18]~reg0 ; |new1|buff2[18]~reg0        ; regout           ;
+; |new1|buff2[19]~reg0 ; |new1|buff2[19]~reg0        ; regout           ;
+; |new1|buff2[20]~reg0 ; |new1|buff2[20]~reg0        ; regout           ;
+; |new1|buff2[21]~reg0 ; |new1|buff2[21]~reg0        ; regout           ;
+; |new1|buff2[22]~reg0 ; |new1|buff2[22]~reg0        ; regout           ;
+; |new1|buff2[23]~reg0 ; |new1|buff2[23]~reg0        ; regout           ;
+; |new1|buff2[24]~reg0 ; |new1|buff2[24]~reg0        ; regout           ;
+; |new1|buff2[25]~reg0 ; |new1|buff2[25]~reg0        ; regout           ;
+; |new1|buff2[26]~reg0 ; |new1|buff2[26]~reg0        ; regout           ;
+; |new1|buff2[27]~reg0 ; |new1|buff2[27]~reg0        ; regout           ;
+; |new1|buff2[28]~reg0 ; |new1|buff2[28]~reg0        ; regout           ;
+; |new1|buff2[29]~reg0 ; |new1|buff2[29]~reg0        ; regout           ;
+; |new1|buff2[30]~reg0 ; |new1|buff2[30]~reg0        ; regout           ;
+; |new1|buff2[31]~reg0 ; |new1|buff2[31]~reg0        ; regout           ;
+; |new1|result[8]      ; |new1|result[8]             ; padio            ;
+; |new1|result[9]      ; |new1|result[9]             ; padio            ;
+; |new1|result[10]     ; |new1|result[10]            ; padio            ;
+; |new1|result[11]     ; |new1|result[11]            ; padio            ;
+; |new1|result[12]     ; |new1|result[12]            ; padio            ;
+; |new1|result[13]     ; |new1|result[13]            ; padio            ;
+; |new1|result[14]     ; |new1|result[14]            ; padio            ;
+; |new1|result[15]     ; |new1|result[15]            ; padio            ;
+; |new1|result[16]     ; |new1|result[16]            ; padio            ;
+; |new1|result[17]     ; |new1|result[17]            ; padio            ;
+; |new1|result[18]     ; |new1|result[18]            ; padio            ;
+; |new1|result[19]     ; |new1|result[19]            ; padio            ;
+; |new1|result[20]     ; |new1|result[20]            ; padio            ;
+; |new1|result[21]     ; |new1|result[21]            ; padio            ;
+; |new1|result[22]     ; |new1|result[22]            ; padio            ;
+; |new1|result[23]     ; |new1|result[23]            ; padio            ;
+; |new1|result[24]     ; |new1|result[24]            ; padio            ;
+; |new1|result[25]     ; |new1|result[25]            ; padio            ;
+; |new1|result[26]     ; |new1|result[26]            ; padio            ;
+; |new1|result[27]     ; |new1|result[27]            ; padio            ;
+; |new1|result[28]     ; |new1|result[28]            ; padio            ;
+; |new1|result[29]     ; |new1|result[29]            ; padio            ;
+; |new1|result[30]     ; |new1|result[30]            ; padio            ;
+; |new1|result[31]     ; |new1|result[31]            ; padio            ;
+; |new1|buff1[8]       ; |new1|buff1[8]              ; padio            ;
+; |new1|buff1[9]       ; |new1|buff1[9]              ; padio            ;
+; |new1|buff1[10]      ; |new1|buff1[10]             ; padio            ;
+; |new1|buff1[11]      ; |new1|buff1[11]             ; padio            ;
+; |new1|buff1[12]      ; |new1|buff1[12]             ; padio            ;
+; |new1|buff1[13]      ; |new1|buff1[13]             ; padio            ;
+; |new1|buff1[14]      ; |new1|buff1[14]             ; padio            ;
+; |new1|buff1[15]      ; |new1|buff1[15]             ; padio            ;
+; |new1|buff1[16]      ; |new1|buff1[16]             ; padio            ;
+; |new1|buff1[17]      ; |new1|buff1[17]             ; padio            ;
+; |new1|buff1[18]      ; |new1|buff1[18]             ; padio            ;
+; |new1|buff1[19]      ; |new1|buff1[19]             ; padio            ;
+; |new1|buff1[20]      ; |new1|buff1[20]             ; padio            ;
+; |new1|buff1[21]      ; |new1|buff1[21]             ; padio            ;
+; |new1|buff1[22]      ; |new1|buff1[22]             ; padio            ;
+; |new1|buff1[23]      ; |new1|buff1[23]             ; padio            ;
+; |new1|buff1[24]      ; |new1|buff1[24]             ; padio            ;
+; |new1|buff1[25]      ; |new1|buff1[25]             ; padio            ;
+; |new1|buff1[26]      ; |new1|buff1[26]             ; padio            ;
+; |new1|buff1[27]      ; |new1|buff1[27]             ; padio            ;
+; |new1|buff1[28]      ; |new1|buff1[28]             ; padio            ;
+; |new1|buff1[29]      ; |new1|buff1[29]             ; padio            ;
+; |new1|buff1[30]      ; |new1|buff1[30]             ; padio            ;
+; |new1|buff1[31]      ; |new1|buff1[31]             ; padio            ;
+; |new1|buff2[8]       ; |new1|buff2[8]              ; padio            ;
+; |new1|buff2[9]       ; |new1|buff2[9]              ; padio            ;
+; |new1|buff2[10]      ; |new1|buff2[10]             ; padio            ;
+; |new1|buff2[11]      ; |new1|buff2[11]             ; padio            ;
+; |new1|buff2[12]      ; |new1|buff2[12]             ; padio            ;
+; |new1|buff2[13]      ; |new1|buff2[13]             ; padio            ;
+; |new1|buff2[14]      ; |new1|buff2[14]             ; padio            ;
+; |new1|buff2[15]      ; |new1|buff2[15]             ; padio            ;
+; |new1|buff2[16]      ; |new1|buff2[16]             ; padio            ;
+; |new1|buff2[17]      ; |new1|buff2[17]             ; padio            ;
+; |new1|buff2[18]      ; |new1|buff2[18]             ; padio            ;
+; |new1|buff2[19]      ; |new1|buff2[19]             ; padio            ;
+; |new1|buff2[20]      ; |new1|buff2[20]             ; padio            ;
+; |new1|buff2[21]      ; |new1|buff2[21]             ; padio            ;
+; |new1|buff2[22]      ; |new1|buff2[22]             ; padio            ;
+; |new1|buff2[23]      ; |new1|buff2[23]             ; padio            ;
+; |new1|buff2[24]      ; |new1|buff2[24]             ; padio            ;
+; |new1|buff2[25]      ; |new1|buff2[25]             ; padio            ;
+; |new1|buff2[26]      ; |new1|buff2[26]             ; padio            ;
+; |new1|buff2[27]      ; |new1|buff2[27]             ; padio            ;
+; |new1|buff2[28]      ; |new1|buff2[28]             ; padio            ;
+; |new1|buff2[29]      ; |new1|buff2[29]             ; padio            ;
+; |new1|buff2[30]      ; |new1|buff2[30]             ; padio            ;
+; |new1|buff2[31]      ; |new1|buff2[31]             ; padio            ;
+; |new1|zero           ; |new1|zero                  ; padio            ;
+; |new1|aluopt         ; |new1|aluopt~corein         ; combout          ;
++----------------------+-----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Tue Apr 11 21:22:05 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off new1 -c new1
+Info: Using vector source file "C:/Users/ASUS/Desktop/JISUANJIZUCHENGDAZUOYE1/new1/new1.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      24.50 %
+Info: Number of transitions in simulation is 9456
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 176 megabytes
+    Info: Processing ended: Tue Apr 11 21:22:05 2017
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

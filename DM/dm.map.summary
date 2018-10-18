@@ -1,0 +1,12 @@
+Analysis & Synthesis Status : Successful - Sun Mar 19 13:08:14 2017
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : dm
+Top-level Entity Name : dm
+Family : Cyclone
+Total logic elements : 1,745
+Total pins : 99
+Total virtual pins : 0
+Total memory bits : 0
+DSP block 9-bit elements : N/A until Partition Merge
+Total PLLs : 0
+Total DLLs : N/A until Partition Merge

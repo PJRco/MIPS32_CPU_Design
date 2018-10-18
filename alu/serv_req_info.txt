@@ -1,0 +1,16 @@
+<internal_error>
+	<executable>quartus_fit.exe</executable>
+	<sub_system>QFIT</sub_system>
+	<file>/quartus/comp/qfit/qfit_cmd.cpp</file>
+	<line>2370</line>
+	<callstack>
+	0x00410074: quartus_fit + 0x10074
+	0x01ebce32: comp_qexe + 0xce32 (?qexe_get_command_line@@YIPBDXZ + 0x3a2)
+	</callstack>
+	<error>split_ok</error>
+	<date>Tue Apr 25 23:04:36 2017</date>
+	<version>Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version</version>
+	<full_error>split_ok
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version </full_error>
+</internal_error>
+

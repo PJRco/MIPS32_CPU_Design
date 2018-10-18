@@ -1,0 +1,948 @@
+Fitter report for divider
+Thu Apr 06 17:24:02 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Fitter Device Options
+  6. Input Pins
+  7. Output Pins
+  8. Bidir Pins
+  9. All Package Pins
+ 10. Control Signals
+ 11. Carry Chains
+ 12. Non-Global High Fan-Out Signals
+ 13. Fitter Resource Usage Summary
+ 14. Fitter Resource Utilization by Entity
+ 15. Delay Chain Summary
+ 16. Fitter Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------+
+; Fitter Summary                                                   ;
++-----------------------+------------------------------------------+
+; Fitter Status         ; Failed - Thu Apr 06 17:24:02 2017        ;
+; Quartus II Version    ; 9.0 Build 132 02/25/2009 SJ Full Version ;
+; Revision Name         ; divider                                  ;
+; Top-level Entity Name ; divider                                  ;
+; Family                ; ACEX1K                                   ;
+; Device                ; EP1K100QC208-3                           ;
+; Timing Models         ; Final                                    ;
+; Total logic elements  ; 300 / 4,992 ( 6 % )                      ;
+; Total pins            ; 199 / 147 ( 135 % )                      ;
+; Total memory bits     ; 0 / 49,152 ( 0 % )                       ;
+; Total PLLs            ; 0                                        ;
++-----------------------+------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Option                                                     ; Setting            ; Default Value      ;
++------------------------------------------------------------+--------------------+--------------------+
+; Device                                                     ; EP1K100QC208-3     ;                    ;
+; Use smart compilation                                      ; Off                ; Off                ;
+; Use TimeQuest Timing Analyzer                              ; Off                ; Off                ;
+; Router Timing Optimization Level                           ; Normal             ; Normal             ;
+; Placement Effort Multiplier                                ; 1.0                ; 1.0                ;
+; Router Effort Multiplier                                   ; 1.0                ; 1.0                ;
+; Optimize Timing                                            ; Normal compilation ; Normal compilation ;
+; Optimize Timing for ECOs                                   ; Off                ; Off                ;
+; Regenerate full fit report during ECO compiles             ; Off                ; Off                ;
+; Optimize IOC Register Placement for Timing                 ; On                 ; On                 ;
+; Limit to One Fitting Attempt                               ; Off                ; Off                ;
+; Final Placement Optimizations                              ; Automatically      ; Automatically      ;
+; Fitter Aggressive Routability Optimizations                ; Automatically      ; Automatically      ;
+; Fitter Initial Placement Seed                              ; 1                  ; 1                  ;
+; Slow Slew Rate                                             ; Off                ; Off                ;
+; PCI I/O                                                    ; Off                ; Off                ;
+; Auto Global Memory Control Signals                         ; Off                ; Off                ;
+; Logic Cell Insertion - Individual Logic Cells              ; On                 ; On                 ;
+; Logic Cell Insertion - I/Os Fed By Carry or Cascade Chains ; On                 ; On                 ;
+; Fitter Effort                                              ; Auto Fit           ; Auto Fit           ;
+; Auto Global Clock                                          ; On                 ; On                 ;
+; Auto Global Output Enable                                  ; On                 ; On                 ;
+; Auto Global Register Control Signals                       ; On                 ; On                 ;
+; Force Fitter to Avoid Periphery Placement Warnings         ; Off                ; Off                ;
++------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Passive Serial           ;
+; nWS, nRS, nCS, CS                            ; Unreserved               ;
+; RDYnBUSY                                     ; Unreserved               ;
+; Data[7..1]                                   ; Unreserved               ;
+; Reserve all unused pins                      ; As output driving ground ;
+; Base pin-out file on sameframe device        ; Off                      ;
++----------------------------------------------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                          ;
++--------------+------------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
+; Name         ; Pin #      ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Power Up High ; PCI I/O Enabled ; Single-Pin CE ; I/O Standard ;
++--------------+------------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
+; alucontr[0]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; alucontr[1]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; alucontr[2]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; alucontr[3]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; clock        ; Unassigned ; --  ; --   ; 105     ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[0]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[1]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[2]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[3]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[4]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[5]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[6]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[7]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[8]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[9]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[10] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[11] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[12] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[13] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[14] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[15] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[16] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[17] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[18] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[19] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[20] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[21] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[22] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[23] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[24] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[25] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[26] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[27] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[28] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[29] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[30] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; dividend[31] ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[0]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[1]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[2]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[3]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[4]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[5]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[6]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[7]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[8]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[9]   ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[10]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[11]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[12]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[13]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[14]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[15]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[16]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[17]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[18]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[19]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[20]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[21]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[22]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[23]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[24]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[25]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[26]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[27]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[28]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[29]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[30]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
+; divisor[31]  ; Unassigned ; --  ; --   ; 1       ; no     ; no           ; no                      ; no            ; no              ; no            ; LVTTL/LVCMOS ;
++--------------+------------+-----+------+---------+--------+--------------+-------------------------+---------------+-----------------+---------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                        ;
++-----------------+------------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
+; Name            ; Pin #      ; Row ; Col. ; I/O Register ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Single-Pin OE ; Single-Pin CE ; Open Drain ; TRI Primitive ; I/O Standard ;
++-----------------+------------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
+; quotient[0]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[1]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[2]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[3]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[4]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[5]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[6]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[7]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[8]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[9]     ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[10]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[11]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[12]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[13]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[14]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[15]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[16]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[17]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[18]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[19]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[20]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[21]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[22]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[23]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[24]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[25]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[26]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[27]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[28]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[29]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[30]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; quotient[31]    ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[0]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[1]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[2]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[3]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[4]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[5]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[6]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[7]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[8]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[9]  ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[10] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[11] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[12] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[13] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[14] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[15] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[16] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[17] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[18] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[19] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[20] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[21] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[22] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[23] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[24] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[25] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[26] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[27] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[28] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[29] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[30] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
+; remainder_r[31] ; Unassigned ; --  ; --   ; no           ; no                       ; no            ; no             ; no              ; no            ; no            ; no         ; no            ; LVTTL/LVCMOS ;
++-----------------+------------+-----+------+--------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+------------+---------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Bidir Pins                                                                                                                                                                                                                                                    ;
++---------------+------------+-----+------+---------+--------+--------------+-------------------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+---------------+------------+--------------+
+; Name          ; Pin #      ; Row ; Col. ; Fan-Out ; Global ; I/O Register ; Use Local Routing Input ; Use Local Routing Output ; Power Up High ; Slow Slew Rate ; PCI I/O Enabled ; Single-Pin OE ; Single-Pin CE ; Single-Pin OE ; Open Drain ; I/O Standard ;
++---------------+------------+-----+------+---------+--------+--------------+-------------------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+---------------+------------+--------------+
+; remainder[0]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[1]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[2]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[3]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[4]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[5]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[6]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[7]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[8]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[9]  ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[10] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[11] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[12] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[13] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[14] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[15] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[16] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[17] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[18] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[19] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[20] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[21] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[22] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[23] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[24] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[25] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[26] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[27] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[28] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[29] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[30] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[31] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[32] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[33] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[34] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[35] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[36] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[37] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[38] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[39] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[40] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[41] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[42] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[43] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[44] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[45] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[46] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[47] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[48] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[49] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[50] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[51] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[52] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[53] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[54] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[55] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[56] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[57] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[58] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[59] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[60] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[61] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[62] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[63] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; remainder[64] ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
+; finish        ; Unassigned ; --  ; --   ; 0       ; no     ; no           ; no                      ; no                       ; no            ; no             ; no              ; no            ; no            ; no            ; no         ; LVTTL/LVCMOS ;
++---------------+------------+-----+------+---------+--------+--------------+-------------------------+--------------------------+---------------+----------------+-----------------+---------------+---------------+---------------+------------+--------------+
+
+
++-----------------------------------+
+; All Package Pins                  ;
++-------+------------+--------------+
+; Pin # ; Usage      ; I/O Standard ;
++-------+------------+--------------+
+; 1     ; #TCK       ;              ;
+; 2     ; ^CONF_DONE ;              ;
+; 3     ; ^nCEO      ;              ;
+; 4     ; #TDO       ;              ;
+; 5     ; VCC_IO     ;              ;
+; 6     ; GND        ;              ;
+; 7     ; GND*       ;              ;
+; 8     ; GND*       ;              ;
+; 9     ; GND*       ;              ;
+; 10    ; GND*       ;              ;
+; 11    ; GND*       ;              ;
+; 12    ; GND*       ;              ;
+; 13    ; GND*       ;              ;
+; 14    ; GND*       ;              ;
+; 15    ; GND*       ;              ;
+; 16    ; GND*       ;              ;
+; 17    ; GND*       ;              ;
+; 18    ; GND*       ;              ;
+; 19    ; GND*       ;              ;
+; 20    ; GND        ;              ;
+; 21    ; VCC_INT    ;              ;
+; 22    ; VCC_IO     ;              ;
+; 23    ; GND        ;              ;
+; 24    ; GND*       ;              ;
+; 25    ; GND*       ;              ;
+; 26    ; GND*       ;              ;
+; 27    ; GND*       ;              ;
+; 28    ; GND*       ;              ;
+; 29    ; GND*       ;              ;
+; 30    ; GND*       ;              ;
+; 31    ; GND*       ;              ;
+; 32    ; GND        ;              ;
+; 33    ; VCC_INT    ;              ;
+; 34    ; VCC_IO     ;              ;
+; 35    ; GND        ;              ;
+; 36    ; GND*       ;              ;
+; 37    ; GND*       ;              ;
+; 38    ; GND*       ;              ;
+; 39    ; GND*       ;              ;
+; 40    ; GND*       ;              ;
+; 41    ; GND*       ;              ;
+; 42    ; VCC_IO     ;              ;
+; 43    ; GND        ;              ;
+; 44    ; GND*       ;              ;
+; 45    ; GND*       ;              ;
+; 46    ; GND*       ;              ;
+; 47    ; GND*       ;              ;
+; 48    ; VCC_INT    ;              ;
+; 49    ; GND        ;              ;
+; 50    ; #TMS       ;              ;
+; 51    ; #TRST      ;              ;
+; 52    ; ^nSTATUS   ;              ;
+; 53    ; GND*       ;              ;
+; 54    ; GND*       ;              ;
+; 55    ; GND*       ;              ;
+; 56    ; GND*       ;              ;
+; 57    ; GND*       ;              ;
+; 58    ; GND*       ;              ;
+; 59    ; GND        ;              ;
+; 60    ; GND*       ;              ;
+; 61    ; GND*       ;              ;
+; 62    ; GND*       ;              ;
+; 63    ; GND*       ;              ;
+; 64    ; GND*       ;              ;
+; 65    ; GND*       ;              ;
+; 66    ; VCC_IO     ;              ;
+; 67    ; GND*       ;              ;
+; 68    ; GND*       ;              ;
+; 69    ; GND*       ;              ;
+; 70    ; GND*       ;              ;
+; 71    ; GND*       ;              ;
+; 72    ; VCC_INT    ;              ;
+; 73    ; GND*       ;              ;
+; 74    ; GND*       ;              ;
+; 75    ; GND*       ;              ;
+; 76    ; GND        ;              ;
+; 77    ; VCC_CKLK   ;              ;
+; 78    ; GND+       ;              ;
+; 79    ; GND+       ;              ;
+; 80    ; GND+       ;              ;
+; 81    ; GND_CKLK   ;              ;
+; 82    ; GND        ;              ;
+; 83    ; GND*       ;              ;
+; 84    ; VCC_IO     ;              ;
+; 85    ; GND*       ;              ;
+; 86    ; GND*       ;              ;
+; 87    ; GND*       ;              ;
+; 88    ; GND*       ;              ;
+; 89    ; GND*       ;              ;
+; 90    ; GND*       ;              ;
+; 91    ; VCC_INT    ;              ;
+; 92    ; GND*       ;              ;
+; 93    ; GND*       ;              ;
+; 94    ; GND*       ;              ;
+; 95    ; GND*       ;              ;
+; 96    ; GND*       ;              ;
+; 97    ; GND*       ;              ;
+; 98    ; VCC_IO     ;              ;
+; 99    ; GND*       ;              ;
+; 100   ; GND*       ;              ;
+; 101   ; GND*       ;              ;
+; 102   ; GND*       ;              ;
+; 103   ; GND*       ;              ;
+; 104   ; GND*       ;              ;
+; 105   ; ^nCONFIG   ;              ;
+; 106   ; VCC_INT    ;              ;
+; 107   ; ^MSEL1     ;              ;
+; 108   ; ^MSEL0     ;              ;
+; 109   ; GND        ;              ;
+; 110   ; VCC_IO     ;              ;
+; 111   ; GND*       ;              ;
+; 112   ; GND*       ;              ;
+; 113   ; GND*       ;              ;
+; 114   ; GND*       ;              ;
+; 115   ; GND*       ;              ;
+; 116   ; GND*       ;              ;
+; 117   ; GND        ;              ;
+; 118   ; VCC_IO     ;              ;
+; 119   ; GND*       ;              ;
+; 120   ; GND*       ;              ;
+; 121   ; GND*       ;              ;
+; 122   ; GND*       ;              ;
+; 123   ; GND        ;              ;
+; 124   ; VCC_INT    ;              ;
+; 125   ; GND*       ;              ;
+; 126   ; GND*       ;              ;
+; 127   ; GND*       ;              ;
+; 128   ; GND*       ;              ;
+; 129   ; GND        ;              ;
+; 130   ; VCC_INT    ;              ;
+; 131   ; GND*       ;              ;
+; 132   ; GND*       ;              ;
+; 133   ; GND*       ;              ;
+; 134   ; GND*       ;              ;
+; 135   ; GND*       ;              ;
+; 136   ; GND*       ;              ;
+; 137   ; GND        ;              ;
+; 138   ; VCC_IO     ;              ;
+; 139   ; GND*       ;              ;
+; 140   ; GND*       ;              ;
+; 141   ; GND*       ;              ;
+; 142   ; GND*       ;              ;
+; 143   ; GND*       ;              ;
+; 144   ; GND*       ;              ;
+; 145   ; GND        ;              ;
+; 146   ; VCC_IO     ;              ;
+; 147   ; GND*       ;              ;
+; 148   ; GND*       ;              ;
+; 149   ; GND*       ;              ;
+; 150   ; GND*       ;              ;
+; 151   ; GND        ;              ;
+; 152   ; VCC_INT    ;              ;
+; 153   ; #TDI       ;              ;
+; 154   ; ^nCE       ;              ;
+; 155   ; ^DCLK      ;              ;
+; 156   ; ^DATA0     ;              ;
+; 157   ; GND*       ;              ;
+; 158   ; GND*       ;              ;
+; 159   ; GND*       ;              ;
+; 160   ; GND*       ;              ;
+; 161   ; GND*       ;              ;
+; 162   ; GND*       ;              ;
+; 163   ; GND*       ;              ;
+; 164   ; GND*       ;              ;
+; 165   ; VCC_IO     ;              ;
+; 166   ; GND*       ;              ;
+; 167   ; GND*       ;              ;
+; 168   ; GND*       ;              ;
+; 169   ; GND*       ;              ;
+; 170   ; GND*       ;              ;
+; 171   ; GND        ;              ;
+; 172   ; GND*       ;              ;
+; 173   ; GND*       ;              ;
+; 174   ; GND*       ;              ;
+; 175   ; GND*       ;              ;
+; 176   ; GND*       ;              ;
+; 177   ; GND*       ;              ;
+; 178   ; VCC_IO     ;              ;
+; 179   ; GND*       ;              ;
+; 180   ; GND*       ;              ;
+; 181   ; GND        ;              ;
+; 182   ; GND+       ;              ;
+; 183   ; GND+       ;              ;
+; 184   ; GND+       ;              ;
+; 185   ; VCC_INT    ;              ;
+; 186   ; GND*       ;              ;
+; 187   ; GND*       ;              ;
+; 188   ; GND        ;              ;
+; 189   ; GND*       ;              ;
+; 190   ; GND*       ;              ;
+; 191   ; GND*       ;              ;
+; 192   ; GND*       ;              ;
+; 193   ; GND*       ;              ;
+; 194   ; VCC_IO     ;              ;
+; 195   ; GND*       ;              ;
+; 196   ; GND*       ;              ;
+; 197   ; GND*       ;              ;
+; 198   ; GND*       ;              ;
+; 199   ; GND*       ;              ;
+; 200   ; GND*       ;              ;
+; 201   ; VCC_INT    ;              ;
+; 202   ; GND*       ;              ;
+; 203   ; GND*       ;              ;
+; 204   ; GND*       ;              ;
+; 205   ; GND*       ;              ;
+; 206   ; GND*       ;              ;
+; 207   ; GND*       ;              ;
+; 208   ; GND*       ;              ;
++-------+------------+--------------+
+
+
++------------------------------------------------------------------+
+; Control Signals                                                  ;
++-------------+------------+---------+--------------+--------------+
+; Name        ; Pin #      ; Fan-Out ; Usage        ; Global Usage ;
++-------------+------------+---------+--------------+--------------+
+; drreg[0]~32 ; Unassigned ; 32      ; Clock enable ; Non-global   ;
+; clock       ; Unassigned ; 105     ; Clock        ; Non-global   ;
++-------------+------------+---------+--------------+--------------+
+
+
++---------------------------------------------+
+; Carry Chains                                ;
++--------------------+------------------------+
+; Carry Chain Length ; Number of Carry Chains ;
++--------------------+------------------------+
+; 0                  ; 0                      ;
+; 1                  ; 0                      ;
+; 2                  ; 0                      ;
+; 3                  ; 0                      ;
+; 4                  ; 0                      ;
+; 5                  ; 1                      ;
++--------------------+------------------------+
+
+
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++-------------------+-------------+
+; Name              ; Fan-Out     ;
++-------------------+-------------+
+; clock             ; 105         ;
+; count2[1]~5       ; 101         ;
+; count2[0]~6       ; 101         ;
+; finish~2          ; 64          ;
+; load_rem~5        ; 62          ;
+; load_rem~4        ; 32          ;
+; drreg[0]~96       ; 32          ;
+; Equal2~1          ; 32          ;
+; Equal3~1          ; 9           ;
+; remainder[48]~502 ; 6           ;
+; remainder[56]~510 ; 6           ;
+; remainder[60]~514 ; 6           ;
+; remainder[62]~516 ; 6           ;
+; remainder[63]~517 ; 6           ;
+; remainder[61]~515 ; 6           ;
+; remainder[57]~511 ; 6           ;
+; remainder[58]~512 ; 6           ;
+; remainder[59]~513 ; 6           ;
+; remainder[49]~503 ; 6           ;
+; remainder[52]~506 ; 6           ;
+; remainder[54]~508 ; 6           ;
+; remainder[55]~509 ; 6           ;
+; remainder[53]~507 ; 6           ;
+; remainder[50]~504 ; 6           ;
+; remainder[51]~505 ; 6           ;
+; remainder[44]~498 ; 6           ;
+; remainder[46]~500 ; 6           ;
+; remainder[47]~501 ; 6           ;
+; remainder[45]~499 ; 6           ;
+; remainder[40]~494 ; 6           ;
+; remainder[41]~495 ; 6           ;
+; remainder[42]~496 ; 6           ;
+; remainder[43]~497 ; 6           ;
+; remainder[38]~492 ; 6           ;
+; remainder[39]~493 ; 6           ;
+; remainder[36]~490 ; 6           ;
+; remainder[37]~491 ; 6           ;
+; remainder[33]~487 ; 6           ;
+; remainder[34]~488 ; 6           ;
+; remainder[35]~489 ; 6           ;
+; remainder[32]~550 ; 5           ;
+; remainder[30]~485 ; 4           ;
+; remainder[14]~469 ; 4           ;
+; remainder[29]~484 ; 4           ;
+; remainder[28]~483 ; 4           ;
+; remainder[6]~461  ; 4           ;
+; remainder[13]~468 ; 4           ;
+; remainder[27]~482 ; 4           ;
+; remainder[26]~481 ; 4           ;
+; remainder[12]~467 ; 4           ;
++-------------------+-------------+
+
+
++---------------------------------------------------------+
+; Fitter Resource Usage Summary                           ;
++-----------------------------------+---------------------+
+; Resource                          ; Usage               ;
++-----------------------------------+---------------------+
+; Total logic elements              ; 300 / 4,992 ( 6 % ) ;
+; Registers                         ; 105 / 4,992 ( 2 % ) ;
+; Logic elements in carry chains    ; 5                   ;
+; User inserted logic elements      ; 0                   ;
+; I/O pins                          ; 199 / 147 ( 135 % ) ;
+;     -- Clock pins                 ; 0 / 0 ( -- )        ;
+;     -- Dedicated input pins       ; 0 / 4 ( 0 % )       ;
+; Global signals                    ; 0                   ;
+; EABs                              ; 0 / 12 ( 0 % )      ;
+; Total memory bits                 ; 0 / 49,152 ( 0 % )  ;
+; Total RAM block bits              ; 0 / 49,152 ( 0 % )  ;
+; Maximum fan-out node              ; clock               ;
+; Maximum fan-out                   ; 105                 ;
+; Highest non-global fan-out signal ; clock               ;
+; Highest non-global fan-out        ; 105                 ;
+; Total fan-out                     ; 1219                ;
+; Average fan-out                   ; 2.44                ;
++-----------------------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                          ;
++----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                             ; Library Name ;
++----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+--------------+
+; |divider                               ; 300 (295)   ; 105          ; 0           ; 199  ; 195 (195)    ; 32 (32)           ; 73 (68)          ; 5 (0)           ; 0 (0)      ; |divider                                                        ; work         ;
+;    |lpm_counter:count_rtl_0|           ; 5 (0)       ; 5            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 5 (0)            ; 5 (0)           ; 0 (0)      ; |divider|lpm_counter:count_rtl_0                                ; work         ;
+;       |alt_counter_f10ke:wysi_counter| ; 5 (5)       ; 5            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 5 (5)           ; 0 (0)      ; |divider|lpm_counter:count_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
++----------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------+
+; Delay Chain Summary                      ;
++-----------------+----------+-------------+
+; Name            ; Pin Type ; Pad to Core ;
++-----------------+----------+-------------+
+; alucontr[0]     ; Input    ; OFF         ;
+; alucontr[1]     ; Input    ; OFF         ;
+; alucontr[2]     ; Input    ; OFF         ;
+; alucontr[3]     ; Input    ; OFF         ;
+; clock           ; Input    ; OFF         ;
+; dividend[0]     ; Input    ; OFF         ;
+; dividend[1]     ; Input    ; OFF         ;
+; dividend[2]     ; Input    ; OFF         ;
+; dividend[3]     ; Input    ; OFF         ;
+; dividend[4]     ; Input    ; OFF         ;
+; dividend[5]     ; Input    ; OFF         ;
+; dividend[6]     ; Input    ; OFF         ;
+; dividend[7]     ; Input    ; OFF         ;
+; dividend[8]     ; Input    ; OFF         ;
+; dividend[9]     ; Input    ; OFF         ;
+; dividend[10]    ; Input    ; OFF         ;
+; dividend[11]    ; Input    ; OFF         ;
+; dividend[12]    ; Input    ; OFF         ;
+; dividend[13]    ; Input    ; OFF         ;
+; dividend[14]    ; Input    ; OFF         ;
+; dividend[15]    ; Input    ; OFF         ;
+; dividend[16]    ; Input    ; OFF         ;
+; dividend[17]    ; Input    ; OFF         ;
+; dividend[18]    ; Input    ; OFF         ;
+; dividend[19]    ; Input    ; OFF         ;
+; dividend[20]    ; Input    ; OFF         ;
+; dividend[21]    ; Input    ; OFF         ;
+; dividend[22]    ; Input    ; OFF         ;
+; dividend[23]    ; Input    ; OFF         ;
+; dividend[24]    ; Input    ; OFF         ;
+; dividend[25]    ; Input    ; OFF         ;
+; dividend[26]    ; Input    ; OFF         ;
+; dividend[27]    ; Input    ; OFF         ;
+; dividend[28]    ; Input    ; OFF         ;
+; dividend[29]    ; Input    ; OFF         ;
+; dividend[30]    ; Input    ; OFF         ;
+; dividend[31]    ; Input    ; OFF         ;
+; divisor[0]      ; Input    ; OFF         ;
+; divisor[1]      ; Input    ; OFF         ;
+; divisor[2]      ; Input    ; OFF         ;
+; divisor[3]      ; Input    ; OFF         ;
+; divisor[4]      ; Input    ; OFF         ;
+; divisor[5]      ; Input    ; OFF         ;
+; divisor[6]      ; Input    ; OFF         ;
+; divisor[7]      ; Input    ; OFF         ;
+; divisor[8]      ; Input    ; OFF         ;
+; divisor[9]      ; Input    ; OFF         ;
+; divisor[10]     ; Input    ; OFF         ;
+; divisor[11]     ; Input    ; OFF         ;
+; divisor[12]     ; Input    ; OFF         ;
+; divisor[13]     ; Input    ; OFF         ;
+; divisor[14]     ; Input    ; OFF         ;
+; divisor[15]     ; Input    ; OFF         ;
+; divisor[16]     ; Input    ; OFF         ;
+; divisor[17]     ; Input    ; OFF         ;
+; divisor[18]     ; Input    ; OFF         ;
+; divisor[19]     ; Input    ; OFF         ;
+; divisor[20]     ; Input    ; OFF         ;
+; divisor[21]     ; Input    ; OFF         ;
+; divisor[22]     ; Input    ; OFF         ;
+; divisor[23]     ; Input    ; OFF         ;
+; divisor[24]     ; Input    ; OFF         ;
+; divisor[25]     ; Input    ; OFF         ;
+; divisor[26]     ; Input    ; OFF         ;
+; divisor[27]     ; Input    ; OFF         ;
+; divisor[28]     ; Input    ; OFF         ;
+; divisor[29]     ; Input    ; OFF         ;
+; divisor[30]     ; Input    ; OFF         ;
+; divisor[31]     ; Input    ; OFF         ;
+; quotient[0]     ; Output   ; OFF         ;
+; quotient[1]     ; Output   ; OFF         ;
+; quotient[2]     ; Output   ; OFF         ;
+; quotient[3]     ; Output   ; OFF         ;
+; quotient[4]     ; Output   ; OFF         ;
+; quotient[5]     ; Output   ; OFF         ;
+; quotient[6]     ; Output   ; OFF         ;
+; quotient[7]     ; Output   ; OFF         ;
+; quotient[8]     ; Output   ; OFF         ;
+; quotient[9]     ; Output   ; OFF         ;
+; quotient[10]    ; Output   ; OFF         ;
+; quotient[11]    ; Output   ; OFF         ;
+; quotient[12]    ; Output   ; OFF         ;
+; quotient[13]    ; Output   ; OFF         ;
+; quotient[14]    ; Output   ; OFF         ;
+; quotient[15]    ; Output   ; OFF         ;
+; quotient[16]    ; Output   ; OFF         ;
+; quotient[17]    ; Output   ; OFF         ;
+; quotient[18]    ; Output   ; OFF         ;
+; quotient[19]    ; Output   ; OFF         ;
+; quotient[20]    ; Output   ; OFF         ;
+; quotient[21]    ; Output   ; OFF         ;
+; quotient[22]    ; Output   ; OFF         ;
+; quotient[23]    ; Output   ; OFF         ;
+; quotient[24]    ; Output   ; OFF         ;
+; quotient[25]    ; Output   ; OFF         ;
+; quotient[26]    ; Output   ; OFF         ;
+; quotient[27]    ; Output   ; OFF         ;
+; quotient[28]    ; Output   ; OFF         ;
+; quotient[29]    ; Output   ; OFF         ;
+; quotient[30]    ; Output   ; OFF         ;
+; quotient[31]    ; Output   ; OFF         ;
+; remainder_r[0]  ; Output   ; OFF         ;
+; remainder_r[1]  ; Output   ; OFF         ;
+; remainder_r[2]  ; Output   ; OFF         ;
+; remainder_r[3]  ; Output   ; OFF         ;
+; remainder_r[4]  ; Output   ; OFF         ;
+; remainder_r[5]  ; Output   ; OFF         ;
+; remainder_r[6]  ; Output   ; OFF         ;
+; remainder_r[7]  ; Output   ; OFF         ;
+; remainder_r[8]  ; Output   ; OFF         ;
+; remainder_r[9]  ; Output   ; OFF         ;
+; remainder_r[10] ; Output   ; OFF         ;
+; remainder_r[11] ; Output   ; OFF         ;
+; remainder_r[12] ; Output   ; OFF         ;
+; remainder_r[13] ; Output   ; OFF         ;
+; remainder_r[14] ; Output   ; OFF         ;
+; remainder_r[15] ; Output   ; OFF         ;
+; remainder_r[16] ; Output   ; OFF         ;
+; remainder_r[17] ; Output   ; OFF         ;
+; remainder_r[18] ; Output   ; OFF         ;
+; remainder_r[19] ; Output   ; OFF         ;
+; remainder_r[20] ; Output   ; OFF         ;
+; remainder_r[21] ; Output   ; OFF         ;
+; remainder_r[22] ; Output   ; OFF         ;
+; remainder_r[23] ; Output   ; OFF         ;
+; remainder_r[24] ; Output   ; OFF         ;
+; remainder_r[25] ; Output   ; OFF         ;
+; remainder_r[26] ; Output   ; OFF         ;
+; remainder_r[27] ; Output   ; OFF         ;
+; remainder_r[28] ; Output   ; OFF         ;
+; remainder_r[29] ; Output   ; OFF         ;
+; remainder_r[30] ; Output   ; OFF         ;
+; remainder_r[31] ; Output   ; OFF         ;
+; remainder[0]    ; Bidir    ; OFF         ;
+; remainder[1]    ; Bidir    ; OFF         ;
+; remainder[2]    ; Bidir    ; OFF         ;
+; remainder[3]    ; Bidir    ; OFF         ;
+; remainder[4]    ; Bidir    ; OFF         ;
+; remainder[5]    ; Bidir    ; OFF         ;
+; remainder[6]    ; Bidir    ; OFF         ;
+; remainder[7]    ; Bidir    ; OFF         ;
+; remainder[8]    ; Bidir    ; OFF         ;
+; remainder[9]    ; Bidir    ; OFF         ;
+; remainder[10]   ; Bidir    ; OFF         ;
+; remainder[11]   ; Bidir    ; OFF         ;
+; remainder[12]   ; Bidir    ; OFF         ;
+; remainder[13]   ; Bidir    ; OFF         ;
+; remainder[14]   ; Bidir    ; OFF         ;
+; remainder[15]   ; Bidir    ; OFF         ;
+; remainder[16]   ; Bidir    ; OFF         ;
+; remainder[17]   ; Bidir    ; OFF         ;
+; remainder[18]   ; Bidir    ; OFF         ;
+; remainder[19]   ; Bidir    ; OFF         ;
+; remainder[20]   ; Bidir    ; OFF         ;
+; remainder[21]   ; Bidir    ; OFF         ;
+; remainder[22]   ; Bidir    ; OFF         ;
+; remainder[23]   ; Bidir    ; OFF         ;
+; remainder[24]   ; Bidir    ; OFF         ;
+; remainder[25]   ; Bidir    ; OFF         ;
+; remainder[26]   ; Bidir    ; OFF         ;
+; remainder[27]   ; Bidir    ; OFF         ;
+; remainder[28]   ; Bidir    ; OFF         ;
+; remainder[29]   ; Bidir    ; OFF         ;
+; remainder[30]   ; Bidir    ; OFF         ;
+; remainder[31]   ; Bidir    ; OFF         ;
+; remainder[32]   ; Bidir    ; OFF         ;
+; remainder[33]   ; Bidir    ; OFF         ;
+; remainder[34]   ; Bidir    ; OFF         ;
+; remainder[35]   ; Bidir    ; OFF         ;
+; remainder[36]   ; Bidir    ; OFF         ;
+; remainder[37]   ; Bidir    ; OFF         ;
+; remainder[38]   ; Bidir    ; OFF         ;
+; remainder[39]   ; Bidir    ; OFF         ;
+; remainder[40]   ; Bidir    ; OFF         ;
+; remainder[41]   ; Bidir    ; OFF         ;
+; remainder[42]   ; Bidir    ; OFF         ;
+; remainder[43]   ; Bidir    ; OFF         ;
+; remainder[44]   ; Bidir    ; OFF         ;
+; remainder[45]   ; Bidir    ; OFF         ;
+; remainder[46]   ; Bidir    ; OFF         ;
+; remainder[47]   ; Bidir    ; OFF         ;
+; remainder[48]   ; Bidir    ; OFF         ;
+; remainder[49]   ; Bidir    ; OFF         ;
+; remainder[50]   ; Bidir    ; OFF         ;
+; remainder[51]   ; Bidir    ; OFF         ;
+; remainder[52]   ; Bidir    ; OFF         ;
+; remainder[53]   ; Bidir    ; OFF         ;
+; remainder[54]   ; Bidir    ; OFF         ;
+; remainder[55]   ; Bidir    ; OFF         ;
+; remainder[56]   ; Bidir    ; OFF         ;
+; remainder[57]   ; Bidir    ; OFF         ;
+; remainder[58]   ; Bidir    ; OFF         ;
+; remainder[59]   ; Bidir    ; OFF         ;
+; remainder[60]   ; Bidir    ; OFF         ;
+; remainder[61]   ; Bidir    ; OFF         ;
+; remainder[62]   ; Bidir    ; OFF         ;
+; remainder[63]   ; Bidir    ; OFF         ;
+; remainder[64]   ; Bidir    ; OFF         ;
+; finish          ; Bidir    ; OFF         ;
++-----------------+----------+-------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info: *******************************************************************
+Info: Running Quartus II Fitter
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Apr 06 17:24:02 2017
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off divider -c divider
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info: Selected device EP1K100QC208-3 for design "divider"
+Error: Can't place all I/O pins in the current design
+    Error: There are 116 regular I/O pins, 4 dedicated fast pins and 1 dedicated clocks still available for the Fitter to place remaining pins in the design
+        Error: Already using 1 dedicated clock pins
+            Error: Dedicated clock pin PIN_79 assigned to node "clock"
+        Error: Already using 25 regular I/O pins
+            Error: I/O pin PIN_7 assigned to node "quotient[0]"
+            Error: I/O pin PIN_8 assigned to node "quotient[1]"
+            Error: I/O pin PIN_9 assigned to node "quotient[2]"
+            Error: I/O pin PIN_11 assigned to node "quotient[3]"
+            Error: I/O pin PIN_12 assigned to node "remainder_r[0]"
+            Error: I/O pin PIN_13 assigned to node "remainder_r[1]"
+            Error: I/O pin PIN_14 assigned to node "remainder_r[2]"
+            Error: I/O pin PIN_15 assigned to node "remainder_r[3]"
+            Error: I/O pin PIN_120 assigned to node "remainder[7]"
+            Error: I/O pin PIN_119 assigned to node "remainder[6]"
+            Error: I/O pin PIN_116 assigned to node "remainder[5]"
+            Error: I/O pin PIN_115 assigned to node "remainder[4]"
+            Error: I/O pin PIN_114 assigned to node "remainder[3]"
+            Error: I/O pin PIN_113 assigned to node "remainder[2]"
+            Error: I/O pin PIN_112 assigned to node "remainder[1]"
+            Error: I/O pin PIN_111 assigned to node "remainder[0]"
+            Error: I/O pin PIN_70 assigned to node "dividend[3]"
+            Error: I/O pin PIN_69 assigned to node "dividend[2]"
+            Error: I/O pin PIN_67 assigned to node "dividend[0]"
+            Error: I/O pin PIN_68 assigned to node "dividend[1]"
+            Error: I/O pin PIN_193 assigned to node "finish"
+            Error: I/O pin PIN_56 assigned to node "divisor[3]"
+            Error: I/O pin PIN_55 assigned to node "divisor[2]"
+            Error: I/O pin PIN_54 assigned to node "divisor[1]"
+            Error: I/O pin PIN_53 assigned to node "divisor[0]"
+    Error: Fitter needs to place 60 input pins, because 0 of the pins cannot be placed on dedicated fast or dedicated clock pins
+    Error: Fitter needs to place 57 bi-directional pins
+    Error: Fitter needs to place 56 output pins
+Info: Inserted 0 logic cells in first fitting attempt
+Error: Project requires 199 I/O pins, but the selected device can contain only 141 I/O pins
+Error: Can't find fit
+Error: Quartus II Fitter was unsuccessful. 35 errors, 0 warnings
+    Error: Peak virtual memory: 265 megabytes
+    Error: Processing ended: Thu Apr 06 17:24:02 2017
+    Error: Elapsed time: 00:00:00
+    Error: Total CPU time (on all processors): 00:00:00
+
+

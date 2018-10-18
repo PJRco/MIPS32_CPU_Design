@@ -1,0 +1,12 @@
+Fitter Status : Successful - Sun Mar 19 14:04:52 2017
+Quartus II Version : 8.0 Build 215 05/29/2008 SJ Full Version
+Revision Name : Iregfile
+Top-level Entity Name : Iregfile
+Family : Cyclone
+Device : EP1C6Q240C8
+Timing Models : Final
+Total logic elements : 1,396 / 5,980 ( 23 % )
+Total pins : 113 / 185 ( 61 % )
+Total virtual pins : 0
+Total memory bits : 0 / 92,160 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

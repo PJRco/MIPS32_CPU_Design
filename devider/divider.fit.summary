@@ -1,0 +1,11 @@
+Fitter Status : Failed - Thu Apr 06 17:24:02 2017
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : divider
+Top-level Entity Name : divider
+Family : ACEX1K
+Device : EP1K100QC208-3
+Timing Models : Final
+Total logic elements : 300 / 4,992 ( 6 % )
+Total pins : 199 / 147 ( 135 % )
+Total memory bits : 0 / 49,152 ( 0 % )
+Total PLLs : 0

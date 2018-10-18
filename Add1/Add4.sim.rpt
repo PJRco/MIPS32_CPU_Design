@@ -1,0 +1,458 @@
+Simulator report for Add4
+Sat Feb 25 09:59:20 2017
+Quartus II 64-Bit Version 8.0 Build 215 05/29/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 95 nodes     ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone      ;
+; Device                      ; EP1C6Q240C8  ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 95           ;
+; Total output ports checked                          ; 149          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 149          ;
+; Total output ports with no 1-value coverage         ; 149          ;
+; Total output ports with no 0-value coverage         ; 149          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------+
+; Missing 1-Value Coverage                                   ;
++-----------------+-----------------------+------------------+
+; Node Name       ; Output Port Name      ; Output Port Type ;
++-----------------+-----------------------+------------------+
+; |Add4|Add0~183  ; |Add4|Add0~183        ; combout          ;
+; |Add4|Add0~183  ; |Add4|Add0~184        ; cout0            ;
+; |Add4|Add0~183  ; |Add4|Add0~184COUT1   ; cout1            ;
+; |Add4|Add0~185  ; |Add4|Add0~185        ; combout          ;
+; |Add4|Add0~185  ; |Add4|Add0~186        ; cout0            ;
+; |Add4|Add0~185  ; |Add4|Add0~186COUT1   ; cout1            ;
+; |Add4|Add0~187  ; |Add4|Add0~187        ; combout          ;
+; |Add4|Add0~187  ; |Add4|Add0~188        ; cout0            ;
+; |Add4|Add0~187  ; |Add4|Add0~188COUT1   ; cout1            ;
+; |Add4|Add0~189  ; |Add4|Add0~189        ; combout          ;
+; |Add4|Add0~189  ; |Add4|Add0~190        ; cout0            ;
+; |Add4|Add0~189  ; |Add4|Add0~190COUT1   ; cout1            ;
+; |Add4|Add0~191  ; |Add4|Add0~191        ; combout          ;
+; |Add4|Add0~191  ; |Add4|Add0~192        ; cout             ;
+; |Add4|Add0~193  ; |Add4|Add0~193        ; combout          ;
+; |Add4|Add0~193  ; |Add4|Add0~194        ; cout0            ;
+; |Add4|Add0~193  ; |Add4|Add0~194COUT1   ; cout1            ;
+; |Add4|Add0~195  ; |Add4|Add0~195        ; combout          ;
+; |Add4|Add0~195  ; |Add4|Add0~196        ; cout0            ;
+; |Add4|Add0~195  ; |Add4|Add0~196COUT1   ; cout1            ;
+; |Add4|Add0~197  ; |Add4|Add0~197        ; combout          ;
+; |Add4|Add0~197  ; |Add4|Add0~198        ; cout0            ;
+; |Add4|Add0~197  ; |Add4|Add0~198COUT1   ; cout1            ;
+; |Add4|Add0~199  ; |Add4|Add0~199        ; combout          ;
+; |Add4|Add0~199  ; |Add4|Add0~200        ; cout0            ;
+; |Add4|Add0~199  ; |Add4|Add0~200COUT1   ; cout1            ;
+; |Add4|Add0~201  ; |Add4|Add0~201        ; combout          ;
+; |Add4|Add0~201  ; |Add4|Add0~202        ; cout             ;
+; |Add4|Add0~203  ; |Add4|Add0~203        ; combout          ;
+; |Add4|Add0~203  ; |Add4|Add0~204        ; cout0            ;
+; |Add4|Add0~203  ; |Add4|Add0~204COUT1   ; cout1            ;
+; |Add4|Add0~205  ; |Add4|Add0~205        ; combout          ;
+; |Add4|Add0~205  ; |Add4|Add0~206        ; cout0            ;
+; |Add4|Add0~205  ; |Add4|Add0~206COUT1   ; cout1            ;
+; |Add4|Add0~207  ; |Add4|Add0~207        ; combout          ;
+; |Add4|Add0~207  ; |Add4|Add0~208        ; cout0            ;
+; |Add4|Add0~207  ; |Add4|Add0~208COUT1   ; cout1            ;
+; |Add4|Add0~209  ; |Add4|Add0~209        ; combout          ;
+; |Add4|Add0~209  ; |Add4|Add0~210        ; cout0            ;
+; |Add4|Add0~209  ; |Add4|Add0~210COUT1   ; cout1            ;
+; |Add4|Add0~211  ; |Add4|Add0~211        ; combout          ;
+; |Add4|Add0~211  ; |Add4|Add0~212        ; cout             ;
+; |Add4|Add0~213  ; |Add4|Add0~213        ; combout          ;
+; |Add4|Add0~213  ; |Add4|Add0~214        ; cout0            ;
+; |Add4|Add0~213  ; |Add4|Add0~214COUT1   ; cout1            ;
+; |Add4|Add0~215  ; |Add4|Add0~215        ; combout          ;
+; |Add4|Add0~215  ; |Add4|Add0~216        ; cout0            ;
+; |Add4|Add0~215  ; |Add4|Add0~216COUT1   ; cout1            ;
+; |Add4|Add0~217  ; |Add4|Add0~217        ; combout          ;
+; |Add4|Add0~217  ; |Add4|Add0~218        ; cout0            ;
+; |Add4|Add0~217  ; |Add4|Add0~218COUT1   ; cout1            ;
+; |Add4|Add0~219  ; |Add4|Add0~219        ; combout          ;
+; |Add4|Add0~219  ; |Add4|Add0~220        ; cout0            ;
+; |Add4|Add0~219  ; |Add4|Add0~220COUT1   ; cout1            ;
+; |Add4|Add0~221  ; |Add4|Add0~221        ; combout          ;
+; |Add4|Add0~221  ; |Add4|Add0~222        ; cout             ;
+; |Add4|Add0~223  ; |Add4|Add0~223        ; combout          ;
+; |Add4|Add0~223  ; |Add4|Add0~224        ; cout0            ;
+; |Add4|Add0~223  ; |Add4|Add0~224COUT1   ; cout1            ;
+; |Add4|Add0~225  ; |Add4|Add0~225        ; combout          ;
+; |Add4|Add0~225  ; |Add4|Add0~226        ; cout0            ;
+; |Add4|Add0~225  ; |Add4|Add0~226COUT1   ; cout1            ;
+; |Add4|Add0~227  ; |Add4|Add0~227        ; combout          ;
+; |Add4|Add0~227  ; |Add4|Add0~228        ; cout0            ;
+; |Add4|Add0~227  ; |Add4|Add0~228COUT1   ; cout1            ;
+; |Add4|Add0~229  ; |Add4|Add0~229        ; combout          ;
+; |Add4|Add0~229  ; |Add4|Add0~230        ; cout0            ;
+; |Add4|Add0~229  ; |Add4|Add0~230COUT1   ; cout1            ;
+; |Add4|Add0~231  ; |Add4|Add0~231        ; combout          ;
+; |Add4|Add0~231  ; |Add4|Add0~232        ; cout             ;
+; |Add4|Add0~233  ; |Add4|Add0~233        ; combout          ;
+; |Add4|Add0~233  ; |Add4|Add0~234        ; cout0            ;
+; |Add4|Add0~233  ; |Add4|Add0~234COUT1   ; cout1            ;
+; |Add4|Add0~235  ; |Add4|Add0~235        ; combout          ;
+; |Add4|Add0~235  ; |Add4|Add0~236        ; cout0            ;
+; |Add4|Add0~235  ; |Add4|Add0~236COUT1   ; cout1            ;
+; |Add4|Add0~237  ; |Add4|Add0~237        ; combout          ;
+; |Add4|Add0~237  ; |Add4|Add0~238        ; cout0            ;
+; |Add4|Add0~237  ; |Add4|Add0~238COUT1   ; cout1            ;
+; |Add4|Add0~239  ; |Add4|Add0~239        ; combout          ;
+; |Add4|Add0~239  ; |Add4|Add0~240        ; cout0            ;
+; |Add4|Add0~239  ; |Add4|Add0~240COUT1   ; cout1            ;
+; |Add4|Add0~241  ; |Add4|Add0~241        ; combout          ;
+; |Add4|Add0~241  ; |Add4|Add0~242        ; cout             ;
+; |Add4|Add0~243  ; |Add4|Add0~243        ; combout          ;
+; |Add4|pcout[0]  ; |Add4|pcout[0]        ; padio            ;
+; |Add4|pcout[1]  ; |Add4|pcout[1]        ; padio            ;
+; |Add4|pcout[2]  ; |Add4|pcout[2]        ; padio            ;
+; |Add4|pcout[3]  ; |Add4|pcout[3]        ; padio            ;
+; |Add4|pcout[4]  ; |Add4|pcout[4]        ; padio            ;
+; |Add4|pcout[5]  ; |Add4|pcout[5]        ; padio            ;
+; |Add4|pcout[6]  ; |Add4|pcout[6]        ; padio            ;
+; |Add4|pcout[7]  ; |Add4|pcout[7]        ; padio            ;
+; |Add4|pcout[8]  ; |Add4|pcout[8]        ; padio            ;
+; |Add4|pcout[9]  ; |Add4|pcout[9]        ; padio            ;
+; |Add4|pcout[10] ; |Add4|pcout[10]       ; padio            ;
+; |Add4|pcout[11] ; |Add4|pcout[11]       ; padio            ;
+; |Add4|pcout[12] ; |Add4|pcout[12]       ; padio            ;
+; |Add4|pcout[13] ; |Add4|pcout[13]       ; padio            ;
+; |Add4|pcout[14] ; |Add4|pcout[14]       ; padio            ;
+; |Add4|pcout[15] ; |Add4|pcout[15]       ; padio            ;
+; |Add4|pcout[16] ; |Add4|pcout[16]       ; padio            ;
+; |Add4|pcout[17] ; |Add4|pcout[17]       ; padio            ;
+; |Add4|pcout[18] ; |Add4|pcout[18]       ; padio            ;
+; |Add4|pcout[19] ; |Add4|pcout[19]       ; padio            ;
+; |Add4|pcout[20] ; |Add4|pcout[20]       ; padio            ;
+; |Add4|pcout[21] ; |Add4|pcout[21]       ; padio            ;
+; |Add4|pcout[22] ; |Add4|pcout[22]       ; padio            ;
+; |Add4|pcout[23] ; |Add4|pcout[23]       ; padio            ;
+; |Add4|pcout[24] ; |Add4|pcout[24]       ; padio            ;
+; |Add4|pcout[25] ; |Add4|pcout[25]       ; padio            ;
+; |Add4|pcout[26] ; |Add4|pcout[26]       ; padio            ;
+; |Add4|pcout[27] ; |Add4|pcout[27]       ; padio            ;
+; |Add4|pcout[28] ; |Add4|pcout[28]       ; padio            ;
+; |Add4|pcout[29] ; |Add4|pcout[29]       ; padio            ;
+; |Add4|pcout[30] ; |Add4|pcout[30]       ; padio            ;
+; |Add4|pcout[31] ; |Add4|pcout[31]       ; padio            ;
+; |Add4|pcin[0]   ; |Add4|pcin[0]~corein  ; combout          ;
+; |Add4|pcin[1]   ; |Add4|pcin[1]~corein  ; combout          ;
+; |Add4|pcin[2]   ; |Add4|pcin[2]~corein  ; combout          ;
+; |Add4|pcin[3]   ; |Add4|pcin[3]~corein  ; combout          ;
+; |Add4|pcin[4]   ; |Add4|pcin[4]~corein  ; combout          ;
+; |Add4|pcin[5]   ; |Add4|pcin[5]~corein  ; combout          ;
+; |Add4|pcin[6]   ; |Add4|pcin[6]~corein  ; combout          ;
+; |Add4|pcin[7]   ; |Add4|pcin[7]~corein  ; combout          ;
+; |Add4|pcin[8]   ; |Add4|pcin[8]~corein  ; combout          ;
+; |Add4|pcin[9]   ; |Add4|pcin[9]~corein  ; combout          ;
+; |Add4|pcin[10]  ; |Add4|pcin[10]~corein ; combout          ;
+; |Add4|pcin[11]  ; |Add4|pcin[11]~corein ; combout          ;
+; |Add4|pcin[12]  ; |Add4|pcin[12]~corein ; combout          ;
+; |Add4|pcin[13]  ; |Add4|pcin[13]~corein ; combout          ;
+; |Add4|pcin[14]  ; |Add4|pcin[14]~corein ; combout          ;
+; |Add4|pcin[15]  ; |Add4|pcin[15]~corein ; combout          ;
+; |Add4|pcin[16]  ; |Add4|pcin[16]~corein ; combout          ;
+; |Add4|pcin[17]  ; |Add4|pcin[17]~corein ; combout          ;
+; |Add4|pcin[18]  ; |Add4|pcin[18]~corein ; combout          ;
+; |Add4|pcin[19]  ; |Add4|pcin[19]~corein ; combout          ;
+; |Add4|pcin[20]  ; |Add4|pcin[20]~corein ; combout          ;
+; |Add4|pcin[21]  ; |Add4|pcin[21]~corein ; combout          ;
+; |Add4|pcin[22]  ; |Add4|pcin[22]~corein ; combout          ;
+; |Add4|pcin[23]  ; |Add4|pcin[23]~corein ; combout          ;
+; |Add4|pcin[24]  ; |Add4|pcin[24]~corein ; combout          ;
+; |Add4|pcin[25]  ; |Add4|pcin[25]~corein ; combout          ;
+; |Add4|pcin[26]  ; |Add4|pcin[26]~corein ; combout          ;
+; |Add4|pcin[27]  ; |Add4|pcin[27]~corein ; combout          ;
+; |Add4|pcin[28]  ; |Add4|pcin[28]~corein ; combout          ;
+; |Add4|pcin[29]  ; |Add4|pcin[29]~corein ; combout          ;
+; |Add4|pcin[30]  ; |Add4|pcin[30]~corein ; combout          ;
+; |Add4|pcin[31]  ; |Add4|pcin[31]~corein ; combout          ;
++-----------------+-----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++-----------------+-----------------------+------------------+
+; Node Name       ; Output Port Name      ; Output Port Type ;
++-----------------+-----------------------+------------------+
+; |Add4|Add0~183  ; |Add4|Add0~183        ; combout          ;
+; |Add4|Add0~183  ; |Add4|Add0~184        ; cout0            ;
+; |Add4|Add0~183  ; |Add4|Add0~184COUT1   ; cout1            ;
+; |Add4|Add0~185  ; |Add4|Add0~185        ; combout          ;
+; |Add4|Add0~185  ; |Add4|Add0~186        ; cout0            ;
+; |Add4|Add0~185  ; |Add4|Add0~186COUT1   ; cout1            ;
+; |Add4|Add0~187  ; |Add4|Add0~187        ; combout          ;
+; |Add4|Add0~187  ; |Add4|Add0~188        ; cout0            ;
+; |Add4|Add0~187  ; |Add4|Add0~188COUT1   ; cout1            ;
+; |Add4|Add0~189  ; |Add4|Add0~189        ; combout          ;
+; |Add4|Add0~189  ; |Add4|Add0~190        ; cout0            ;
+; |Add4|Add0~189  ; |Add4|Add0~190COUT1   ; cout1            ;
+; |Add4|Add0~191  ; |Add4|Add0~191        ; combout          ;
+; |Add4|Add0~191  ; |Add4|Add0~192        ; cout             ;
+; |Add4|Add0~193  ; |Add4|Add0~193        ; combout          ;
+; |Add4|Add0~193  ; |Add4|Add0~194        ; cout0            ;
+; |Add4|Add0~193  ; |Add4|Add0~194COUT1   ; cout1            ;
+; |Add4|Add0~195  ; |Add4|Add0~195        ; combout          ;
+; |Add4|Add0~195  ; |Add4|Add0~196        ; cout0            ;
+; |Add4|Add0~195  ; |Add4|Add0~196COUT1   ; cout1            ;
+; |Add4|Add0~197  ; |Add4|Add0~197        ; combout          ;
+; |Add4|Add0~197  ; |Add4|Add0~198        ; cout0            ;
+; |Add4|Add0~197  ; |Add4|Add0~198COUT1   ; cout1            ;
+; |Add4|Add0~199  ; |Add4|Add0~199        ; combout          ;
+; |Add4|Add0~199  ; |Add4|Add0~200        ; cout0            ;
+; |Add4|Add0~199  ; |Add4|Add0~200COUT1   ; cout1            ;
+; |Add4|Add0~201  ; |Add4|Add0~201        ; combout          ;
+; |Add4|Add0~201  ; |Add4|Add0~202        ; cout             ;
+; |Add4|Add0~203  ; |Add4|Add0~203        ; combout          ;
+; |Add4|Add0~203  ; |Add4|Add0~204        ; cout0            ;
+; |Add4|Add0~203  ; |Add4|Add0~204COUT1   ; cout1            ;
+; |Add4|Add0~205  ; |Add4|Add0~205        ; combout          ;
+; |Add4|Add0~205  ; |Add4|Add0~206        ; cout0            ;
+; |Add4|Add0~205  ; |Add4|Add0~206COUT1   ; cout1            ;
+; |Add4|Add0~207  ; |Add4|Add0~207        ; combout          ;
+; |Add4|Add0~207  ; |Add4|Add0~208        ; cout0            ;
+; |Add4|Add0~207  ; |Add4|Add0~208COUT1   ; cout1            ;
+; |Add4|Add0~209  ; |Add4|Add0~209        ; combout          ;
+; |Add4|Add0~209  ; |Add4|Add0~210        ; cout0            ;
+; |Add4|Add0~209  ; |Add4|Add0~210COUT1   ; cout1            ;
+; |Add4|Add0~211  ; |Add4|Add0~211        ; combout          ;
+; |Add4|Add0~211  ; |Add4|Add0~212        ; cout             ;
+; |Add4|Add0~213  ; |Add4|Add0~213        ; combout          ;
+; |Add4|Add0~213  ; |Add4|Add0~214        ; cout0            ;
+; |Add4|Add0~213  ; |Add4|Add0~214COUT1   ; cout1            ;
+; |Add4|Add0~215  ; |Add4|Add0~215        ; combout          ;
+; |Add4|Add0~215  ; |Add4|Add0~216        ; cout0            ;
+; |Add4|Add0~215  ; |Add4|Add0~216COUT1   ; cout1            ;
+; |Add4|Add0~217  ; |Add4|Add0~217        ; combout          ;
+; |Add4|Add0~217  ; |Add4|Add0~218        ; cout0            ;
+; |Add4|Add0~217  ; |Add4|Add0~218COUT1   ; cout1            ;
+; |Add4|Add0~219  ; |Add4|Add0~219        ; combout          ;
+; |Add4|Add0~219  ; |Add4|Add0~220        ; cout0            ;
+; |Add4|Add0~219  ; |Add4|Add0~220COUT1   ; cout1            ;
+; |Add4|Add0~221  ; |Add4|Add0~221        ; combout          ;
+; |Add4|Add0~221  ; |Add4|Add0~222        ; cout             ;
+; |Add4|Add0~223  ; |Add4|Add0~223        ; combout          ;
+; |Add4|Add0~223  ; |Add4|Add0~224        ; cout0            ;
+; |Add4|Add0~223  ; |Add4|Add0~224COUT1   ; cout1            ;
+; |Add4|Add0~225  ; |Add4|Add0~225        ; combout          ;
+; |Add4|Add0~225  ; |Add4|Add0~226        ; cout0            ;
+; |Add4|Add0~225  ; |Add4|Add0~226COUT1   ; cout1            ;
+; |Add4|Add0~227  ; |Add4|Add0~227        ; combout          ;
+; |Add4|Add0~227  ; |Add4|Add0~228        ; cout0            ;
+; |Add4|Add0~227  ; |Add4|Add0~228COUT1   ; cout1            ;
+; |Add4|Add0~229  ; |Add4|Add0~229        ; combout          ;
+; |Add4|Add0~229  ; |Add4|Add0~230        ; cout0            ;
+; |Add4|Add0~229  ; |Add4|Add0~230COUT1   ; cout1            ;
+; |Add4|Add0~231  ; |Add4|Add0~231        ; combout          ;
+; |Add4|Add0~231  ; |Add4|Add0~232        ; cout             ;
+; |Add4|Add0~233  ; |Add4|Add0~233        ; combout          ;
+; |Add4|Add0~233  ; |Add4|Add0~234        ; cout0            ;
+; |Add4|Add0~233  ; |Add4|Add0~234COUT1   ; cout1            ;
+; |Add4|Add0~235  ; |Add4|Add0~235        ; combout          ;
+; |Add4|Add0~235  ; |Add4|Add0~236        ; cout0            ;
+; |Add4|Add0~235  ; |Add4|Add0~236COUT1   ; cout1            ;
+; |Add4|Add0~237  ; |Add4|Add0~237        ; combout          ;
+; |Add4|Add0~237  ; |Add4|Add0~238        ; cout0            ;
+; |Add4|Add0~237  ; |Add4|Add0~238COUT1   ; cout1            ;
+; |Add4|Add0~239  ; |Add4|Add0~239        ; combout          ;
+; |Add4|Add0~239  ; |Add4|Add0~240        ; cout0            ;
+; |Add4|Add0~239  ; |Add4|Add0~240COUT1   ; cout1            ;
+; |Add4|Add0~241  ; |Add4|Add0~241        ; combout          ;
+; |Add4|Add0~241  ; |Add4|Add0~242        ; cout             ;
+; |Add4|Add0~243  ; |Add4|Add0~243        ; combout          ;
+; |Add4|pcout[0]  ; |Add4|pcout[0]        ; padio            ;
+; |Add4|pcout[1]  ; |Add4|pcout[1]        ; padio            ;
+; |Add4|pcout[2]  ; |Add4|pcout[2]        ; padio            ;
+; |Add4|pcout[3]  ; |Add4|pcout[3]        ; padio            ;
+; |Add4|pcout[4]  ; |Add4|pcout[4]        ; padio            ;
+; |Add4|pcout[5]  ; |Add4|pcout[5]        ; padio            ;
+; |Add4|pcout[6]  ; |Add4|pcout[6]        ; padio            ;
+; |Add4|pcout[7]  ; |Add4|pcout[7]        ; padio            ;
+; |Add4|pcout[8]  ; |Add4|pcout[8]        ; padio            ;
+; |Add4|pcout[9]  ; |Add4|pcout[9]        ; padio            ;
+; |Add4|pcout[10] ; |Add4|pcout[10]       ; padio            ;
+; |Add4|pcout[11] ; |Add4|pcout[11]       ; padio            ;
+; |Add4|pcout[12] ; |Add4|pcout[12]       ; padio            ;
+; |Add4|pcout[13] ; |Add4|pcout[13]       ; padio            ;
+; |Add4|pcout[14] ; |Add4|pcout[14]       ; padio            ;
+; |Add4|pcout[15] ; |Add4|pcout[15]       ; padio            ;
+; |Add4|pcout[16] ; |Add4|pcout[16]       ; padio            ;
+; |Add4|pcout[17] ; |Add4|pcout[17]       ; padio            ;
+; |Add4|pcout[18] ; |Add4|pcout[18]       ; padio            ;
+; |Add4|pcout[19] ; |Add4|pcout[19]       ; padio            ;
+; |Add4|pcout[20] ; |Add4|pcout[20]       ; padio            ;
+; |Add4|pcout[21] ; |Add4|pcout[21]       ; padio            ;
+; |Add4|pcout[22] ; |Add4|pcout[22]       ; padio            ;
+; |Add4|pcout[23] ; |Add4|pcout[23]       ; padio            ;
+; |Add4|pcout[24] ; |Add4|pcout[24]       ; padio            ;
+; |Add4|pcout[25] ; |Add4|pcout[25]       ; padio            ;
+; |Add4|pcout[26] ; |Add4|pcout[26]       ; padio            ;
+; |Add4|pcout[27] ; |Add4|pcout[27]       ; padio            ;
+; |Add4|pcout[28] ; |Add4|pcout[28]       ; padio            ;
+; |Add4|pcout[29] ; |Add4|pcout[29]       ; padio            ;
+; |Add4|pcout[30] ; |Add4|pcout[30]       ; padio            ;
+; |Add4|pcout[31] ; |Add4|pcout[31]       ; padio            ;
+; |Add4|pcin[0]   ; |Add4|pcin[0]~corein  ; combout          ;
+; |Add4|pcin[1]   ; |Add4|pcin[1]~corein  ; combout          ;
+; |Add4|pcin[2]   ; |Add4|pcin[2]~corein  ; combout          ;
+; |Add4|pcin[3]   ; |Add4|pcin[3]~corein  ; combout          ;
+; |Add4|pcin[4]   ; |Add4|pcin[4]~corein  ; combout          ;
+; |Add4|pcin[5]   ; |Add4|pcin[5]~corein  ; combout          ;
+; |Add4|pcin[6]   ; |Add4|pcin[6]~corein  ; combout          ;
+; |Add4|pcin[7]   ; |Add4|pcin[7]~corein  ; combout          ;
+; |Add4|pcin[8]   ; |Add4|pcin[8]~corein  ; combout          ;
+; |Add4|pcin[9]   ; |Add4|pcin[9]~corein  ; combout          ;
+; |Add4|pcin[10]  ; |Add4|pcin[10]~corein ; combout          ;
+; |Add4|pcin[11]  ; |Add4|pcin[11]~corein ; combout          ;
+; |Add4|pcin[12]  ; |Add4|pcin[12]~corein ; combout          ;
+; |Add4|pcin[13]  ; |Add4|pcin[13]~corein ; combout          ;
+; |Add4|pcin[14]  ; |Add4|pcin[14]~corein ; combout          ;
+; |Add4|pcin[15]  ; |Add4|pcin[15]~corein ; combout          ;
+; |Add4|pcin[16]  ; |Add4|pcin[16]~corein ; combout          ;
+; |Add4|pcin[17]  ; |Add4|pcin[17]~corein ; combout          ;
+; |Add4|pcin[18]  ; |Add4|pcin[18]~corein ; combout          ;
+; |Add4|pcin[19]  ; |Add4|pcin[19]~corein ; combout          ;
+; |Add4|pcin[20]  ; |Add4|pcin[20]~corein ; combout          ;
+; |Add4|pcin[21]  ; |Add4|pcin[21]~corein ; combout          ;
+; |Add4|pcin[22]  ; |Add4|pcin[22]~corein ; combout          ;
+; |Add4|pcin[23]  ; |Add4|pcin[23]~corein ; combout          ;
+; |Add4|pcin[24]  ; |Add4|pcin[24]~corein ; combout          ;
+; |Add4|pcin[25]  ; |Add4|pcin[25]~corein ; combout          ;
+; |Add4|pcin[26]  ; |Add4|pcin[26]~corein ; combout          ;
+; |Add4|pcin[27]  ; |Add4|pcin[27]~corein ; combout          ;
+; |Add4|pcin[28]  ; |Add4|pcin[28]~corein ; combout          ;
+; |Add4|pcin[29]  ; |Add4|pcin[29]~corein ; combout          ;
+; |Add4|pcin[30]  ; |Add4|pcin[30]~corein ; combout          ;
+; |Add4|pcin[31]  ; |Add4|pcin[31]~corein ; combout          ;
++-----------------+-----------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 8.0 Build 215 05/29/2008 SJ Full Version
+    Info: Processing started: Sat Feb 25 09:58:58 2017
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Add4 -c Add4
+Info: Using vector source file "D:/JISUANJIZUCHENGDAZUOYE/Add4/Add4.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       0.00 %
+Info: Number of transitions in simulation is 0
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 205 megabytes
+    Info: Processing ended: Sat Feb 25 09:59:20 2017
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:00
+
+

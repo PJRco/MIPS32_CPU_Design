@@ -1,0 +1,29 @@
+|alucontrol
+funct[0] => Mux3.IN36
+funct[0] => Mux2.IN19
+funct[0] => Mux1.IN19
+funct[1] => Mux3.IN35
+funct[1] => Mux2.IN18
+funct[1] => Mux1.IN18
+funct[1] => Mux0.IN10
+funct[2] => Mux3.IN34
+funct[2] => Mux2.IN17
+funct[2] => Mux1.IN17
+funct[2] => Mux0.IN9
+funct[3] => Mux3.IN33
+funct[4] => ~NO_FANOUT~
+funct[5] => Mux3.IN32
+funct[5] => Mux2.IN16
+funct[5] => Mux1.IN16
+funct[5] => Mux0.IN8
+aluop1[0] => Mux4.IN5
+aluop1[1] => aluoper~2.OUTPUTSELECT
+aluop1[1] => aluoper~1.OUTPUTSELECT
+aluop1[1] => Mux4.IN4
+aluop1[1] => aluoper~0.OUTPUTSELECT
+aluoper[0] <= aluoper~2.DB_MAX_OUTPUT_PORT_TYPE
+aluoper[1] <= aluoper~1.DB_MAX_OUTPUT_PORT_TYPE
+aluoper[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+aluoper[3] <= aluoper~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

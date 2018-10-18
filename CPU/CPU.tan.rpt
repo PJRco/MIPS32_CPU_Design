@@ -1,0 +1,503 @@
+Classic Timing Analyzer report for CPU
+Thu Apr 06 13:42:39 2017
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk1'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                ;
++------------------------------+-------+---------------+----------------------------------+------------------+--------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From             ; To                 ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------+--------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.636 ns                         ; ret              ; pc:z12|pc_out[4]   ; --         ; clk1     ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 11.990 ns                        ; rout1[20]~reg0   ; rout1[20]          ; clk1       ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -5.584 ns                        ; ret              ; pc:z12|pc_out[4]   ; --         ; clk1     ; 0            ;
+; Clock Setup: 'clk1'          ; N/A   ; None          ; 32.02 MHz ( period = 31.228 ns ) ; pc:z12|pc_out[2] ; regfile:z8|mem~526 ; clk1       ; clk1     ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                  ;                    ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------+--------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP1C6Q240C8        ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk1            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk1'                                                                                                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From             ; To                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 32.02 MHz ( period = 31.228 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~526  ; clk1       ; clk1     ; None                        ; None                      ; 30.990 ns               ;
+; N/A                                     ; 32.02 MHz ( period = 31.227 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~430  ; clk1       ; clk1     ; None                        ; None                      ; 30.989 ns               ;
+; N/A                                     ; 32.05 MHz ( period = 31.204 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~942  ; clk1       ; clk1     ; None                        ; None                      ; 30.966 ns               ;
+; N/A                                     ; 32.05 MHz ( period = 31.203 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~686  ; clk1       ; clk1     ; None                        ; None                      ; 30.965 ns               ;
+; N/A                                     ; 32.23 MHz ( period = 31.027 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~782  ; clk1       ; clk1     ; None                        ; None                      ; 30.789 ns               ;
+; N/A                                     ; 32.23 MHz ( period = 31.025 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~526  ; clk1       ; clk1     ; None                        ; None                      ; 30.787 ns               ;
+; N/A                                     ; 32.23 MHz ( period = 31.024 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~430  ; clk1       ; clk1     ; None                        ; None                      ; 30.786 ns               ;
+; N/A                                     ; 32.23 MHz ( period = 31.023 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~654  ; clk1       ; clk1     ; None                        ; None                      ; 30.785 ns               ;
+; N/A                                     ; 32.26 MHz ( period = 31.001 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~942  ; clk1       ; clk1     ; None                        ; None                      ; 30.763 ns               ;
+; N/A                                     ; 32.26 MHz ( period = 31.000 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~686  ; clk1       ; clk1     ; None                        ; None                      ; 30.762 ns               ;
+; N/A                                     ; 32.30 MHz ( period = 30.964 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~302  ; clk1       ; clk1     ; None                        ; None                      ; 30.755 ns               ;
+; N/A                                     ; 32.30 MHz ( period = 30.962 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~398  ; clk1       ; clk1     ; None                        ; None                      ; 30.753 ns               ;
+; N/A                                     ; 32.35 MHz ( period = 30.916 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~526  ; clk1       ; clk1     ; None                        ; None                      ; 30.678 ns               ;
+; N/A                                     ; 32.35 MHz ( period = 30.915 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~430  ; clk1       ; clk1     ; None                        ; None                      ; 30.677 ns               ;
+; N/A                                     ; 32.36 MHz ( period = 30.903 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~526  ; clk1       ; clk1     ; None                        ; None                      ; 30.665 ns               ;
+; N/A                                     ; 32.36 MHz ( period = 30.902 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~430  ; clk1       ; clk1     ; None                        ; None                      ; 30.664 ns               ;
+; N/A                                     ; 32.37 MHz ( period = 30.892 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~238  ; clk1       ; clk1     ; None                        ; None                      ; 30.683 ns               ;
+; N/A                                     ; 32.37 MHz ( period = 30.892 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~942  ; clk1       ; clk1     ; None                        ; None                      ; 30.654 ns               ;
+; N/A                                     ; 32.37 MHz ( period = 30.891 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~686  ; clk1       ; clk1     ; None                        ; None                      ; 30.653 ns               ;
+; N/A                                     ; 32.37 MHz ( period = 30.890 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~206  ; clk1       ; clk1     ; None                        ; None                      ; 30.681 ns               ;
+; N/A                                     ; 32.38 MHz ( period = 30.879 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~942  ; clk1       ; clk1     ; None                        ; None                      ; 30.641 ns               ;
+; N/A                                     ; 32.39 MHz ( period = 30.878 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~686  ; clk1       ; clk1     ; None                        ; None                      ; 30.640 ns               ;
+; N/A                                     ; 32.44 MHz ( period = 30.824 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~782  ; clk1       ; clk1     ; None                        ; None                      ; 30.586 ns               ;
+; N/A                                     ; 32.45 MHz ( period = 30.820 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~654  ; clk1       ; clk1     ; None                        ; None                      ; 30.582 ns               ;
+; N/A                                     ; 32.51 MHz ( period = 30.761 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~302  ; clk1       ; clk1     ; None                        ; None                      ; 30.552 ns               ;
+; N/A                                     ; 32.51 MHz ( period = 30.759 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~398  ; clk1       ; clk1     ; None                        ; None                      ; 30.550 ns               ;
+; N/A                                     ; 32.55 MHz ( period = 30.721 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~789  ; clk1       ; clk1     ; None                        ; None                      ; 30.483 ns               ;
+; N/A                                     ; 32.55 MHz ( period = 30.720 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~789  ; clk1       ; clk1     ; None                        ; None                      ; 30.482 ns               ;
+; N/A                                     ; 32.55 MHz ( period = 30.720 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~661  ; clk1       ; clk1     ; None                        ; None                      ; 30.482 ns               ;
+; N/A                                     ; 32.55 MHz ( period = 30.719 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~661  ; clk1       ; clk1     ; None                        ; None                      ; 30.481 ns               ;
+; N/A                                     ; 32.56 MHz ( period = 30.715 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~782  ; clk1       ; clk1     ; None                        ; None                      ; 30.477 ns               ;
+; N/A                                     ; 32.56 MHz ( period = 30.711 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~654  ; clk1       ; clk1     ; None                        ; None                      ; 30.473 ns               ;
+; N/A                                     ; 32.57 MHz ( period = 30.702 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~782  ; clk1       ; clk1     ; None                        ; None                      ; 30.464 ns               ;
+; N/A                                     ; 32.58 MHz ( period = 30.698 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~654  ; clk1       ; clk1     ; None                        ; None                      ; 30.460 ns               ;
+; N/A                                     ; 32.58 MHz ( period = 30.689 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~238  ; clk1       ; clk1     ; None                        ; None                      ; 30.480 ns               ;
+; N/A                                     ; 32.59 MHz ( period = 30.687 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~206  ; clk1       ; clk1     ; None                        ; None                      ; 30.478 ns               ;
+; N/A                                     ; 32.62 MHz ( period = 30.655 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~110  ; clk1       ; clk1     ; None                        ; None                      ; 30.417 ns               ;
+; N/A                                     ; 32.62 MHz ( period = 30.653 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~166  ; clk1       ; clk1     ; None                        ; None                      ; 30.444 ns               ;
+; N/A                                     ; 32.62 MHz ( period = 30.652 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~302  ; clk1       ; clk1     ; None                        ; None                      ; 30.443 ns               ;
+; N/A                                     ; 32.63 MHz ( period = 30.650 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~398  ; clk1       ; clk1     ; None                        ; None                      ; 30.441 ns               ;
+; N/A                                     ; 32.63 MHz ( period = 30.650 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~46   ; clk1       ; clk1     ; None                        ; None                      ; 30.412 ns               ;
+; N/A                                     ; 32.63 MHz ( period = 30.648 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~78   ; clk1       ; clk1     ; None                        ; None                      ; 30.439 ns               ;
+; N/A                                     ; 32.64 MHz ( period = 30.639 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~302  ; clk1       ; clk1     ; None                        ; None                      ; 30.430 ns               ;
+; N/A                                     ; 32.64 MHz ( period = 30.637 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~398  ; clk1       ; clk1     ; None                        ; None                      ; 30.428 ns               ;
+; N/A                                     ; 32.66 MHz ( period = 30.623 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~496  ; clk1       ; clk1     ; None                        ; None                      ; 30.414 ns               ;
+; N/A                                     ; 32.66 MHz ( period = 30.623 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~462  ; clk1       ; clk1     ; None                        ; None                      ; 30.414 ns               ;
+; N/A                                     ; 32.66 MHz ( period = 30.621 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~464  ; clk1       ; clk1     ; None                        ; None                      ; 30.412 ns               ;
+; N/A                                     ; 32.66 MHz ( period = 30.621 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~494  ; clk1       ; clk1     ; None                        ; None                      ; 30.412 ns               ;
+; N/A                                     ; 32.66 MHz ( period = 30.619 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~878  ; clk1       ; clk1     ; None                        ; None                      ; 30.410 ns               ;
+; N/A                                     ; 32.66 MHz ( period = 30.617 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~622  ; clk1       ; clk1     ; None                        ; None                      ; 30.408 ns               ;
+; N/A                                     ; 32.69 MHz ( period = 30.595 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~450  ; clk1       ; clk1     ; None                        ; None                      ; 30.334 ns               ;
+; N/A                                     ; 32.69 MHz ( period = 30.595 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~546  ; clk1       ; clk1     ; None                        ; None                      ; 30.334 ns               ;
+; N/A                                     ; 32.70 MHz ( period = 30.583 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~789  ; clk1       ; clk1     ; None                        ; None                      ; 30.345 ns               ;
+; N/A                                     ; 32.70 MHz ( period = 30.582 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~661  ; clk1       ; clk1     ; None                        ; None                      ; 30.344 ns               ;
+; N/A                                     ; 32.70 MHz ( period = 30.580 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~238  ; clk1       ; clk1     ; None                        ; None                      ; 30.371 ns               ;
+; N/A                                     ; 32.70 MHz ( period = 30.578 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~206  ; clk1       ; clk1     ; None                        ; None                      ; 30.369 ns               ;
+; N/A                                     ; 32.72 MHz ( period = 30.567 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~238  ; clk1       ; clk1     ; None                        ; None                      ; 30.358 ns               ;
+; N/A                                     ; 32.72 MHz ( period = 30.565 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~206  ; clk1       ; clk1     ; None                        ; None                      ; 30.356 ns               ;
+; N/A                                     ; 32.72 MHz ( period = 30.559 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~366  ; clk1       ; clk1     ; None                        ; None                      ; 30.350 ns               ;
+; N/A                                     ; 32.73 MHz ( period = 30.552 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~500  ; clk1       ; clk1     ; None                        ; None                      ; 30.343 ns               ;
+; N/A                                     ; 32.73 MHz ( period = 30.551 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~468  ; clk1       ; clk1     ; None                        ; None                      ; 30.342 ns               ;
+; N/A                                     ; 32.75 MHz ( period = 30.534 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~436  ; clk1       ; clk1     ; None                        ; None                      ; 30.325 ns               ;
+; N/A                                     ; 32.75 MHz ( period = 30.534 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~532  ; clk1       ; clk1     ; None                        ; None                      ; 30.325 ns               ;
+; N/A                                     ; 32.78 MHz ( period = 30.507 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~44   ; clk1       ; clk1     ; None                        ; None                      ; 30.298 ns               ;
+; N/A                                     ; 32.78 MHz ( period = 30.506 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~108  ; clk1       ; clk1     ; None                        ; None                      ; 30.297 ns               ;
+; N/A                                     ; 32.81 MHz ( period = 30.477 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~116  ; clk1       ; clk1     ; None                        ; None                      ; 30.276 ns               ;
+; N/A                                     ; 32.81 MHz ( period = 30.477 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~52   ; clk1       ; clk1     ; None                        ; None                      ; 30.276 ns               ;
+; N/A                                     ; 32.82 MHz ( period = 30.471 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~789  ; clk1       ; clk1     ; None                        ; None                      ; 30.233 ns               ;
+; N/A                                     ; 32.82 MHz ( period = 30.470 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~661  ; clk1       ; clk1     ; None                        ; None                      ; 30.232 ns               ;
+; N/A                                     ; 32.83 MHz ( period = 30.459 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~44   ; clk1       ; clk1     ; None                        ; None                      ; 30.250 ns               ;
+; N/A                                     ; 32.83 MHz ( period = 30.458 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~108  ; clk1       ; clk1     ; None                        ; None                      ; 30.249 ns               ;
+; N/A                                     ; 32.84 MHz ( period = 30.452 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~110  ; clk1       ; clk1     ; None                        ; None                      ; 30.214 ns               ;
+; N/A                                     ; 32.84 MHz ( period = 30.450 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~166  ; clk1       ; clk1     ; None                        ; None                      ; 30.241 ns               ;
+; N/A                                     ; 32.84 MHz ( period = 30.447 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~46   ; clk1       ; clk1     ; None                        ; None                      ; 30.209 ns               ;
+; N/A                                     ; 32.85 MHz ( period = 30.445 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~78   ; clk1       ; clk1     ; None                        ; None                      ; 30.236 ns               ;
+; N/A                                     ; 32.87 MHz ( period = 30.420 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~861  ; clk1       ; clk1     ; None                        ; None                      ; 30.159 ns               ;
+; N/A                                     ; 32.87 MHz ( period = 30.420 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~733  ; clk1       ; clk1     ; None                        ; None                      ; 30.159 ns               ;
+; N/A                                     ; 32.87 MHz ( period = 30.420 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~496  ; clk1       ; clk1     ; None                        ; None                      ; 30.211 ns               ;
+; N/A                                     ; 32.87 MHz ( period = 30.420 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~462  ; clk1       ; clk1     ; None                        ; None                      ; 30.211 ns               ;
+; N/A                                     ; 32.88 MHz ( period = 30.418 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~464  ; clk1       ; clk1     ; None                        ; None                      ; 30.209 ns               ;
+; N/A                                     ; 32.88 MHz ( period = 30.418 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~494  ; clk1       ; clk1     ; None                        ; None                      ; 30.209 ns               ;
+; N/A                                     ; 32.88 MHz ( period = 30.416 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~878  ; clk1       ; clk1     ; None                        ; None                      ; 30.207 ns               ;
+; N/A                                     ; 32.88 MHz ( period = 30.414 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~622  ; clk1       ; clk1     ; None                        ; None                      ; 30.205 ns               ;
+; N/A                                     ; 32.89 MHz ( period = 30.400 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~948  ; clk1       ; clk1     ; None                        ; None                      ; 30.191 ns               ;
+; N/A                                     ; 32.89 MHz ( period = 30.400 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~660  ; clk1       ; clk1     ; None                        ; None                      ; 30.191 ns               ;
+; N/A                                     ; 32.90 MHz ( period = 30.392 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~450  ; clk1       ; clk1     ; None                        ; None                      ; 30.131 ns               ;
+; N/A                                     ; 32.90 MHz ( period = 30.392 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~546  ; clk1       ; clk1     ; None                        ; None                      ; 30.131 ns               ;
+; N/A                                     ; 32.92 MHz ( period = 30.379 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~309  ; clk1       ; clk1     ; None                        ; None                      ; 30.170 ns               ;
+; N/A                                     ; 32.92 MHz ( period = 30.378 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~309  ; clk1       ; clk1     ; None                        ; None                      ; 30.169 ns               ;
+; N/A                                     ; 32.92 MHz ( period = 30.374 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~341  ; clk1       ; clk1     ; None                        ; None                      ; 30.165 ns               ;
+; N/A                                     ; 32.92 MHz ( period = 30.373 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~341  ; clk1       ; clk1     ; None                        ; None                      ; 30.164 ns               ;
+; N/A                                     ; 32.92 MHz ( period = 30.373 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~788  ; clk1       ; clk1     ; None                        ; None                      ; 30.164 ns               ;
+; N/A                                     ; 32.93 MHz ( period = 30.366 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~692  ; clk1       ; clk1     ; None                        ; None                      ; 30.157 ns               ;
+; N/A                                     ; 32.94 MHz ( period = 30.356 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~366  ; clk1       ; clk1     ; None                        ; None                      ; 30.147 ns               ;
+; N/A                                     ; 32.94 MHz ( period = 30.356 ns )                    ; pc:z12|pc_out[4] ; regfile:z8|mem~526  ; clk1       ; clk1     ; None                        ; None                      ; 30.118 ns               ;
+; N/A                                     ; 32.94 MHz ( period = 30.355 ns )                    ; pc:z12|pc_out[4] ; regfile:z8|mem~430  ; clk1       ; clk1     ; None                        ; None                      ; 30.117 ns               ;
+; N/A                                     ; 32.95 MHz ( period = 30.349 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~500  ; clk1       ; clk1     ; None                        ; None                      ; 30.140 ns               ;
+; N/A                                     ; 32.95 MHz ( period = 30.348 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~468  ; clk1       ; clk1     ; None                        ; None                      ; 30.139 ns               ;
+; N/A                                     ; 32.96 MHz ( period = 30.343 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~110  ; clk1       ; clk1     ; None                        ; None                      ; 30.105 ns               ;
+; N/A                                     ; 32.96 MHz ( period = 30.341 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~166  ; clk1       ; clk1     ; None                        ; None                      ; 30.132 ns               ;
+; N/A                                     ; 32.96 MHz ( period = 30.339 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~305  ; clk1       ; clk1     ; None                        ; None                      ; 30.130 ns               ;
+; N/A                                     ; 32.96 MHz ( period = 30.338 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~401  ; clk1       ; clk1     ; None                        ; None                      ; 30.129 ns               ;
+; N/A                                     ; 32.96 MHz ( period = 30.338 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~46   ; clk1       ; clk1     ; None                        ; None                      ; 30.100 ns               ;
+; N/A                                     ; 32.96 MHz ( period = 30.336 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~78   ; clk1       ; clk1     ; None                        ; None                      ; 30.127 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.335 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~721  ; clk1       ; clk1     ; None                        ; None                      ; 30.126 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.334 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~977  ; clk1       ; clk1     ; None                        ; None                      ; 30.125 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.332 ns )                    ; pc:z12|pc_out[4] ; regfile:z8|mem~942  ; clk1       ; clk1     ; None                        ; None                      ; 30.094 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.331 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~436  ; clk1       ; clk1     ; None                        ; None                      ; 30.122 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.331 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~532  ; clk1       ; clk1     ; None                        ; None                      ; 30.122 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.331 ns )                    ; pc:z12|pc_out[4] ; regfile:z8|mem~686  ; clk1       ; clk1     ; None                        ; None                      ; 30.093 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.330 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~110  ; clk1       ; clk1     ; None                        ; None                      ; 30.092 ns               ;
+; N/A                                     ; 32.97 MHz ( period = 30.328 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~166  ; clk1       ; clk1     ; None                        ; None                      ; 30.119 ns               ;
+; N/A                                     ; 32.98 MHz ( period = 30.325 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~46   ; clk1       ; clk1     ; None                        ; None                      ; 30.087 ns               ;
+; N/A                                     ; 32.98 MHz ( period = 30.323 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~78   ; clk1       ; clk1     ; None                        ; None                      ; 30.114 ns               ;
+; N/A                                     ; 32.98 MHz ( period = 30.321 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~849  ; clk1       ; clk1     ; None                        ; None                      ; 30.112 ns               ;
+; N/A                                     ; 32.98 MHz ( period = 30.321 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~44   ; clk1       ; clk1     ; None                        ; None                      ; 30.112 ns               ;
+; N/A                                     ; 32.98 MHz ( period = 30.320 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~108  ; clk1       ; clk1     ; None                        ; None                      ; 30.111 ns               ;
+; N/A                                     ; 32.98 MHz ( period = 30.318 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~657  ; clk1       ; clk1     ; None                        ; None                      ; 30.109 ns               ;
+; N/A                                     ; 32.99 MHz ( period = 30.311 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~496  ; clk1       ; clk1     ; None                        ; None                      ; 30.102 ns               ;
+; N/A                                     ; 32.99 MHz ( period = 30.311 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~462  ; clk1       ; clk1     ; None                        ; None                      ; 30.102 ns               ;
+; N/A                                     ; 32.99 MHz ( period = 30.309 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~464  ; clk1       ; clk1     ; None                        ; None                      ; 30.100 ns               ;
+; N/A                                     ; 32.99 MHz ( period = 30.309 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~494  ; clk1       ; clk1     ; None                        ; None                      ; 30.100 ns               ;
+; N/A                                     ; 33.00 MHz ( period = 30.307 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~580  ; clk1       ; clk1     ; None                        ; None                      ; 30.098 ns               ;
+; N/A                                     ; 33.00 MHz ( period = 30.307 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~878  ; clk1       ; clk1     ; None                        ; None                      ; 30.098 ns               ;
+; N/A                                     ; 33.00 MHz ( period = 30.305 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~622  ; clk1       ; clk1     ; None                        ; None                      ; 30.096 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.298 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~496  ; clk1       ; clk1     ; None                        ; None                      ; 30.089 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.298 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~462  ; clk1       ; clk1     ; None                        ; None                      ; 30.089 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.298 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~785  ; clk1       ; clk1     ; None                        ; None                      ; 30.089 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.297 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~693  ; clk1       ; clk1     ; None                        ; None                      ; 30.088 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.296 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~693  ; clk1       ; clk1     ; None                        ; None                      ; 30.087 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.296 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~464  ; clk1       ; clk1     ; None                        ; None                      ; 30.087 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.296 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~494  ; clk1       ; clk1     ; None                        ; None                      ; 30.087 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.294 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~529  ; clk1       ; clk1     ; None                        ; None                      ; 30.085 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.294 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~878  ; clk1       ; clk1     ; None                        ; None                      ; 30.085 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.292 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~565  ; clk1       ; clk1     ; None                        ; None                      ; 30.083 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.292 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~622  ; clk1       ; clk1     ; None                        ; None                      ; 30.083 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.291 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~565  ; clk1       ; clk1     ; None                        ; None                      ; 30.082 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.291 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~270  ; clk1       ; clk1     ; None                        ; None                      ; 30.082 ns               ;
+; N/A                                     ; 33.01 MHz ( period = 30.290 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~174  ; clk1       ; clk1     ; None                        ; None                      ; 30.081 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.285 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~305  ; clk1       ; clk1     ; None                        ; None                      ; 30.076 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.284 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~401  ; clk1       ; clk1     ; None                        ; None                      ; 30.075 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.283 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~450  ; clk1       ; clk1     ; None                        ; None                      ; 30.022 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.283 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~546  ; clk1       ; clk1     ; None                        ; None                      ; 30.022 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.282 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~277  ; clk1       ; clk1     ; None                        ; None                      ; 30.073 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.282 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~213  ; clk1       ; clk1     ; None                        ; None                      ; 30.073 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.281 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~721  ; clk1       ; clk1     ; None                        ; None                      ; 30.072 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.281 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~277  ; clk1       ; clk1     ; None                        ; None                      ; 30.072 ns               ;
+; N/A                                     ; 33.02 MHz ( period = 30.281 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~213  ; clk1       ; clk1     ; None                        ; None                      ; 30.072 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.280 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~977  ; clk1       ; clk1     ; None                        ; None                      ; 30.071 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.278 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~580  ; clk1       ; clk1     ; None                        ; None                      ; 30.069 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.276 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~720  ; clk1       ; clk1     ; None                        ; None                      ; 30.067 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.275 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~624  ; clk1       ; clk1     ; None                        ; None                      ; 30.066 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.274 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~116  ; clk1       ; clk1     ; None                        ; None                      ; 30.073 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.274 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~52   ; clk1       ; clk1     ; None                        ; None                      ; 30.073 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.274 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~752  ; clk1       ; clk1     ; None                        ; None                      ; 30.065 ns               ;
+; N/A                                     ; 33.03 MHz ( period = 30.272 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~880  ; clk1       ; clk1     ; None                        ; None                      ; 30.063 ns               ;
+; N/A                                     ; 33.04 MHz ( period = 30.270 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~450  ; clk1       ; clk1     ; None                        ; None                      ; 30.009 ns               ;
+; N/A                                     ; 33.04 MHz ( period = 30.270 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~546  ; clk1       ; clk1     ; None                        ; None                      ; 30.009 ns               ;
+; N/A                                     ; 33.04 MHz ( period = 30.269 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~881  ; clk1       ; clk1     ; None                        ; None                      ; 30.060 ns               ;
+; N/A                                     ; 33.04 MHz ( period = 30.269 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~1009 ; clk1       ; clk1     ; None                        ; None                      ; 30.060 ns               ;
+; N/A                                     ; 33.04 MHz ( period = 30.267 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~849  ; clk1       ; clk1     ; None                        ; None                      ; 30.058 ns               ;
+; N/A                                     ; 33.04 MHz ( period = 30.264 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~657  ; clk1       ; clk1     ; None                        ; None                      ; 30.055 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.247 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~366  ; clk1       ; clk1     ; None                        ; None                      ; 30.038 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.244 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~221  ; clk1       ; clk1     ; None                        ; None                      ; 29.983 ns               ;
+; N/A                                     ; 33.06 MHz ( period = 30.244 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~785  ; clk1       ; clk1     ; None                        ; None                      ; 30.035 ns               ;
+; N/A                                     ; 33.07 MHz ( period = 30.241 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~309  ; clk1       ; clk1     ; None                        ; None                      ; 30.032 ns               ;
+; N/A                                     ; 33.07 MHz ( period = 30.240 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~500  ; clk1       ; clk1     ; None                        ; None                      ; 30.031 ns               ;
+; N/A                                     ; 33.07 MHz ( period = 30.240 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~529  ; clk1       ; clk1     ; None                        ; None                      ; 30.031 ns               ;
+; N/A                                     ; 33.07 MHz ( period = 30.239 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~468  ; clk1       ; clk1     ; None                        ; None                      ; 30.030 ns               ;
+; N/A                                     ; 33.07 MHz ( period = 30.236 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~341  ; clk1       ; clk1     ; None                        ; None                      ; 30.027 ns               ;
+; N/A                                     ; 33.08 MHz ( period = 30.234 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~366  ; clk1       ; clk1     ; None                        ; None                      ; 30.025 ns               ;
+; N/A                                     ; 33.08 MHz ( period = 30.227 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~500  ; clk1       ; clk1     ; None                        ; None                      ; 30.018 ns               ;
+; N/A                                     ; 33.08 MHz ( period = 30.226 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~468  ; clk1       ; clk1     ; None                        ; None                      ; 30.017 ns               ;
+; N/A                                     ; 33.08 MHz ( period = 30.226 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~437  ; clk1       ; clk1     ; None                        ; None                      ; 30.017 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.225 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~501  ; clk1       ; clk1     ; None                        ; None                      ; 30.016 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.225 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~437  ; clk1       ; clk1     ; None                        ; None                      ; 30.016 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.224 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~501  ; clk1       ; clk1     ; None                        ; None                      ; 30.015 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.222 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~436  ; clk1       ; clk1     ; None                        ; None                      ; 30.013 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.222 ns )                    ; pc:z12|pc_out[1] ; regfile:z8|mem~532  ; clk1       ; clk1     ; None                        ; None                      ; 30.013 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.217 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~861  ; clk1       ; clk1     ; None                        ; None                      ; 29.956 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.217 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~733  ; clk1       ; clk1     ; None                        ; None                      ; 29.956 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.217 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~558  ; clk1       ; clk1     ; None                        ; None                      ; 30.008 ns               ;
+; N/A                                     ; 33.09 MHz ( period = 30.217 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~1006 ; clk1       ; clk1     ; None                        ; None                      ; 30.008 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.216 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~268  ; clk1       ; clk1     ; None                        ; None                      ; 30.007 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.216 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~750  ; clk1       ; clk1     ; None                        ; None                      ; 30.007 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.215 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~881  ; clk1       ; clk1     ; None                        ; None                      ; 30.006 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.215 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~1009 ; clk1       ; clk1     ; None                        ; None                      ; 30.006 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.215 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~172  ; clk1       ; clk1     ; None                        ; None                      ; 30.006 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.209 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~436  ; clk1       ; clk1     ; None                        ; None                      ; 30.000 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.209 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~532  ; clk1       ; clk1     ; None                        ; None                      ; 30.000 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.209 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~44   ; clk1       ; clk1     ; None                        ; None                      ; 30.000 ns               ;
+; N/A                                     ; 33.10 MHz ( period = 30.208 ns )                    ; pc:z12|pc_out[0] ; regfile:z8|mem~108  ; clk1       ; clk1     ; None                        ; None                      ; 29.999 ns               ;
+; N/A                                     ; 33.11 MHz ( period = 30.202 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~884  ; clk1       ; clk1     ; None                        ; None                      ; 29.993 ns               ;
+; N/A                                     ; 33.11 MHz ( period = 30.201 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~756  ; clk1       ; clk1     ; None                        ; None                      ; 29.992 ns               ;
+; N/A                                     ; 33.11 MHz ( period = 30.201 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~305  ; clk1       ; clk1     ; None                        ; None                      ; 29.992 ns               ;
+; N/A                                     ; 33.11 MHz ( period = 30.200 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~401  ; clk1       ; clk1     ; None                        ; None                      ; 29.991 ns               ;
+; N/A                                     ; 33.12 MHz ( period = 30.197 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~948  ; clk1       ; clk1     ; None                        ; None                      ; 29.988 ns               ;
+; N/A                                     ; 33.12 MHz ( period = 30.197 ns )                    ; pc:z12|pc_out[3] ; regfile:z8|mem~721  ; clk1       ; clk1     ; None                        ; None                      ; 29.988 ns               ;
+; N/A                                     ; 33.12 MHz ( period = 30.197 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~718  ; clk1       ; clk1     ; None                        ; None                      ; 29.988 ns               ;
+; N/A                                     ; 33.12 MHz ( period = 30.197 ns )                    ; pc:z12|pc_out[2] ; regfile:z8|mem~846  ; clk1       ; clk1     ; None                        ; None                      ; 29.988 ns               ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                  ;                     ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+------------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------+
+; tsu                                                                    ;
++-------+--------------+------------+------+------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To               ; To Clock ;
++-------+--------------+------------+------+------------------+----------+
+; N/A   ; None         ; 5.636 ns   ; ret  ; pc:z12|pc_out[0] ; clk1     ;
+; N/A   ; None         ; 5.636 ns   ; ret  ; pc:z12|pc_out[1] ; clk1     ;
+; N/A   ; None         ; 5.636 ns   ; ret  ; pc:z12|pc_out[2] ; clk1     ;
+; N/A   ; None         ; 5.636 ns   ; ret  ; pc:z12|pc_out[3] ; clk1     ;
+; N/A   ; None         ; 5.636 ns   ; ret  ; pc:z12|pc_out[4] ; clk1     ;
++-------+--------------+------------+------+------------------+----------+
+
+
++-----------------------------------------------------------------------------+
+; tco                                                                         ;
++-------+--------------+------------+----------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From           ; To        ; From Clock ;
++-------+--------------+------------+----------------+-----------+------------+
+; N/A   ; None         ; 11.990 ns  ; rout1[20]~reg0 ; rout1[20] ; clk1       ;
+; N/A   ; None         ; 11.936 ns  ; rout2[16]~reg0 ; rout2[16] ; clk1       ;
+; N/A   ; None         ; 11.507 ns  ; rout2[15]~reg0 ; rout2[15] ; clk1       ;
+; N/A   ; None         ; 10.342 ns  ; rout1[16]~reg0 ; rout1[16] ; clk1       ;
+; N/A   ; None         ; 10.326 ns  ; rout2[26]~reg0 ; rout2[26] ; clk1       ;
+; N/A   ; None         ; 10.009 ns  ; rout2[12]~reg0 ; rout2[12] ; clk1       ;
+; N/A   ; None         ; 9.831 ns   ; rout1[23]~reg0 ; rout1[23] ; clk1       ;
+; N/A   ; None         ; 9.551 ns   ; rout2[28]~reg0 ; rout2[28] ; clk1       ;
+; N/A   ; None         ; 9.368 ns   ; rout2[19]~reg0 ; rout2[19] ; clk1       ;
+; N/A   ; None         ; 9.365 ns   ; rout1[11]~reg0 ; rout1[11] ; clk1       ;
+; N/A   ; None         ; 9.334 ns   ; rout1[15]~reg0 ; rout1[15] ; clk1       ;
+; N/A   ; None         ; 9.243 ns   ; rout2[27]~reg0 ; rout2[27] ; clk1       ;
+; N/A   ; None         ; 9.130 ns   ; rout2[22]~reg0 ; rout2[22] ; clk1       ;
+; N/A   ; None         ; 8.900 ns   ; rout2[2]~reg0  ; rout2[2]  ; clk1       ;
+; N/A   ; None         ; 8.763 ns   ; rout2[8]~reg0  ; rout2[8]  ; clk1       ;
+; N/A   ; None         ; 8.714 ns   ; rout2[17]~reg0 ; rout2[17] ; clk1       ;
+; N/A   ; None         ; 8.630 ns   ; rout2[25]~reg0 ; rout2[25] ; clk1       ;
+; N/A   ; None         ; 8.602 ns   ; rout2[0]~reg0  ; rout2[0]  ; clk1       ;
+; N/A   ; None         ; 8.468 ns   ; rout1[19]~reg0 ; rout1[19] ; clk1       ;
+; N/A   ; None         ; 8.437 ns   ; rout1[2]~reg0  ; rout1[2]  ; clk1       ;
+; N/A   ; None         ; 8.412 ns   ; rout2[30]~reg0 ; rout2[30] ; clk1       ;
+; N/A   ; None         ; 8.353 ns   ; rout2[18]~reg0 ; rout2[18] ; clk1       ;
+; N/A   ; None         ; 8.318 ns   ; rout1[27]~reg0 ; rout1[27] ; clk1       ;
+; N/A   ; None         ; 8.223 ns   ; rout1[18]~reg0 ; rout1[18] ; clk1       ;
+; N/A   ; None         ; 7.995 ns   ; rout1[14]~reg0 ; rout1[14] ; clk1       ;
+; N/A   ; None         ; 7.887 ns   ; rout1[28]~reg0 ; rout1[28] ; clk1       ;
+; N/A   ; None         ; 7.870 ns   ; rout1[12]~reg0 ; rout1[12] ; clk1       ;
+; N/A   ; None         ; 7.832 ns   ; rout2[1]~reg0  ; rout2[1]  ; clk1       ;
+; N/A   ; None         ; 7.824 ns   ; rout1[22]~reg0 ; rout1[22] ; clk1       ;
+; N/A   ; None         ; 7.811 ns   ; rout1[26]~reg0 ; rout1[26] ; clk1       ;
+; N/A   ; None         ; 7.781 ns   ; rout1[5]~reg0  ; rout1[5]  ; clk1       ;
+; N/A   ; None         ; 7.731 ns   ; rout1[31]~reg0 ; rout1[31] ; clk1       ;
+; N/A   ; None         ; 7.699 ns   ; rout2[13]~reg0 ; rout2[13] ; clk1       ;
+; N/A   ; None         ; 7.642 ns   ; rout2[23]~reg0 ; rout2[23] ; clk1       ;
+; N/A   ; None         ; 7.514 ns   ; rout1[24]~reg0 ; rout1[24] ; clk1       ;
+; N/A   ; None         ; 7.507 ns   ; rout1[29]~reg0 ; rout1[29] ; clk1       ;
+; N/A   ; None         ; 7.501 ns   ; rout2[4]~reg0  ; rout2[4]  ; clk1       ;
+; N/A   ; None         ; 7.499 ns   ; rout2[10]~reg0 ; rout2[10] ; clk1       ;
+; N/A   ; None         ; 7.489 ns   ; rout2[24]~reg0 ; rout2[24] ; clk1       ;
+; N/A   ; None         ; 7.478 ns   ; rout2[6]~reg0  ; rout2[6]  ; clk1       ;
+; N/A   ; None         ; 7.469 ns   ; rout1[13]~reg0 ; rout1[13] ; clk1       ;
+; N/A   ; None         ; 7.446 ns   ; rout2[9]~reg0  ; rout2[9]  ; clk1       ;
+; N/A   ; None         ; 7.434 ns   ; rout2[5]~reg0  ; rout2[5]  ; clk1       ;
+; N/A   ; None         ; 7.401 ns   ; rout1[0]~reg0  ; rout1[0]  ; clk1       ;
+; N/A   ; None         ; 7.256 ns   ; rout2[7]~reg0  ; rout2[7]  ; clk1       ;
+; N/A   ; None         ; 7.210 ns   ; rout2[3]~reg0  ; rout2[3]  ; clk1       ;
+; N/A   ; None         ; 7.098 ns   ; rout2[11]~reg0 ; rout2[11] ; clk1       ;
+; N/A   ; None         ; 7.012 ns   ; rout1[21]~reg0 ; rout1[21] ; clk1       ;
+; N/A   ; None         ; 6.994 ns   ; rout2[21]~reg0 ; rout2[21] ; clk1       ;
+; N/A   ; None         ; 6.955 ns   ; rout1[17]~reg0 ; rout1[17] ; clk1       ;
+; N/A   ; None         ; 6.926 ns   ; rout1[1]~reg0  ; rout1[1]  ; clk1       ;
+; N/A   ; None         ; 6.889 ns   ; rout1[25]~reg0 ; rout1[25] ; clk1       ;
+; N/A   ; None         ; 6.712 ns   ; rout2[20]~reg0 ; rout2[20] ; clk1       ;
+; N/A   ; None         ; 6.638 ns   ; rout2[14]~reg0 ; rout2[14] ; clk1       ;
+; N/A   ; None         ; 6.622 ns   ; rout2[29]~reg0 ; rout2[29] ; clk1       ;
+; N/A   ; None         ; 6.596 ns   ; rout1[3]~reg0  ; rout1[3]  ; clk1       ;
+; N/A   ; None         ; 6.536 ns   ; rout2[31]~reg0 ; rout2[31] ; clk1       ;
++-------+--------------+------------+----------------+-----------+------------+
+
+
++------------------------------------------------------------------------------+
+; th                                                                           ;
++---------------+-------------+-----------+------+------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To               ; To Clock ;
++---------------+-------------+-----------+------+------------------+----------+
+; N/A           ; None        ; -5.584 ns ; ret  ; pc:z12|pc_out[0] ; clk1     ;
+; N/A           ; None        ; -5.584 ns ; ret  ; pc:z12|pc_out[1] ; clk1     ;
+; N/A           ; None        ; -5.584 ns ; ret  ; pc:z12|pc_out[2] ; clk1     ;
+; N/A           ; None        ; -5.584 ns ; ret  ; pc:z12|pc_out[3] ; clk1     ;
+; N/A           ; None        ; -5.584 ns ; ret  ; pc:z12|pc_out[4] ; clk1     ;
++---------------+-------------+-----------+------+------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Thu Apr 06 13:42:34 2017
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off CPU -c CPU --timing_analysis_only
+Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk1" is an undefined clock
+Info: Clock "clk1" has Internal fmax of 32.02 MHz between source register "pc:z12|pc_out[2]" and destination register "regfile:z8|mem~526" (period= 31.228 ns)
+    Info: + Longest register to register delay is 30.990 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X10_Y9_N8; Fanout = 35; REG Node = 'pc:z12|pc_out[2]'
+        Info: 2: + IC(0.858 ns) + CELL(0.590 ns) = 1.448 ns; Loc. = LC_X11_Y9_N5; Fanout = 3; COMB Node = 'IM:z13|mem_initial~60'
+        Info: 3: + IC(0.423 ns) + CELL(0.114 ns) = 1.985 ns; Loc. = LC_X11_Y9_N8; Fanout = 225; COMB Node = 'IM:z13|mem_initial~61'
+        Info: 4: + IC(2.725 ns) + CELL(0.590 ns) = 5.300 ns; Loc. = LC_X19_Y5_N7; Fanout = 1; COMB Node = 'regfile:z8|mem~1486'
+        Info: 5: + IC(2.691 ns) + CELL(0.114 ns) = 8.105 ns; Loc. = LC_X15_Y17_N8; Fanout = 2; COMB Node = 'regfile:z8|mem~1487'
+        Info: 6: + IC(1.243 ns) + CELL(0.292 ns) = 9.640 ns; Loc. = LC_X15_Y16_N6; Fanout = 32; COMB Node = 'regfile:z8|rd2[12]~46'
+        Info: 7: + IC(1.296 ns) + CELL(0.292 ns) = 11.228 ns; Loc. = LC_X19_Y16_N5; Fanout = 7; COMB Node = 'mux2_11:z4|y1[12]~54'
+        Info: 8: + IC(1.746 ns) + CELL(0.590 ns) = 13.564 ns; Loc. = LC_X19_Y11_N7; Fanout = 1; COMB Node = 'alu:z16|ShiftLeft0~12'
+        Info: 9: + IC(1.116 ns) + CELL(0.590 ns) = 15.270 ns; Loc. = LC_X23_Y11_N4; Fanout = 21; COMB Node = 'alu:z16|ShiftLeft0~17'
+        Info: 10: + IC(0.340 ns) + CELL(0.114 ns) = 15.724 ns; Loc. = LC_X23_Y11_N5; Fanout = 2; COMB Node = 'alu:z16|Mux31~0'
+        Info: 11: + IC(1.235 ns) + CELL(0.292 ns) = 17.251 ns; Loc. = LC_X22_Y14_N3; Fanout = 1; COMB Node = 'alu:z16|Mux31~2'
+        Info: 12: + IC(1.246 ns) + CELL(0.114 ns) = 18.611 ns; Loc. = LC_X22_Y10_N9; Fanout = 1; COMB Node = 'alu:z16|Mux31~5'
+        Info: 13: + IC(0.436 ns) + CELL(0.292 ns) = 19.339 ns; Loc. = LC_X22_Y10_N7; Fanout = 258; COMB Node = 'alu:z16|Mux31~8'
+        Info: 14: + IC(1.811 ns) + CELL(0.442 ns) = 21.592 ns; Loc. = LC_X27_Y8_N5; Fanout = 1; COMB Node = 'dm:z18|sram~1234'
+        Info: 15: + IC(0.427 ns) + CELL(0.114 ns) = 22.133 ns; Loc. = LC_X27_Y8_N9; Fanout = 1; COMB Node = 'dm:z18|sram~1235'
+        Info: 16: + IC(1.294 ns) + CELL(0.292 ns) = 23.719 ns; Loc. = LC_X27_Y10_N1; Fanout = 1; COMB Node = 'dm:z18|sram~1238'
+        Info: 17: + IC(0.182 ns) + CELL(0.114 ns) = 24.015 ns; Loc. = LC_X27_Y10_N2; Fanout = 1; COMB Node = 'dm:z18|sram~1241'
+        Info: 18: + IC(0.437 ns) + CELL(0.292 ns) = 24.744 ns; Loc. = LC_X27_Y10_N9; Fanout = 1; COMB Node = 'dm:z18|sram~1242'
+        Info: 19: + IC(3.486 ns) + CELL(0.114 ns) = 28.344 ns; Loc. = LC_X10_Y16_N6; Fanout = 2; COMB Node = 'mux2_11:z5|y1[8]~117'
+        Info: 20: + IC(0.182 ns) + CELL(0.114 ns) = 28.640 ns; Loc. = LC_X10_Y16_N7; Fanout = 28; COMB Node = 'mux2_11:z5|y1[8]'
+        Info: 21: + IC(2.235 ns) + CELL(0.115 ns) = 30.990 ns; Loc. = LC_X10_Y10_N3; Fanout = 2; REG Node = 'regfile:z8|mem~526'
+        Info: Total cell delay = 5.581 ns ( 18.01 % )
+        Info: Total interconnect delay = 25.409 ns ( 81.99 % )
+    Info: - Smallest clock skew is 0.023 ns
+        Info: + Shortest clock path from clock "clk1" to destination register is 2.925 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 1982; CLK Node = 'clk1'
+            Info: 2: + IC(0.745 ns) + CELL(0.711 ns) = 2.925 ns; Loc. = LC_X10_Y10_N3; Fanout = 2; REG Node = 'regfile:z8|mem~526'
+            Info: Total cell delay = 2.180 ns ( 74.53 % )
+            Info: Total interconnect delay = 0.745 ns ( 25.47 % )
+        Info: - Longest clock path from clock "clk1" to source register is 2.902 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 1982; CLK Node = 'clk1'
+            Info: 2: + IC(0.722 ns) + CELL(0.711 ns) = 2.902 ns; Loc. = LC_X10_Y9_N8; Fanout = 35; REG Node = 'pc:z12|pc_out[2]'
+            Info: Total cell delay = 2.180 ns ( 75.12 % )
+            Info: Total interconnect delay = 0.722 ns ( 24.88 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Micro setup delay of destination is 0.037 ns
+Info: tsu for register "pc:z12|pc_out[0]" (data pin = "ret", clock pin = "clk1") is 5.636 ns
+    Info: + Longest pin to register delay is 8.501 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_41; Fanout = 5; PIN Node = 'ret'
+        Info: 2: + IC(6.165 ns) + CELL(0.867 ns) = 8.501 ns; Loc. = LC_X10_Y9_N0; Fanout = 37; REG Node = 'pc:z12|pc_out[0]'
+        Info: Total cell delay = 2.336 ns ( 27.48 % )
+        Info: Total interconnect delay = 6.165 ns ( 72.52 % )
+    Info: + Micro setup delay of destination is 0.037 ns
+    Info: - Shortest clock path from clock "clk1" to destination register is 2.902 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 1982; CLK Node = 'clk1'
+        Info: 2: + IC(0.722 ns) + CELL(0.711 ns) = 2.902 ns; Loc. = LC_X10_Y9_N0; Fanout = 37; REG Node = 'pc:z12|pc_out[0]'
+        Info: Total cell delay = 2.180 ns ( 75.12 % )
+        Info: Total interconnect delay = 0.722 ns ( 24.88 % )
+Info: tco from clock "clk1" to destination pin "rout1[20]" through register "rout1[20]~reg0" is 11.990 ns
+    Info: + Longest clock path from clock "clk1" to source register is 2.925 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 1982; CLK Node = 'clk1'
+        Info: 2: + IC(0.745 ns) + CELL(0.711 ns) = 2.925 ns; Loc. = LC_X11_Y12_N5; Fanout = 1; REG Node = 'rout1[20]~reg0'
+        Info: Total cell delay = 2.180 ns ( 74.53 % )
+        Info: Total interconnect delay = 0.745 ns ( 25.47 % )
+    Info: + Micro clock to output delay of source is 0.224 ns
+    Info: + Longest register to pin delay is 8.841 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X11_Y12_N5; Fanout = 1; REG Node = 'rout1[20]~reg0'
+        Info: 2: + IC(6.733 ns) + CELL(2.108 ns) = 8.841 ns; Loc. = PIN_224; Fanout = 0; PIN Node = 'rout1[20]'
+        Info: Total cell delay = 2.108 ns ( 23.84 % )
+        Info: Total interconnect delay = 6.733 ns ( 76.16 % )
+Info: th for register "pc:z12|pc_out[0]" (data pin = "ret", clock pin = "clk1") is -5.584 ns
+    Info: + Longest clock path from clock "clk1" to destination register is 2.902 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_29; Fanout = 1982; CLK Node = 'clk1'
+        Info: 2: + IC(0.722 ns) + CELL(0.711 ns) = 2.902 ns; Loc. = LC_X10_Y9_N0; Fanout = 37; REG Node = 'pc:z12|pc_out[0]'
+        Info: Total cell delay = 2.180 ns ( 75.12 % )
+        Info: Total interconnect delay = 0.722 ns ( 24.88 % )
+    Info: + Micro hold delay of destination is 0.015 ns
+    Info: - Shortest pin to register delay is 8.501 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.469 ns) = 1.469 ns; Loc. = PIN_41; Fanout = 5; PIN Node = 'ret'
+        Info: 2: + IC(6.165 ns) + CELL(0.867 ns) = 8.501 ns; Loc. = LC_X10_Y9_N0; Fanout = 37; REG Node = 'pc:z12|pc_out[0]'
+        Info: Total cell delay = 2.336 ns ( 27.48 % )
+        Info: Total interconnect delay = 6.165 ns ( 72.52 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 246 megabytes
+    Info: Processing ended: Thu Apr 06 13:42:39 2017
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
+
+
